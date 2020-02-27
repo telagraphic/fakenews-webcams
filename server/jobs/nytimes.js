@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const db = require('../api/api');
+const news = require('../config/sources');
 
 async function fetchStories() {
 
@@ -38,6 +40,8 @@ async function fetchStories() {
 
           if (story.querySelector('img')) {
             article.img = story.querySelector('img').getAttribute('src');
+          } else {
+            article.img = '';
           }
         }
 
@@ -49,10 +53,17 @@ async function fetchStories() {
 
   });
 
-  console.log(stories);
+  // console.log(stories);
+  // const data = JSON.stringify(stories);
+  // fs.writeFileSync('./json/nytimes.json', data);
 
-  const data = JSON.stringify(stories);
-  fs.writeFileSync('./json/nytimes.json', data);
+  db.createFakeNews(stories, news.nytimes.name)
+    .then((response) => {
+      process.exit(0);
+    }).
+    catch((error) => {
+      process.exit(0);
+    });
 
 
   await browser.close();

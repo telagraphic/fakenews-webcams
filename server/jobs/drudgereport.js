@@ -5,7 +5,7 @@ const news = require('../config/sources');
 
 async function fetchStories() {
 
-  const url = "https://www.zerohedge.com";
+  const url = "https://www.drudgereport.com";
 
   const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
@@ -15,7 +15,7 @@ async function fetchStories() {
   await page.waitFor('.layout-content');
 
   const stories = await page.evaluate(() => {
-    let url = "https://www.zerohedge.com";
+    let url = "https://www.drudgereport.com";
 
     const allStories = [];
 
@@ -49,7 +49,7 @@ async function fetchStories() {
   // const data = JSON.stringify(stories);
   // fs.writeFileSync('./json/zerohedge.json', data);
 
-  db.createFakeNews(stories, news.zerohedge.name)
+  db.createFakeNews(stories, news.drudgereport.name)
     .then((response) => {
       process.exit(0);
     }).

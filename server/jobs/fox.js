@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const db = require('../api/api');
+const news = require('../config/sources');
 
 async function fetchStories() {
 
@@ -24,18 +26,22 @@ async function fetchStories() {
     banner_img = banner_img.replace("//", "");
     let banner_href= document.querySelector('.main-content .sticky-region .story-1 .info-header h2 a').getAttribute('href');
 
-
-    allStories.push({headline: banner_headline, img: banner_img, href: banner_href});
+    if (banner_headline.length > 0) {
+      allStories.push({headline: banner_headline, img: banner_img, href: banner_href});
+    }
 
     let mainRelated = document.querySelectorAll('.main-content .sticky-region .story-1 .content .related ul li.related-item');
     mainRelated.forEach(story => {
       let article = {};
 
-      article.headline = story.querySelector('a').innerText;
+      article.headline = story.querySelector('a').innerText.replace(/(\r\n|\n|\r)/gm,"");
       article.href = story.querySelector('a').getAttribute('href');
+      article.img = '';
 
-      allStories.push(article);
 
+      if (article.headline.length > 0) {
+        allStories.push(article);
+      }
     });
 
 
@@ -43,10 +49,14 @@ async function fetchStories() {
     mainCollection.forEach(story => {
       let article = {};
 
-      article.headline = story.querySelector('.info .info-header a').innerText;
+      article.headline = story.querySelector('.info .info-header a').innerText.replace(/(\r\n|\n|\r)/gm,"");
       article.href = story.querySelector('.info .info-header a').getAttribute('href');
+      article.img = '';
 
-      allStories.push(article);
+      if (article.headline.length > 0) {
+        allStories.push(article);
+      }
+
     });
 
 
@@ -54,10 +64,14 @@ async function fetchStories() {
     secondaryCollection.forEach(story => {
       let article = {};
 
-      article.headline = story.querySelector('.info .info-header h2 a').innerText;
+      article.headline = story.querySelector('.info .info-header h2 a').innerText.replace(/(\r\n|\n|\r)/gm,"");
       article.href = story.querySelector('.info .info-header h2 a').getAttribute('href');
+      article.img = '';
 
-      allStories.push(article);
+      if (article.headline.length > 0) {
+        allStories.push(article);
+      }
+
     });
 
 
@@ -65,20 +79,32 @@ async function fetchStories() {
     exclusiveClips.forEach(story => {
       let article = {};
 
-      article.headline = story.querySelector('.info .info-header a').innerText;
+      article.headline = story.querySelector('.info .info-header a').innerText.replace(/(\r\n|\n|\r)/gm,"");
       article.href = story.querySelector('.info .info-header a').getAttribute('href');
+      article.img = '';
 
-      allStories.push(article);
+      if (article.headline.length > 0) {
+        allStories.push(article);
+      }
+
     });
 
     return allStories;
 
   });
 
-  console.log(stories);
+  // console.log(stories);
+  // const data = JSON.stringify(stories);
+  // fs.writeFileSync('./json/fox.json', data);
 
-  const data = JSON.stringify(stories);
-  fs.writeFileSync('./json/fox.json', data);
+  db.createFakeNews(stories, news.fox.name)
+    .then((response) => {
+      process.exit(0);
+    }).
+    catch((error) => {
+      process.exit(0);
+    });
+
 
 
   await browser.close();

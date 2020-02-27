@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS stories (
+  id SERIAL PRIMARY KEY NOT NULL,
+  headline TEXT NOT NULL,
+  img TEXT NULL,
+  href TEXT NOT NULL,
+  source VARCHAR(256) NOT NULL,
+  created TIMESTAMP NOT NULL DEFAULT now()
+);

@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const db = require('../api/api');
+const news = require('../config/sources');
 
 async function fetchStories() {
 
@@ -47,6 +49,8 @@ async function fetchStories() {
 
         if (story.querySelector('.thumbnail img')) {
           article.img = story.querySelector('.thumbnail img').getAttribute('src');
+        } else {
+          article.img = '';
         }
 
         allStories.push(article);
@@ -67,6 +71,8 @@ async function fetchStories() {
 
         if (story.querySelector('.thumbnail img')) {
           article.img = story.querySelector('.thumbnail img').getAttribute('src');
+        } else {
+          article.img = '';
         }
 
         allStories.push(article);
@@ -78,10 +84,55 @@ async function fetchStories() {
 
   });
 
-  console.log(stories);
+  // function titleCase(str) {
+  //   return str.toLowerCase().split(' ').map(function(word) {
+  //     return (
+  //       if (word.charAt(0) === "\'") {
+  //         word.charAt(1).toUpperCase() + word.slice(2)
+  //       } else (
+  //         word.charAt(0).toUpperCase() + word.slice(1)
+  //       )
+  //     );
+  //   }).join(' ');
+  // }
 
-  const data = JSON.stringify(stories);
-  fs.writeFileSync('./json/infowars.json', data);
+  // function titleCase(str) {
+  //   str = str.toLowerCase().split(' ');
+  //   for (var i = 0; i < str.length; i++) {
+  //     if (str[i] === "\'") {
+  //       str[i] = str[i].charAt(1).toUpperCase() + str[i].slice(2);
+  //     } else {
+  //       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  //     }
+  //   }
+  //   return str.join(' ');
+  // }
+  //
+  // const typesetStories = [];
+  //
+  // stories.forEach(story => {
+  //
+  //   let lowercaseHeadline = story.headline.toLowerCase();
+  //   story.headline = titleCase(lowercaseHeadline);
+  //   typesetStories.push(story);
+  //
+  // });
+  // https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
+  //
+  // console.log(typesetStories);
+
+  // console.log(stories);
+  // const data = JSON.stringify(stories);
+  // fs.writeFileSync('./json/infowars.json', data);
+
+  db.createFakeNews(stories, news.infowars.name)
+    .then((response) => {
+      process.exit(0);
+    }).
+    catch((error) => {
+      process.exit(0);
+    });
+
 
 
   await browser.close();

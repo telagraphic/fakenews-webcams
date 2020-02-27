@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const db = require('../api/api');
+const news = require('../config/sources');
 
 async function fetchStories() {
 
@@ -40,7 +42,11 @@ async function fetchStories() {
         article.href = story.querySelector('a').getAttribute('href');
         article.href = url.concat(article.href);
 
-        article.img = story.querySelector('a img').getAttribute('src');
+        if (story.querySelector('a img')) {
+          article.img = story.querySelector('a img').getAttribute('src');
+        } else {
+          article.img = '';
+        }
 
         allStories.push(article);
 
@@ -53,9 +59,14 @@ async function fetchStories() {
       on_the_radar.forEach(story => {
         let article = {};
 
-        article.headline = story.querySelector('a').innerText;
+        let lowercaseHeadline = story.querySelector('a').innerText.toLowerCase();
+        let capitalizedHeadline = lowercaseHeadline.charAt(0).toUpperCase() + lowercaseHeadline.slice(1);
+
+        article.headline = capitalizedHeadline;
         article.href = story.querySelector('a').getAttribute('href');
         article.href = url.concat(article.href);
+
+        article.img = '';
 
         allStories.push(article);
 
@@ -77,6 +88,8 @@ async function fetchStories() {
 
         if (story.querySelector('.tco')) {
           article.img = story.querySelector('.tco img').getAttribute('src');
+        } else {
+          article.img = '';
         }
 
         allStories.push(article);
@@ -89,10 +102,19 @@ async function fetchStories() {
 
   });
 
-  console.log(stories);
+  // console.log(stories);
+  // const data = JSON.stringify(stories);
+  // fs.writeFileSync('./json/breitbart.json', data);
 
-  const data = JSON.stringify(stories);
-  fs.writeFileSync('./json/breitbart.json', data);
+  db.createFakeNews(stories, news.breitbart.name)
+    .then((response) => {
+      process.exit(0);
+    }).
+    catch((error) => {
+      process.exit(0);
+    });
+
+
   await browser.close();
 
 }

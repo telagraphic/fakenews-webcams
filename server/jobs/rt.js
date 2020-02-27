@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const db = require('../api/api');
+const news = require('../config/sources');
 
 async function fetchStories() {
 
@@ -16,8 +18,6 @@ async function fetchStories() {
     let url = "https://www.rt.com";
 
     const allStories = [];
-
-    // banner
 
     let main_stories = document.querySelectorAll('.layout__content .columns .main-promobox__list li.main-promobox__item');
 
@@ -38,7 +38,13 @@ async function fetchStories() {
 
     article.headline = popular.querySelector('a.link').innerText;
     article.href = url.concat(popular.querySelector('a.link').getAttribute('href'));
-    article.img = popular.querySelector('img').getAttribute('src');
+
+    if (popular.querySelector('img')) {
+      article.img = popular.querySelector('img').getAttribute('src');
+    } else {
+      article.img = '';
+    }
+
 
     allStories.push(article);
 
@@ -53,6 +59,8 @@ async function fetchStories() {
 
       if (story.querySelector('img')) {
         article.img = story.querySelector('img').getAttribute('src');
+      } else {
+        article.img = "";
       }
 
       allStories.push(article);
@@ -63,10 +71,17 @@ async function fetchStories() {
 
   });
 
-  console.log(stories);
+  // console.log(stories);
+  // const data = JSON.stringify(stories);
+  // fs.writeFileSync('./json/rt.json', data);
 
-  const data = JSON.stringify(stories);
-  fs.writeFileSync('./json/rt.json', data);
+  db.createFakeNews(stories, news.rt.name)
+    .then((response) => {
+      process.exit(0);
+    }).
+    catch((error) => {
+      process.exit(0);
+    });
 
 
   await browser.close();
