@@ -14,9 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/telagraphic/fakenews-webcams.git"
+    "url": "https://github.com/telagraphic/fakenews-webcams"
   },
   "author": "@telagraphic",
+  "website": "https://www.telagraphic.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/telagraphic/fakenews-webcams/issues"
