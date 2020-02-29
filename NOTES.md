@@ -10,3 +10,10 @@
 # NODE
 
 [Node Architecture](https://dev.to/santypk4/bulletproof-node-js-project-architecture-4epf#cron)
+
+
+
+
+# CLIENT
+
+[News Ticker](https://www.youtube.com/watch?v=3T4rD_P2nc8)

@@ -31,6 +31,27 @@ function createFakeNews(stories, source) {
 }
 
 
+async function getFakeNews() {
+  let query = 'select json_build_object(source, json_agg(stories.*)) from stories group by source order by source';
+  return db.any(query)
+            .then(function(stories) {
+              var formatted = {};
+              for (var i = 0; i < stories.length; i++) {
+                var obj = stories[i].json_build_object;
+                var name = Object.keys(obj)[0];
+                formatted[name] = obj[name];
+              };
+
+      return formatted;
+    })
+    .catch(function(err) {
+      console.log(err);
+      return next(err);
+    });
+}
+
+
 module.exports = {
-  createFakeNews: createFakeNews
+  createFakeNews: createFakeNews,
+  getFakeNews: getFakeNews
 }

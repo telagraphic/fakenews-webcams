@@ -1,13 +1,13 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const db = require('../../api/api');
+const db = require('../../services/stories');
 const news = require('../../config/sources');
 
 async function fetchStories() {
 
   const url = "https://www.cnn.com/";
 
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
