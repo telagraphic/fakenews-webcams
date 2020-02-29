@@ -7,11 +7,11 @@ async function fetchStories() {
 
   const url = "https://www.cnn.com/";
 
-  // const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
-  const browser = await puppeteer.launch({ headless: false});
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+  // const browser = await puppeteer.launch({ headless: false});
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  
+
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -153,7 +153,7 @@ async function fetchStories() {
   });
 
   // console.log(stories);
-  fs.writeFileSync('../json/cnn.json', JSON.stringify(stories));
+  // fs.writeFileSync('../json/cnn.json', JSON.stringify(stories));
 
   newsService.createFakeNews(stories, news.cnn.name)
     .then((response) => {
