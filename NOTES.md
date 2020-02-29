@@ -1,5 +1,4 @@
 # DEPLOY
-
 [dotenv](https://stackabuse.com/managing-environment-variables-in-node-js-with-dotenv/)
 [environment variables](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786)
 [Heroku Node Best Practices](https://devcenter.heroku.com/articles/node-best-practices)
@@ -7,9 +6,9 @@
 [Heroku Deploy](https://devcenter.heroku.com/articles/git)
 [PUPPETEER ON HEROKU](heroku run chrome puppeteer headless)
 
-
 # PUPPETEER
 [Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)
+[Puppeteer Heroku Buildpack](https://github.com/jontewks/puppeteer-heroku-buildpack)
 
 
 # NODE

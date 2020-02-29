@@ -7,8 +7,11 @@ async function fetchStories() {
 
   const url = "https://www.cnn.com/";
 
-  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+  // const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+  const browser = await puppeteer.launch({ headless: false});
   const page = await browser.newPage();
+  await page.setDefaultNavigationTimeout(0);
+  
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -76,8 +79,12 @@ async function fetchStories() {
       homepageZoneOne.forEach(story => {
         let article = {};
 
-        article.headline = story.innerText;
-        article.headline = article.headline.replace(/(\n)/gm," ");
+        // checks for placed ad
+        if (story.querySelector('.cd__headline-text')) {
+          article.headline = story.querySelector('.cd__headline-text').innerText.replace(/(\n)/gm," ");
+        } else {
+          article.headline = "";
+        }
 
         if (story.querySelector('img')) {
           article.img = story.querySelector('img').getAttribute('src');
@@ -108,7 +115,14 @@ async function fetchStories() {
       homepageZoneTwo.forEach(story => {
         let article = {};
 
-        article.headline = story.querySelector('.cd__headline-text').innerText.replace(/(\n)/gm," ");
+        // checks for placed ad
+        if (story.querySelector('.cd__headline-text')) {
+          article.headline = story.querySelector('.cd__headline-text').innerText.replace(/(\n)/gm," ");
+        } else {
+          article.headline = "";
+        }
+
+        // article.headline = story.querySelector('.cd__headline-text').innerText.replace(/(\n)/gm," ");
 
         if (story.querySelector('img')) {
           article.img = story.querySelector('img').getAttribute('src');
@@ -139,8 +153,7 @@ async function fetchStories() {
   });
 
   // console.log(stories);
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/cnn.json', data);
+  fs.writeFileSync('../json/cnn.json', JSON.stringify(stories));
 
   newsService.createFakeNews(stories, news.cnn.name)
     .then((response) => {
