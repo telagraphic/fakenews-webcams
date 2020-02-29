@@ -1,13 +1,13 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const db = require('../../services/stories');
+const newsService = require('../../services/newsService');
 const news = require('../../config/sources');
 
 async function fetchStories() {
 
   const url = "https://www.cnn.com/";
 
-  const browser = await puppeteer.launch({headless: true});
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
@@ -142,7 +142,7 @@ async function fetchStories() {
   // const data = JSON.stringify(stories);
   // fs.writeFileSync('../json/cnn.json', data);
 
-  db.createFakeNews(stories, news.cnn.name)
+  newsService.createFakeNews(stories, news.cnn.name)
     .then((response) => {
       process.exit(0);
     }).

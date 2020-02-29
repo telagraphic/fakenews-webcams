@@ -3,13 +3,13 @@
 const express = require('express');
 const app = express();
 const routes = require('./server/api/routes');
-const db = require('./server/services/stories');
+const newsService = require('./server/services/newsService');
 const path = require('path');
-const exphbs = require("express-handlebars");
+const expressHandlebars = require("express-handlebars");
 
 app.use(express.static(__dirname + '/public'));
 
-const hbs = exphbs.create({
+const hbs = expressHandlebars.create({
   partialsDir: ["public/views/partials"],
   extname: ".hbs",
   layoutsDir: path.join(__dirname, "public/views/layouts"),
@@ -33,6 +33,8 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
-  let stories = await db.getFakeNews();
-  res.render('index', { cnn: stories.CNN, fox: stories.FOX });
+  let news = await newsService.getFakeNews();
+  console.log(news);
+  res.send(news);
+  // res.render('index', { cnn: news.CNN, fox: news.FOX });
 });

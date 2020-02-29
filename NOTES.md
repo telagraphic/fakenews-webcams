@@ -5,15 +5,16 @@
 [Heroku Node Best Practices](https://devcenter.heroku.com/articles/node-best-practices)
 [PM2 on Heroku](https://pm2.keymetrics.io/docs/integrations/heroku/)
 [Heroku Deploy](https://devcenter.heroku.com/articles/git)
+[PUPPETEER ON HEROKU](heroku run chrome puppeteer headless)
+
+
+# PUPPETEER
+[Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)
 
 
 # NODE
-
 [Node Architecture](https://dev.to/santypk4/bulletproof-node-js-project-architecture-4epf#cron)
 
 
-
-
 # CLIENT
-
 [News Ticker](https://www.youtube.com/watch?v=3T4rD_P2nc8)

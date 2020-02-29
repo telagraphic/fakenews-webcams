@@ -1,13 +1,13 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const db = require('../../api/api');
+const newsService = require('../../services/newsService');
 const news = require('../../config/sources');
 
 async function fetchStories() {
 
   const url = "https://www.politico.com";
 
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
@@ -59,7 +59,7 @@ async function fetchStories() {
   // const data = JSON.stringify(stories);
   // fs.writeFileSync('../json/politico.json', data);
 
-  db.createFakeNews(stories, news.politico.name)
+  newsService.createFakeNews(stories, news.politico.name)
     .then((response) => {
       process.exit(0);
     }).
