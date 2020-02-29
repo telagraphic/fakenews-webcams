@@ -34,7 +34,5 @@ app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
   let stories = await db.getFakeNews();
-  // res.send(stories['CNN']);
-  // console.log(stories['CNN']);
-  res.render('index', { cnn: stories['CNN'], fox: stories['FOX']});
+  res.render('index', { cnn: stories.CNN, fox: stories.FOX });
 });

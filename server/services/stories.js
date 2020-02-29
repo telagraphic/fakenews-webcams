@@ -35,14 +35,26 @@ async function getFakeNews() {
   let query = 'select json_build_object(source, json_agg(stories.*)) from stories group by source order by source';
   return db.any(query)
             .then(function(stories) {
-              var formatted = {};
+              var data = {};
               for (var i = 0; i < stories.length; i++) {
                 var obj = stories[i].json_build_object;
                 var name = Object.keys(obj)[0];
-                formatted[name] = obj[name];
+                data[name] = obj[name];
               };
 
-      return formatted;
+      return {
+        ALL: '',
+        CNN: data.CNN,
+        FOX: data.FOX,
+        RT: data.RT,
+        BLOOMBERG: data.BLOOMBERG,
+        BREITBART: data.BREITBART,
+        INFOWARS: data.INFOWARS,
+        NYTIMES: data.NYTIMES,
+        POLITICO: data.POLITICO,
+        ZEROHEDGE: data.ZEROHEDGE
+      }
+
     })
     .catch(function(err) {
       console.log(err);
