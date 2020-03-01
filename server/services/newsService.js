@@ -2,9 +2,7 @@ const newsModel = require('../models/newsModel');
 const fs = require('fs');
 
 async function createFakeNews(stories, source) {
-
   return newsModel.createFakeNews(stories, source);
-
 }
 
 
@@ -14,6 +12,7 @@ async function getFakeNews() {
     .getFakeNews()
     .then(data => {
 
+      // fs.writeFileSync('server/models/newsFromDatabase.json', JSON.stringify(data));
 
       let news = {};
       for (var i = 0; i < data.length; i++) {
@@ -22,16 +21,12 @@ async function getFakeNews() {
         news[name] = obj[name];
       };
 
-      // fs.writeFileSync('server/models/news.json', JSON.stringify(news));
+      // fs.writeFileSync('server/models/newsForClient.json', JSON.stringify(news));
 
-
-      // flatten data array into one with all news
-      const all = [];
-
-
+      const allNews = [...news.CNN, ...news.FOX, ...news.RT, ...news.BLOOMBERG, ...news.BREITBART, ...news.INFOWARS, ...news.NYTIMES, ...news.POLITICO, ...news.ZEROHEDGE];
 
       return {
-        ALL: [{all: "All News Here"}],
+        ALL: allNews,
         CNN: news.CNN,
         FOX: news.FOX,
         RT: news.RT,

@@ -7,6 +7,8 @@ const newsService = require('./server/services/newsService');
 const path = require('path');
 const expressHandlebars = require("express-handlebars");
 
+app.use('/api', routes);
+
 app.use(express.static(__dirname + '/public'));
 
 const hbs = expressHandlebars.create({

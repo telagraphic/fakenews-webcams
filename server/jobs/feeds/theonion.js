@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
-const news = require('../../config/sources');
+const newsSource = require('../../config/sources');
 
 async function fetchStories() {
 

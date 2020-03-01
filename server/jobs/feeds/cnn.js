@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
-const news = require('../../config/sources');
+const newsSource = require('../../config/sources');
 
 async function fetchStories() {
 
@@ -155,7 +155,7 @@ async function fetchStories() {
   // console.log(stories);
   // fs.writeFileSync('../json/cnn.json', JSON.stringify(stories));
 
-  newsService.createFakeNews(stories, news.cnn.name)
+  newsService.createFakeNews(stories, newsSource.cnn.name)
     .then((response) => {
       process.exit(0);
     }).
