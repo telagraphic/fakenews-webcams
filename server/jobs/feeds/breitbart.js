@@ -9,6 +9,8 @@ async function fetchStories() {
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
+  await page.setDefaultNavigationTimeout(0);
+
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -105,7 +107,7 @@ async function fetchStories() {
   // console.log(stories);
   // const data = JSON.stringify(stories);
   // fs.writeFileSync('../json/breitbart.json', data);
-  
+
   newsService.createFakeNews(stories, newsSource.breitbart.name)
     .then((response) => {
       process.exit(0);
