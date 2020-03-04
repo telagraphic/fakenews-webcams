@@ -1,152 +1,4 @@
 {
-  "BLOOMBERG": [{
-    "id": 685,
-    "headline": "U.S. Stocks Tumble 11% in Worst Week Since Crisis",
-    "img": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6jWUZj.25wo/v0/800x600.jpg",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-27/stock-slump-to-extend-in-asia-on-virus-fears-markets-wrap?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.479813"
-  }, {
-    "id": 686,
-    "headline": "Powell’s ‘Whatever It Takes’ Moment Is Here, But Will It Work?",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/powell-s-whatever-it-takes-moment-is-here-but-will-it-work?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.517929"
-  }, {
-    "id": 687,
-    "headline": "World’s Richest Lose $444 Billion After Hellish Week for Markets",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/world-s-richest-lose-444-billion-after-hellish-week-for-markets?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.518618"
-  }, {
-    "id": 688,
-    "headline": "Rapid Market Swoon May Not Be as Ominous as Feared",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/rapid-market-swoon-may-not-be-as-ominous-as-feared?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.51921"
-  }, {
-    "id": 689,
-    "headline": "U.S. Raises Italy Travel Advisory; Rate Cut Eyed: Virus Update",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/germany-boosts-border-checks-google-scraps-event-virus-update?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.519753"
-  }, {
-    "id": 690,
-    "headline": "Apple’s Tim Cook Sees Minor Supply Chain Changes in Wake of Virus",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/apple-s-cook-sees-minor-supply-chain-changes-in-wake-of-virus?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.520327"
-  }, {
-    "id": 691,
-    "headline": "White House Weighs Use of Defense Law for Coronavirus Supplies",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/white-house-weighs-use-of-defense-law-for-coronavirus-supplies?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.521056"
-  }, {
-    "id": 692,
-    "headline": "Lufthansa Plans to Slash Flights on Virus’s Hit to Travel",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/lufthansa-plans-to-slash-flights-on-virus-s-hit-to-travel?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.521645"
-  }, {
-    "id": 693,
-    "headline": "Head of Top U.S. Federal Union Resigns Amid Harassment Claims",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/head-of-top-u-s-federal-union-resigns-amid-harassment-claims?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.522419"
-  }, {
-    "id": 694,
-    "headline": "Trump Beats Democrats’ Suit to Force Don McGahn To Testify",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/trump-beats-house-democrats-suit-to-force-don-mcgahn-testimony?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.52307"
-  }, {
-    "id": 695,
-    "headline": "Steve Cohen’s Point72 Hedge Fund Posts February Gain, Rising Nearly 1%",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/cohen-s-point72-hedge-fund-posts-february-gain-rising-nearly-1?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.523705"
-  }, {
-    "id": 696,
-    "headline": "Bernie Sanders Shows Strong Lead in Latest California Poll",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/bernie-sanders-shows-strong-lead-in-latest-california-poll?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.524382"
-  }, {
-    "id": 697,
-    "headline": "Trump Takes Credit as Markets Rise, Points Finger When They Fall",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/trump-takes-credit-as-markets-rise-points-finger-when-they-fall?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.524922"
-  }, {
-    "id": 698,
-    "headline": "Roberts Faces Moment of Truth on Abortion Issue at Supreme Court",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/roberts-faces-moment-of-truth-on-abortion-issue-at-supreme-court?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.525491"
-  }, {
-    "id": 699,
-    "headline": "To Stop Virus’s Spread, Japan Must End Its Fixation With Being at the Office",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/virus-challenges-japan-s-obsession-with-long-hours-at-the-office?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.578419"
-  }, {
-    "id": 700,
-    "headline": "Plant-Milk Craze Has Created an Oat Bubble That’s About to Burst",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/plant-milk-craze-has-created-an-oat-bubble-that-s-about-to-burst?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.579162"
-  }, {
-    "id": 701,
-    "headline": "Beverly Hills Eclipsed by Calabasas as Home for Rich and Famous",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/beverly-hills-eclipsed-by-calabasas-as-home-for-rich-and-famous?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.579697"
-  }, {
-    "id": 702,
-    "headline": "Google Cancels Internal Conference Over Virus Concerns",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/google-cancels-internal-conference-over-coronavirus-concerns?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.580518"
-  }, {
-    "id": 703,
-    "headline": "Hedge Funds Finally Do Their Job Amid Chaos of Stock Tumble",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/hedge-funds-finally-do-their-job-as-stock-markets-plummet?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.581129"
-  }, {
-    "id": 704,
-    "headline": "Mexico Has Two Coronavirus Cases, Health Officials Say",
-    "img": "",
-    "href": "https://www.bloomberg.com/news/articles/2020-02-28/mexico-says-35-year-old-man-confirmed-as-first-coronavirus-case?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.581858"
-  }, {
-    "id": 705,
-    "headline": "Mapping the Coronavirus Outbreak Across the World",
-    "img": "",
-    "href": "https://www.bloomberg.comhttps://www.bloomberg.com/graphics/2020-wuhan-novel-coronavirus-outbreak/?srnd=premium",
-    "source": "BLOOMBERG",
-    "created": "2020-02-28T18:27:38.582629"
-  }],
   "BREITBART": [{
     "id": 249,
     "headline": "Appeals Court: Trump Can Withhold Funding from Sanctuary Cities",
@@ -3326,144 +3178,144 @@
     "created": "2020-02-26T20:43:39.201056"
   }],
   "ZEROHEDGE": [{
-    "id": 587,
-    "headline": "CDC Confirms First US Coronavirus Case Of 'Unknown Origin' As South Korea Infections Soar: Live Updates",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/RONA.PNG?itok=F1-aJ0Kr",
-    "href": "https://www.zerohedge.com/geopolitical/france-confirms-2nd-death-outbreak-spreads-across-europe-virus-arrives-south-america",
+    "id": 851,
+    "headline": "Hillary Clinton Ordered To Give Sworn Deposition After Judge Tosses 'Preposterous' Defense",
+    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-03/hillary%20clinton.jpg?itok=hsmgOGw_",
+    "href": "https://www.zerohedge.com/political/hillary-clinton-ordered-give-sworn-deposition-over-emails-benghazi-after-judge-tosses",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.861501"
+    "created": "2020-03-02T18:51:39.596536"
   }, {
-    "id": 588,
-    "headline": "President Trump Appoints VP Pence As Coronavirus Czar, Stocks Slide",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/PENCE.jpg?itok=bwyXTQ5G",
-    "href": "https://www.zerohedge.com/political/trump-hold-news-conference-6pmet-dispel-medias-fake-news-panicking-over-virus-outbreak",
+    "id": 852,
+    "headline": "Did CDC Stop Disclosing How Many Americans Are Being Tested For Covid-19? - Live Updates",
+    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-03/234252.png?itok=7KhZBqYV",
+    "href": "https://www.zerohedge.com/geopolitical/washington-state-confirms-2nd-us-coronavirus-death-amid-rash-new-cases-virus-updates",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.863876"
+    "created": "2020-03-02T18:51:39.742603"
   }, {
-    "id": 589,
-    "headline": "Coronavirus Paralyzes Global Credit Market As New Issuance Crashes To Zero",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/bond%20market%20frozen.jpg?itok=TFuuy_iO",
-    "href": "https://www.zerohedge.com/markets/coronavirus-paralyzes-global-credit-market-new-issuance-crashes-zero",
+    "id": 853,
+    "headline": "Why Crypto Bulls May Not Want It To Be A Safe-Haven Asset",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/1_-He8PPXF9YGZ7Rbp8Xb-iQ.png?h=887517a7&itok=Xw2ceBX4",
+    "href": "https://www.zerohedge.com/crypto/why-crypto-bulls-may-not-want-it-be-safe-haven-asset",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.864827"
+    "created": "2020-03-02T18:51:39.743915"
   }, {
-    "id": 590,
-    "headline": "SoftBank 'Vision Fund' Chief Carried Out Weinstein-Style Sabotage Campaign To Sideline Rivals",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/mishra.PNG?itok=jHX7hLbX",
-    "href": "https://www.zerohedge.com/markets/softbank-vision-fund-chief-carried-out-weinstein-style-sabotage-campaign-sideline-rivals",
+    "id": 854,
+    "headline": "As 'Corona Recession' Fears Threaten Trump Re-Election, Sanders Gains Steam Into 'Super Tuesday'",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/biden%20sanders.jpg?itok=DqALp5EV",
+    "href": "https://www.zerohedge.com/political/corona-recession-fears-threaten-trump-re-election-sanders-gains-steam-super-tuesday",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.86554"
+    "created": "2020-03-02T18:51:39.745174"
   }, {
-    "id": 591,
-    "headline": "\"Haven Of Last Resort\" - Goldman Sees Gold At $1800 Due To Virus & Bernie Sanders Fears",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/bfmBD73.jpg?h=fccdabea&itok=W1ato1MR",
-    "href": "https://www.zerohedge.com/commodities/haven-last-resort-goldman-sees-gold-1800-due-virus-bernie-sanders-fears",
+    "id": 855,
+    "headline": "Shanghai Accord 2.0? Powell, Mnuchin To Lead Tuesday's Emergency G-7 Coronavirus Call",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/powell%20mnuchin.jpeg?itok=Xo6tjp-4",
+    "href": "https://www.zerohedge.com/markets/shanghai-accord-20-powell-mnuchin-lead-tuesdays-emergency-g-7-coronavirus-call",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.865988"
+    "created": "2020-03-02T18:51:39.745781"
   }, {
-    "id": 592,
-    "headline": "Scientists Discover HIV-Like \"Mutation\" Which Makes Coronavirus Extremely Infectious",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/wuhan%20corona_0.jpg?itok=32otN432",
-    "href": "https://www.zerohedge.com/health/coronavirus-hiv-mutation-suggests-nearly-1000x-more-likely-sars-infect",
+    "id": 856,
+    "headline": "Covid-19 Risks - Doing The Math",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/march-2-covid-19-cover.jpg?itok=aAiEpsRE",
+    "href": "https://www.zerohedge.com/health/covid-19-risks-doing-math",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.866548"
+    "created": "2020-03-02T18:51:39.746924"
   }, {
-    "id": 593,
-    "headline": "U.S. Intelligence Is Intervening In The 2020 Election",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/5e559c6d3ee95.image_.jpg?h=a66ba9c8&itok=hyL27b-T",
-    "href": "https://www.zerohedge.com/political/us-intelligence-intervening-2020-election",
+    "id": 857,
+    "headline": "Senate Homeland Committee To Issue First Subpoena In Biden-Burisma Probe",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/hunter%20biden%20face.jpg?itok=aoBzc24K",
+    "href": "https://www.zerohedge.com/political/senate-homeland-committee-issue-first-subpoena-biden-burisma-probe",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.86721"
+    "created": "2020-03-02T18:51:39.748211"
   }, {
-    "id": 594,
-    "headline": "A Great Debate Emerges On Wall Street: Are Men Or Machines Behind The \"Panic Selling\"?",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/global%20macro%20HFs%20nomura%20teaser.jpg?h=714f0409&itok=VhuMRd4l",
-    "href": "https://www.zerohedge.com/markets/great-debate-emerges-wall-street-are-men-or-machines-behind-panic-selling",
+    "id": 858,
+    "headline": "Coronavirus Outbreak: How Employers & Employees Are Responding",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/Office-workers-wearing-masks.jpg?itok=8EVJh2tt",
+    "href": "https://www.zerohedge.com/health/coronavirus-outbreak-how-employers-employees-are-responding",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.86783"
+    "created": "2020-03-02T18:51:39.748752"
   }, {
-    "id": 595,
-    "headline": "Leaked Docs Reveal Covid-19 Infections Up To 52 Times Higher Than 'Official' Figures In China's Shandong Province",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/GettyImages-1199972442-700x420.jpg?itok=QqyFPMTg",
-    "href": "https://www.zerohedge.com/geopolitical/leaked-docs-reveal-covid-19-infections-52-times-higher-official-figures-chinas",
+    "id": 859,
+    "headline": "Sanders Agrees With Trump: \"They're Staging A Coup Against Bernie!\"",
+    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-03/sbr022720dAPR20200227024542%20%281%29.jpg?h=3ba56445&itok=3eA_1o2f",
+    "href": "https://www.zerohedge.com/markets/buttigieg-quits-democratic-presidential-race",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.868421"
+    "created": "2020-03-02T18:51:39.749311"
   }, {
-    "id": 596,
-    "headline": "Paying The Price For Our Faustian Bargain With China",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/Faustian-Bargain.jpg?h=de866de0&itok=J2ukWPSM",
-    "href": "https://www.zerohedge.com/geopolitical/paying-price-our-faustian-bargain-china",
+    "id": 860,
+    "headline": "Visa Slashes Q2 Revenue Outlook By 2.5-3.5% On Lower Asia Travel; Microchip Pulls Guidance",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/visa%20guidance%20cut.jpg?h=86f30b55&itok=_U84aJPp",
+    "href": "https://www.zerohedge.com/markets/visa-slashes-q2-revenue-outlook-25-35-lower-asia-travel-microchip-pulls-guidance",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.869008"
+    "created": "2020-03-02T18:51:39.749817"
   }, {
-    "id": 597,
-    "headline": "Japan Cancels Sport And Cultural Events Amid Concerns Olympics Could Be Canceled ",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/tokyo%20games.jpg?h=1122c64a&itok=EyCU78y1",
-    "href": "https://www.zerohedge.com/markets/japan-cancels-sport-and-cultural-events-amid-new-concerns-olympics-could-be-canceled",
+    "id": 861,
+    "headline": "DoubleLine Deputy CIO: \"The Coronavirus Outbreak Is Way Beyond The Fed's Control\"",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/jeff%20sherman%202.jpg?itok=Ti-O8tHb",
+    "href": "https://www.zerohedge.com/markets/doubleline-deputy-cio-coronavirus-outbreak-way-beyond-feds-control",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.869702"
+    "created": "2020-03-02T18:51:39.750766"
   }, {
-    "id": 598,
-    "headline": "At Least 7 Dead In Mass Shooting At MillerCoors Milwaukee HQ",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/crs.PNG?itok=tLuPeqYm",
-    "href": "https://www.zerohedge.com/political/police-responding-active-shooting-millercoors-milwaukee-headquarters",
+    "id": 862,
+    "headline": "Panic-Buying Sends Dow To Best Point-Gain Ever On Hopes Of Intervention",
+    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_mobile_desktop_1x/public/2020-03/2020-03-02_13-12-44.jpg?itok=XpZkv-jB",
+    "href": "https://www.zerohedge.com/markets/stocks-soar-hopes-intervention-bond-yields-crash-record-lows",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.87134"
+    "created": "2020-03-02T18:51:39.751335"
   }, {
-    "id": 599,
-    "headline": "McKinsey Publishes Handy 'How To Survive The Coronavirus' Guide For Corporations & Governments",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/mck.PNG?itok=COsekIxx",
-    "href": "https://www.zerohedge.com/geopolitical/mckinsey-publishes-handy-how-survive-coronavirus-guide-corporations-governments",
+    "id": 863,
+    "headline": "SaxoBank: Equities Are In Rough & Unpredictable Seas, Central Banks Will Not Alleviate The Pain",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/image011%20%283%29.png?itok=HBT-Q10x",
+    "href": "https://www.zerohedge.com/markets/saxobank-equities-are-rough-unpredictable-seas-central-banks-will-not-alleviate-pain",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.872214"
+    "created": "2020-03-02T18:51:39.751865"
   }, {
-    "id": 600,
-    "headline": "\"You Had To Be Fairly Wealthy\": $1,750 To $3,200 ​​​​​​​Ticket Prices For Dem Debate Spark Disgust",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/demdebate1.jpg?itok=Nn3ChXuR",
-    "href": "https://www.zerohedge.com/political/you-had-be-fairly-wealthy-1750-3200-ticket-prices-dem-debate-spark-disgust",
+    "id": 864,
+    "headline": "Capital Market Freeze Goes Global - IPOs Delayed Over Market Turmoil",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/global%20ipo.jpg?itok=-VAl4vC1",
+    "href": "https://www.zerohedge.com/markets/coronavirus-freezes-capital-markets-europe",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.873322"
+    "created": "2020-03-02T18:51:39.752564"
   }, {
-    "id": 601,
-    "headline": "China's \"Whatever It Takes\" Moment (May Not Be Enough)",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/unnamed%20%285%29.jpg?h=806aafa2&itok=Pb6CeJMv",
-    "href": "https://www.zerohedge.com/geopolitical/chinas-whatever-it-takes-moment",
+    "id": 865,
+    "headline": "What If The Selling Isn't Over: Here Are The Cheapest Ways To Hedge The Next Crash",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/vol%20z%20scores%20teaser.jpg?h=6ca9a1fc&itok=nKnNsxwL",
+    "href": "https://www.zerohedge.com/markets/what-if-selling-isnt-over-here-are-cheapest-ways-hedge-next-crash",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.873965"
+    "created": "2020-03-02T18:51:39.753757"
   }, {
-    "id": 602,
-    "headline": "Socialism In Education",
-    "img": "/s3/files/styles/teaser_small/public/2020-02/socialism2.jpg?h=68275226&itok=kEaVBO7j",
-    "href": "https://www.zerohedge.com/political/socialism-education",
+    "id": 866,
+    "headline": "Shale Drillers Need A Miracle To Keep Production From Falling",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/2020-03-02_7-57-46.jpg?itok=bddqAIFa",
+    "href": "https://www.zerohedge.com/energy/shale-drillers-need-miracle-keep-production-falling",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.874665"
+    "created": "2020-03-02T18:51:39.754287"
   }, {
-    "id": 603,
-    "headline": "Microsoft Slides After Cutting Personal Computing Guidance Due To Coronavirus; Intel Dragged Lower",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/msft%20down.jpg?h=49adb196&itok=R1xfqPPf",
-    "href": "https://www.zerohedge.com/markets/microsoft-slides-after-cutting-personal-computing-guidance-due-coronavirus-intel-dragged",
+    "id": 867,
+    "headline": "\"What Are The Odds?\" - A Timeline Of Facts Linking Covid-19, HIV, & Wuhan's Secret Bio-Lab",
+    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-03/2020-03-01_17-57-47.jpg?h=c0e47c27&itok=UiJmKcKj",
+    "href": "https://www.zerohedge.com/geopolitical/what-are-odds-timeline-facts-linking-covid-19-hiv-wuhans-secret-bio-lab",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.875469"
+    "created": "2020-03-02T18:51:39.754837"
   }, {
-    "id": 604,
-    "headline": "The End Of The Beginning Or The Beginning Of The End?",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/Reset-640x360.jpg?itok=uYKzq2IV",
-    "href": "https://www.zerohedge.com/geopolitical/end-beginning-or-beginning-end",
+    "id": 868,
+    "headline": "South Korea To Screen Passengers For Elevated Temperatures For All US Flights",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/temp%20check.jpg?h=843ad0fc&itok=UYKzSWak",
+    "href": "https://www.zerohedge.com/markets/south-korea-screen-passengers-elevated-temperatures-all-us-flights",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.876345"
+    "created": "2020-03-02T18:51:39.755422"
   }, {
-    "id": 605,
-    "headline": "Dip-Buyers Battered As Stocks, Bond Yields, & Oil Plunge Intraday",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_mobile_desktop_1x/public/2020-02/2020-02-26_11-07-12.jpg?itok=rlcemmv3",
-    "href": "https://www.zerohedge.com/markets/dip-buyers-battered-stocks-bond-yields-oil-plunge-intraday",
+    "id": 869,
+    "headline": "Platts: 4 Commodity Charts To Watch This Week",
+    "img": "/s3/files/styles/teaser_small/public/2020-03/20200302_M2_Dubai.jpg?h=75d9db0b&itok=kpzKl9Vr",
+    "href": "https://www.zerohedge.com/commodities/platts-4-commodity-charts-watch-week-1",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.877217"
+    "created": "2020-03-02T18:51:39.755962"
   }, {
-    "id": 606,
-    "headline": "Global Times Editor Trolls US - Says \"Many Doubt\" Virus Cases At 57",
-    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-02/troll%20china.png?h=5b53c15a&itok=pqmkFzXA",
-    "href": "https://www.zerohedge.com/markets/global-times-editor-trolls-us-says-many-doubt-virus-cases-are-57",
+    "id": 870,
+    "headline": "Kudlow, Mnuchin Favor Fed Rate Cut As Virus Fallout Response; Fiscal Stimulus \"Not Under Heavy Consideration\" In White House",
+    "img": "https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/styles/teaser_small/public/2020-03/kudlow%20mnuchin.jpg?itok=WSwvQqLH",
+    "href": "https://www.zerohedge.com/markets/kudlow-mnuchin-favor-fed-rate-cut-viral-fallout-response-fiscal-stimulus-not-under-heavy",
     "source": "ZEROHEDGE",
-    "created": "2020-02-26T20:59:17.877912"
+    "created": "2020-03-02T18:51:39.756488"
   }]
 }

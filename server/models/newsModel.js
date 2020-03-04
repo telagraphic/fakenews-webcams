@@ -3,31 +3,21 @@ const fs = require('fs');
 
 async function createFakeNews(news, source) {
 
-  if (news.length > 0) {
+  database.none("DELETE FROM stories WHERE source = $1", source);
 
-    news.forEach(story => {
-      story.source = source;
+  return database.task(function(t) {
+    var queries = [];
+    news.forEach(function(story) {
+      queries.push(t.none("INSERT INTO stories (headline, img, href, source) VALUES (${headline}, ${img}, ${href}, ${source})", story));
     });
-
-    database.none("DELETE FROM stories WHERE source = $1", source);
-
-    return database.task(function(t) {
-      var queries = [];
-      news.forEach(function(story) {
-        queries.push(t.none("INSERT INTO stories (headline, img, href, source) VALUES (${headline}, ${img}, ${href}, ${source})", story));
-      });
-      return t.batch(queries);
-    })
-    .then(function(data) {
-      console.log("SAVED: " + data.length + " " + source + " stories.");
-    })
-    .catch(function(error) {
-      console.log("FAILED: ", error);
-    });
-
-  } else {
-    console.log(`No ${source} News to Report...`);
-  }
+    return t.batch(queries);
+  })
+  .then(function(data) {
+    console.log("SAVED: " + data.length + " " + source + " stories.");
+  })
+  .catch(function(error) {
+    console.log("FAILED: ", error);
+  });
 
 }
 

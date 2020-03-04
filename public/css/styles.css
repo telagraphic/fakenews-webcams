@@ -2,6 +2,12 @@
   color: white;
 }
 
+:root body {
+  font-family: 'Inter';
+}
+
 :root h1 {
   color: black;
+  font-family: 'Inter';
+  font-weight: 500;
 }

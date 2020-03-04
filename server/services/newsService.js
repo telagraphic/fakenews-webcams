@@ -1,8 +1,19 @@
 const newsModel = require('../models/newsModel');
 const fs = require('fs');
 
-async function createFakeNews(stories, source) {
-  return newsModel.createFakeNews(stories, source);
+async function createFakeNews(news, newsSource) {
+
+  if (news.length > 0) {
+
+    news.forEach(story => {
+      story.source = newsSource;
+    });
+
+    return newsModel.createFakeNews(news, newsSource);
+
+  } else {
+    console.log(`No ${newsSource} News to Report...`);
+  }
 }
 
 
@@ -21,16 +32,25 @@ async function getFakeNews() {
         news[name] = obj[name];
       };
 
-      fs.writeFileSync('server/models/newsForClient.json', JSON.stringify(news));
+      // fs.writeFileSync('server/models/newsForClient.json', JSON.stringify(news));
 
-      const allNews = [...news.CNN, ...news.FOX, ...news.RT, ...news.BLOOMBERG, ...news.BREITBART, ...news.INFOWARS, ...news.NYTIMES, ...news.POLITICO, ...news.ZEROHEDGE];
+      const allNews = [];
+
+      for (const prop in news) {
+        if (news[prop]) {
+          allNews.push(...news[prop])
+        }
+      }
+
+      // fs.writeFileSync('server/models/newsForClient.json', JSON.stringify(allNews));
+      // const allNews = [...news.CNN, ...news.FOX, ...news.RT, ...news.BLOOMBERG, ...news.BREITBART, ...news.INFOWARS, ...news.NYTIMES, ...news.POLITICO, ...news.ZEROHEDGE];
 
       return {
         ALL: allNews,
         CNN: news.CNN,
         FOX: news.FOX,
         RT: news.RT,
-        BLOOMBERG: news.BLOOMBERG,
+        // BLOOMBERG: news.BLOOMBERG,
         BREITBART: news.BREITBART,
         INFOWARS: news.INFOWARS,
         NYTIMES: news.NYTIMES,
