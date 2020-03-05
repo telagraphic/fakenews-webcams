@@ -8,9 +8,10 @@
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "dev": "nodemon index.js",
     "production": "",
-    "public:scss": "node-sass --output-style compressed -o public/css public/scss",
-    "public:serve": "browser-sync start --server --files 'public/css/**/*.css, **/*.html'",
-    "public:watch": ""
+    "public:scss": "node-sass --output-style compressed -o public/css public/scss/styles.scss",
+    "public:watch:scss": "onchange 'public/scss' -- npm run public:scss",
+    "public:serve": "browser-sync start --server --ss 'public/pages' --files 'public/scss/**/*.scss, public/pages/*.html'",
+    "public:start": "run-p public:watch:scss public:serve"
   },
   "engines": {
     "node": "12.10.0"
