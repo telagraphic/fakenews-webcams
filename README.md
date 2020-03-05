@@ -7,7 +7,7 @@
 - [Heroku Node Best Practices](https://devcenter.heroku.com/articles/node-best-practices)
 - [PM2 on Heroku](https://pm2.keymetrics.io/docs/integrations/heroku/)
 - [Heroku Deploy](https://devcenter.heroku.com/articles/git)
-- [PUPPETEER ON HEROKU](heroku run chrome puppeteer headless)
+- [PUPPETEER ON HEROKU](#)
 
 # PUPPETEER
 - [Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)

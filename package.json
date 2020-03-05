@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "dev": "nodemon index.js",
-    "production": ""
+    "production": "",
+    "public:scss": "node-sass --output-style compressed -o public/css public/scss",
+    "public:serve": "browser-sync start --server --files 'public/css/**/*.css, **/*.html'",
+    "public:watch": ""
   },
   "engines": {
     "node": "12.10.0"
@@ -31,7 +34,11 @@
     "puppeteer": "^2.1.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.2"
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0"
   }
 }

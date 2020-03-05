@@ -1,0 +1,25 @@
+// <article class="news-page">
+//   <section class="news-page__news-section">
+//     <section class="news-page__news-feeds">
+//       <article id="cnn" class="news-page__news-feed news-feed">
+
+
+
+.news-page {
+
+  &__news-section {
+
+  }
+
+  &__news-feeds {
+    display: grid;
+
+    @media (min-width: 42rem) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__news-feed {
+
+  }
+}

@@ -1,0 +1,9 @@
+.news-page__news-feeds {
+  display: grid;
+}
+
+@media (min-width: 42rem) {
+  .news-page__news-feeds {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

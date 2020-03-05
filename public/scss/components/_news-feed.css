@@ -1,0 +1,8 @@
+.news-feed__hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.news-feed__stories-section {
+  list-style: none;
+}
