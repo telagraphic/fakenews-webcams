@@ -6,6 +6,7 @@
 
 
 .news-page {
+  width: 100vw;
 
   &__news-section {
 
@@ -13,6 +14,7 @@
 
   &__news-feeds {
     display: grid;
+    max-width: 100%;
 
     @media (min-width: 42rem) {
       grid-template-columns: repeat(3, 1fr);

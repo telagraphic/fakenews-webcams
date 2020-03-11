@@ -22,20 +22,33 @@
 //             </a>
 //           </li>
 
+@import '../config/variables';
 
 
 .news-feed {
 
-  &__header {}
+  &__header {
+    display: grid;
+    justify-content: center;
 
-  &__hero {
-    max-width: 100%;
-    height: auto;
+    background: $cnn;
+    color: white;
   }
 
-  &__headline {}
+  &__hero {
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__headline {
+    padding: 0 1.5%;
+  }
 
   &__stories-section {
+    padding: 0 1.5%;
     list-style: none;
   }
 

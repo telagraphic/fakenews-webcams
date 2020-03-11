@@ -1,9 +1,10 @@
-@import 'base/normalize.scss';
+@import 'base/normalize';
+@import 'base/defaults';
 
-@import 'globals/defaults.scss';
+@import 'globals/typography';
 
-@import 'components/news-page.scss';
-@import 'components/news-feed.scss';
+@import 'components/news-page';
+@import 'components/news-feed';
 
 // @import 'objects/';
 // @import 'utilities/';
