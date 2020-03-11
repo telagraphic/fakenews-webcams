@@ -1,4 +1,33 @@
 body {
+  font-size: 100%;
   font-family: 'Inter';
   font-weight: 500;
+}
+
+// font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+// font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+
+// MODULAR SCALE
+
+
+// MOBILE SCALE
+
+
+// DESKTOP SCALE
+
+
+// NEWS NAME
+h1 {
+  font-size: calc(1.3rem + 1vw);
+}
+
+// HEADLINE
+h2 {
+  font-size: calc(1.1rem + 1vw);
+}
+
+// STORY LINKS
+h3 {
+  font-size: calc(1rem + .5vw);
 }

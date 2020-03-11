@@ -1,3 +1,5 @@
+@import '../config/variables';
+
 // <article class="news-page">
 //   <section class="news-page__news-section">
 //     <section class="news-page__news-feeds">
@@ -22,10 +24,14 @@
 //             </a>
 //           </li>
 
-@import '../config/variables';
-
-
 .news-feed {
+  max-height: 90vh;
+  // overflow-y: scroll;
+
+  $news-feed-padding: 0 2%;
+
+
+
 
   &__header {
     display: grid;
@@ -40,16 +46,30 @@
     img {
       max-width: 100%;
       height: auto;
+
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 350px;
+      margin: 0 0 1rem 0;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
   &__headline {
-    padding: 0 1.5%;
+    padding: $news-feed-padding;
   }
 
   &__stories-section {
-    padding: 0 1.5%;
+    max-height: 100%;
+    padding: $news-feed-padding;
+
     list-style: none;
+
+    overflow-y: scroll;
   }
 
   &__stories-story {

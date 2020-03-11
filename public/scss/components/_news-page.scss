@@ -1,3 +1,5 @@
+@import '../config/variables';
+
 // <article class="news-page">
 //   <section class="news-page__news-section">
 //     <section class="news-page__news-feeds">
@@ -14,9 +16,11 @@
 
   &__news-feeds {
     display: grid;
+    grid-template-columns: 1fr;
+
     max-width: 100%;
 
-    @media (min-width: 42rem) {
+    @media (min-width: $desktop) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

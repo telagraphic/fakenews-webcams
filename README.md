@@ -32,3 +32,5 @@
 # CSS
 
 - [SASS Structure](https://css-irl.info/a-modern-front-end-workflow-part-3/)
+- [Modular Scale Tips](https://zellwk.com/blog/responsive-modular-scale/)
+- [Fluid Type Options](https://blog.logrocket.com/the-elements-of-responsive-typography/)

@@ -6,12 +6,12 @@ ul {
 }
 
 a {
-  color: $black;
+  color: $black-10;
   text-decoration: none;
 
   &:hover,
   &:focus {
     text-decoration: underline;
   }
-  
+
 }
