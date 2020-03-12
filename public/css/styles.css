@@ -329,21 +329,51 @@ h3 {
 
 .news-page {
   width: 100vw; }
+  .news-page__news-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "news-feeds" "news-video"; }
   .news-page__news-feeds {
+    grid-area: news-feeds;
     display: grid;
     grid-template-columns: 1fr;
     max-width: 100%; }
-    @media (min-width: 65rem) {
+    @media (min-width: 70rem) {
       .news-page__news-feeds {
         grid-template-columns: repeat(3, 1fr); } }
+  .news-page__news-video {
+    grid-area: news-video;
+    height: 100vh;
+    width: 100vw; }
+  .news-page__news-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%; }
+    @media (min-width: 70rem) {
+      .news-page__news-video-wrapper {
+        height: 100vh;
+        padding-bottom: 0; } }
+  .news-page__news-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .news-feed {
-  max-height: 90vh; }
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "hero" "headline" "stories";
+  max-height: auto;
+  height: auto; }
+  @media (min-width: 70rem) {
+    .news-feed {
+      height: 100vh; } }
   .news-feed__header {
     display: grid;
-    justify-content: center;
-    background: #cc0000;
-    color: white; }
+    justify-content: center; }
   .news-feed__hero img {
     max-width: 100%;
     height: auto;
@@ -351,17 +381,35 @@ h3 {
     position: relative;
     float: left;
     width: 100%;
-    height: 350px;
+    max-height: 250px;
+    padding-bottom: 56.25%;
     margin: 0 0 1rem 0;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover; }
+    @media (min-width: 70rem) {
+      .news-feed__hero img {
+        height: 350px; } }
   .news-feed__headline {
     padding: 0 2%; }
   .news-feed__stories-section {
     max-height: 100%;
     padding: 0 2%;
-    list-style: none;
-    overflow-y: scroll; }
+    list-style: none; }
+    @media (min-width: 70rem) {
+      .news-feed__stories-section {
+        overflow-y: scroll; } }
   .news-feed__stories-story a {
     text-decoration: none; }
+
+#cnn .news-feed__header {
+  background-color: #cc0000;
+  color: #FFFFFF; }
+
+#fox .news-feed__header {
+  background-color: rgba(0, 51, 102, 0.99);
+  color: #FFFFFF; }
+
+#rt .news-feed__header {
+  background-color: #76bd1d;
+  color: #000; }

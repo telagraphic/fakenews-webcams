@@ -1,0 +1,6 @@
+@mixin news-brand($background, $title) {
+  .news-feed__header {
+    background-color: $background;
+    color: $title;
+  }
+}

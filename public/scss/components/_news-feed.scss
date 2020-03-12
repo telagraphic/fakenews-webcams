@@ -1,4 +1,5 @@
 @import '../config/variables';
+@import '../config/mixins';
 
 // <article class="news-page">
 //   <section class="news-page__news-section">
@@ -25,23 +26,29 @@
 //           </li>
 
 .news-feed {
-  max-height: 90vh;
-  // overflow-y: scroll;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "hero" "headline" "stories";
+  max-height: auto;
+
+  height: auto;
+
+  @media (min-width: $desktop) {
+    height: 100vh;
+  }
 
   $news-feed-padding: 0 2%;
-
-
-
 
   &__header {
     display: grid;
     justify-content: center;
-
-    background: $cnn;
-    color: white;
   }
 
   &__hero {
+
+    @media (min-width: $desktop) {
+      // height: 100vh;
+    }
 
     img {
       max-width: 100%;
@@ -51,11 +58,17 @@
       position: relative;
       float: left;
       width: 100%;
-      height: 350px;
+      max-height: 250px;
+      padding-bottom: 56.25%;
       margin: 0 0 1rem 0;
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (min-width: $desktop) {
+        height: 350px;
+      }
+
     }
   }
 
@@ -69,7 +82,9 @@
 
     list-style: none;
 
-    overflow-y: scroll;
+    @media (min-width: $desktop) {
+      overflow-y: scroll;
+    }
   }
 
   &__stories-story {
@@ -78,4 +93,16 @@
       text-decoration: none;
     }
   }
+}
+
+#cnn {
+  @include news-brand($cnn, $white)
+}
+
+#fox {
+  @include news-brand($fox, $white)
+}
+
+#rt {
+  @include news-brand($rt, $black-0)
 }

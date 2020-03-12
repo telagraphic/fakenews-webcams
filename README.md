@@ -19,7 +19,6 @@
 
 
 # Build Scripts
-
 - [BrowserSync with Express](https://www.browsersync.io/docs/options/#option-proxy)
 - [CSS Tricks NPM Build Scripts](https://css-tricks.com/why-npm-scripts/)
 
@@ -30,7 +29,12 @@
 
 
 # CSS
-
 - [SASS Structure](https://css-irl.info/a-modern-front-end-workflow-part-3/)
+
+
+# Type
 - [Modular Scale Tips](https://zellwk.com/blog/responsive-modular-scale/)
 - [Fluid Type Options](https://blog.logrocket.com/the-elements-of-responsive-typography/)
+- [Type Stuff](https://8thlight.com/blog/billy-whited/2011/10/28/r-a-ela-tional-design.html#tips)
+- [Layout & Typeface](https://blog.typekit.com/2014/02/26/deriving-layout-from-your-typeface/)
+- [Music Scales and Type](https://24ways.org/2011/composing-the-new-canon)
