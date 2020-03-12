@@ -43,8 +43,12 @@
 
   &__news-section {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-areas: "news-feeds" "news-video";
+
+    @media (min-width: $desktop) {
+      grid-template-rows: 1fr 1fr;
+    }
   }
 
   &__news-feeds {
@@ -65,8 +69,12 @@
 
   &__news-video {
     grid-area: news-video;
-    height: 100vh;
+    
     width: 100vw;
+
+    @media (min-width: $desktop) {
+      height: 100vh;
+    }
   }
 
   &__news-video-wrapper {
