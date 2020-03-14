@@ -1,6 +1,18 @@
+@import 'variables';
+
 @mixin news-brand($background, $title) {
   .news-feed__header {
     background-color: $background;
     color: $title;
+  }
+}
+
+
+
+// 📱 RESPONSIVE MIXINS
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
   }
 }

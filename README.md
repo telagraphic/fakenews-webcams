@@ -26,9 +26,19 @@
 
 # News Ticker
 - [News Ticker](https://www.youtube.com/watch?v=3T4rD_P2nc8)
+- [Infinite Scroll Animation](https://css-tricks.com/infinite-all-css-scrolling-slideshow/)
+- [jQuery Plug-ins](https://ourcodeworld.com/articles/read/490/top-5-best-javascript-and-jquery-marquee-news-ticker-plugins)
+- [Dynamic Marquee](https://github.com/tjenkinson/dynamic-marquee)
+- [Mango Ticker](https://phppot.com/mango-ticker/)
+- [Telex](https://www.sjaakpriester.nl/software/telex)
+- [Marquee](https://github.com/egstad/marquee)
+- [Node-Marquee](https://github.com/antonbobrov/node-marquee)
+- [JS-Marquee](https://github.com/rogervila/jsmarquee)
+- [Marquee Generator - Old School](http://rumkin.com/tools/marquee/)
 
 
 # CSS
+- [SASS Documentation](https://sass-lang.com/documentation)
 - [SASS Structure](https://css-irl.info/a-modern-front-end-workflow-part-3/)
 
 
