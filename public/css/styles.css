@@ -430,8 +430,7 @@ h3 {
   .news-ticker__wrapper {
     display: flex;
     width: 100%;
-    list-style: none;
-    animation: news-ticker-scroll 100s linear infinite; }
+    list-style: none; }
   .news-ticker__story-wrapper {
     flex: 1 0 auto;
     max-width: 100%;
