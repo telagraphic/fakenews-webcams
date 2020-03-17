@@ -55,8 +55,8 @@
 <body>
   <header>
     <section id="news-ticker" class="news-ticker">
-      <ul class="news-ticker__wrapper">
-        <li class="news-ticker__story-wrapper">
+      <ul id="marquee" class="news-ticker__wrapper marquee">
+        <!-- <li class="news-ticker__story-wrapper">
           <a class="news-ticker__story-link" href="#">Appeals Court: Trump Can Withhold Funding from Sanctuary Cities</a>
         </li>
         <li class="news-ticker__story-wrapper">
@@ -79,7 +79,7 @@
         </li>
         <li class="news-ticker__story-wrapper">
           <a class="news-ticker__story-link" href="#">Kennedy Space Center to temporarily close visitor complex due to coronavirus</a>
-        </li>
+        </li> -->
       </ul>
     </section>
   </header>
@@ -757,7 +757,8 @@
 
   </footer>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/dynamic-marquee@1"></script>
 <script src="public/js/mango-ticker.js"></script>
+<script type="module" src="public/js/marquee.js"></script>
 <script src="public/js/scripts.js"></script>
 <html>
