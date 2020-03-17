@@ -1,10 +1,6 @@
-const Marquee = dynamicMarquee.Marquee;
-
 const marquee = new Marquee(document.getElementById('marquee'), {
   rate: -200,
 });
-
-// dynamicMarquee.loop(marquee, [() => 'item 1', () => 'item 2']);
 
 const $item = document.createElement('a');
 $item.textContent = 'testing123';
@@ -22,17 +18,6 @@ dynamicMarquee.loop(marquee, [
         return $separator;
       });
 
-
-
-
-// import Marquee from './marquee.js';
-
-// init with class
-// const marquee = new Marquee('.marquee')
-
-
-
-// startTicker('news-ticker', {speed:1, delay:0});
 //
 // const news = async () => {
 //   let response = await fetch('http://localhost:3000/api/fakenews');
