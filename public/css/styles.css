@@ -419,19 +419,28 @@ h3 {
   background-color: #76bd1d;
   color: #000; }
 
+.news-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0rem;
+  background-color: black;
+  color: white;
+  z-index: 100; }
+
 .news-ticker {
+  display: flex;
+  align-content: center;
   width: 100%;
-  padding: .5% 0;
-  height: 3rem;
-  overflow: hidden;
+  padding: 1% 0;
   font-family: 'Inter';
   font-size: 2rem;
   font-weight: 600; }
-  .news-ticker__wrapper {
-    display: flex;
-    width: 100%;
-    list-style: none;
-    text-transform: uppercase; }
+  @media (min-width: 70rem) {
+    .news-ticker {
+      width: 97%;
+      padding: .5% 0; } }
+  .news-ticker__container {
+    font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300))); }
   .news-ticker__story-wrapper {
     flex: 1 0 auto;
     max-width: 100%;

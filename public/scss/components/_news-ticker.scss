@@ -12,31 +12,41 @@
 //       </ul>
 //     </section>
 
+
+
+.news-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0rem;
+
+  background-color: black;
+  color: white;
+
+  z-index: 100;
+}
+
+
 .news-ticker {
-  // display: flex;
-  // align-content: center;
+  display: flex;
+  align-content: center;
 
   width: 100%;
-  padding: .5% 0;
 
-  height: 3rem;
-
-  overflow: hidden;
+  padding: 1% 0;
 
   font-family: 'Inter';
   font-size: 2rem;
   font-weight: 600;
 
+  @include desktop {
+    width: 97%;
+    padding: .5% 0;
+  }
 
 
-  &__wrapper {
-    display: flex;
 
-    width: 100%;
-
-    list-style: none;
-    text-transform: uppercase;
-
+  &__container {
+    @include font-size(26,20);
   }
 
 

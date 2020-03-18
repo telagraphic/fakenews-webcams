@@ -1,8 +1,17 @@
 import nodeMarquee from './node-marquee.js';
-nodeMarquee({
-    selector: '.news-ticker',
-    speed: 3
-});
+
+if (window.innerWidth > 800) {
+  nodeMarquee({
+      selector: '.news-ticker__container',
+      speed: 3
+  });
+} else {
+  nodeMarquee({
+      selector: '.news-ticker__container',
+      speed: 1.5
+  });
+}
+
 
 
 const news = async () => {

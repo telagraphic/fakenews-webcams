@@ -8,6 +8,11 @@
 }
 
 
+// font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+@mixin font-size($max, $min) {
+  font-size: calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - 300px) / (1600 - 300)))
+}
+
 
 // 📱 RESPONSIVE MIXINS
 

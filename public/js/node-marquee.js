@@ -112,7 +112,7 @@ function nodeMarquee(prop = {}) {
         }
         if (absolute) {
             el.style.position = 'absolute';
-            el.style.top = '9px';
+            el.style.top = '0';
             el.style.left = '0';
         }
         el.style.display = 'inline-block';
