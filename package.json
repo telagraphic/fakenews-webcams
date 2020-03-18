@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2-runtime start ecosystem.config.js --env production",
-    "dev": "nodemon index.js",
-    "production": "",
+    "server": "nodemon index.js",
+    "server:start": "run-p server public:watch:scss",
     "public:scss": "node-sass --output-style nested -o public/css public/scss/styles.scss",
     "public:watch:scss": "onchange 'public/scss' -- npm run public:scss",
-    "public:serve": "browser-sync start --server --ss 'public/pages' --files 'public/scss/**/*.scss, public/pages/*.html'",
+    "public:serve": "browser-sync start --server --ss 'public/pages' --files 'public/scss/**/*.scss, public/pages/*.html, public/js/*.js'",
     "public:start": "run-p public:watch:scss public:serve"
   },
   "engines": {
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/telagraphic/fakenews-webcams#readme",
   "dependencies": {
+    "@egstad/marquee": "^2.5.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "pg-promise": "^10.4.4",

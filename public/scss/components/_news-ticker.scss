@@ -1,0 +1,77 @@
+@import '../config/variables';
+@import '../config/mixins';
+
+// <body>
+//   <header>
+//     <section class="news-ticker">
+//       <ul class="news-ticker__wrapper">
+//         <li class="news-ticker__story-wrapper">
+//           <a class="news-ticker__story-link" href="#">News Story #1</a>
+//         </li>
+//         ...
+//       </ul>
+//     </section>
+
+.news-ticker {
+  // display: flex;
+  // align-content: center;
+
+  width: 100%;
+  padding: .5% 0;
+
+  height: 3rem;
+
+  overflow: hidden;
+
+  font-family: 'Inter';
+  font-size: 2rem;
+  font-weight: 600;
+
+
+
+  &__wrapper {
+    display: flex;
+
+    width: 100%;
+
+    list-style: none;
+    text-transform: uppercase;
+
+  }
+
+
+  &__story-wrapper {
+    flex: 1 0 auto;
+
+    max-width: 100%;
+    padding: 0 5rem;
+
+  }
+
+  &__story-link {
+
+    width: 100%;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+}
+
+
+@keyframes news-ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -10,7 +10,7 @@
 
   <title>Fakenews Webcams</title>
 
-  <!-- <link rel="preload" href="public/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="public/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="public/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="public/css/styles.css">
@@ -29,8 +29,9 @@
       font-display: swap;
       font-weight: 600;
     }
-  </style> -->
-  <link rel="preload" href="Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  </style>
+
+  <!-- <link rel="preload" href="Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="styles.css">
@@ -49,12 +50,50 @@
       font-display: swap;
       font-weight: 600;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
   <header>
-    <h1>Fakenews Webcams</h1>
+    <ul class="news-ticker">
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <!-- <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Appeals Court: Trump Can Withhold Funding from Sanctuary Cities</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Coronavirus pandemic spreads around the globe</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Kennedy Space Center to temporarily close visitor complex due to coronavirus</a>
+      </li> -->
+
+      <!-- <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Coronavirus pandemic spreads around the globe</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Trump: "We're using the full power of the federal government to defeat the virus"</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Kennedy Space Center to temporarily close visitor complex due to coronavirus</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Appeals Court: Trump Can Withhold Funding from Sanctuary Cities</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Coronavirus pandemic spreads around the globe</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Trump: "We're using the full power of the federal government to defeat the virus"</a>
+      </li>
+      <li class="news-ticker__story-wrapper">
+        <a class="news-ticker__story-link" href="#">Kennedy Space Center to temporarily close visitor complex due to coronavirus</a>
+      </li> -->
+    </ul>
   </header>
   <main>
     <article class="news-page">
@@ -731,5 +770,7 @@
   </footer>
 </body>
 
-<script src="scripts.js"></script>
+<script type="module" src="public/js/element.js"></script>
+<script type="module" src="public/js/node-marquee.js"></script>
+<script type="module" src="public/js/scripts.js"></script>
 <html>
