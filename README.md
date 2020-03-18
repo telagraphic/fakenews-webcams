@@ -13,16 +13,12 @@
 - [Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)
 - [Puppeteer Heroku Buildpack](https://github.com/jontewks/puppeteer-heroku-buildpack)
 
-
 # Node
 - [Node Architecture](https://dev.to/santypk4/bulletproof-node-js-project-architecture-4epf#cron)
-
 
 # Build Scripts
 - [BrowserSync with Express](https://www.browsersync.io/docs/options/#option-proxy)
 - [CSS Tricks NPM Build Scripts](https://css-tricks.com/why-npm-scripts/)
-
-
 
 # News Ticker
 - [News Ticker](https://www.youtube.com/watch?v=3T4rD_P2nc8)
@@ -37,13 +33,11 @@
 - [Marquee Generator - Old School](http://rumkin.com/tools/marquee/)
 - [How To Use Modules](https://medium.com/@mattlag/es6-modules-getting-started-gotchas-2ad154f38e2e)
 
-
 # CSS
 - [SASS Documentation](https://sass-lang.com/documentation)
 - [SASS Structure](https://css-irl.info/a-modern-front-end-workflow-part-3/)
 
-
-# Type
+# Typography
 - [Modular Scale Tips](https://zellwk.com/blog/responsive-modular-scale/)
 - [Fluid Type Options](https://blog.logrocket.com/the-elements-of-responsive-typography/)
 - [Type Stuff](https://8thlight.com/blog/billy-whited/2011/10/28/r-a-ela-tional-design.html#tips)

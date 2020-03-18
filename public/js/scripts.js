@@ -1,52 +1,57 @@
-const marquee = new Marquee(document.getElementById('marquee'), {
-  rate: -200,
+import nodeMarquee from './node-marquee.js';
+nodeMarquee({
+    selector: '.news-ticker',
+    speed: 3
 });
 
-const $item = document.createElement('a');
-$item.textContent = 'testing123';
-marquee.appendItem($item);
+
+const news = async () => {
+  let response = await fetch('http://localhost:3000/api/fakenews');
+  let data = await response.json();
+  return data;
+}
+
+news()
+  .then(data => {
+    // console.log(data.news.ALL);
+    renderNewsPage(data.news);
+    renderNewsTicker(data.news.ALL);
+  })
+  .catch(error => {
+    new Error(error);
+  });
 
 
-dynamicMarquee.loop(marquee, [
-        function() { return ''; },
-        function() { return 'It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old'; },
-        function() { return 'Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source'; },
-        function() { return 'RLorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC'; }
-      ], function() {
-        var $separator = document.createElement('div');
-        $separator.innerHTML = '&nbsp|&nbsp';
-        return $separator;
-      });
+function renderNewsPage(news) {
 
+  for (const prop in news) {
+    if (prop !== 'ALL') {
+      // console.log(news[prop]);
+    }
+  }
+}
+
+const newsTickerStories = [];
+
+function renderNewsTicker(news) {
+  news.forEach(story => {
+    // newsTickerStories.push(story.headline);
+
+    let newsStory = document.createElement('div');
+    newsStory.textContent = story.headline;
+    marquee.appendItem(newsStory);
+  })
+}
+
+// const newsTicker = document.getElementById('news-ticker');
+// const marquee = new dynamicMarquee.Marquee(newsTicker, { rate: -200 });
 //
-// const news = async () => {
-//   let response = await fetch('http://localhost:3000/api/fakenews');
-//   let data = await response.json();
-//   return data;
-// }
-//
-//
-//
-// news()
-//   .then(data => {
-//     renderNewsPage(data.news);
-//   })
-//   .catch(error => {
-//     new Error(error);
-//   });
-//
-//
-// function renderNewsPage(news) {
-//
-//   for (const prop in news) {
-//     if (prop !== 'ALL') {
-//       console.log(news[prop]);
-//     }
-//   }
-//
-// }
-//
-//
-// function renderNewsTicker() {
-//
-// }
+// dynamicMarquee.loop(marquee, [], function() {
+//   var $separator = document.createElement('div');
+//   $separator.innerHTML = '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+//   return $separator;
+// });
+
+// const $item = document.createElement('div');
+// $item.textContent = 'Appeals Court: Trump Can Withhold Funding from Sanctuary Cities';
+// marquee.appendItem($item);

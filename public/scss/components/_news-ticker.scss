@@ -13,6 +13,8 @@
 //     </section>
 
 .news-ticker {
+  // display: flex;
+  // align-content: center;
 
   width: 100%;
   padding: .5% 0;
@@ -31,11 +33,9 @@
     display: flex;
 
     width: 100%;
-    // overflow: hidden;
 
     list-style: none;
-
-    // animation: news-ticker-scroll 100s linear infinite;
+    text-transform: uppercase;
 
   }
 
@@ -44,16 +44,7 @@
     flex: 1 0 auto;
 
     max-width: 100%;
-    padding: 0 1rem;
-
-    // overflow: hidden;
-
-    //
-    // animation-name: news-ticker-scroll;
-    // animation-duration: 60s;
-    // animation-iteration-count: infinite;
-    // animation-timing-function: linear;
-
+    padding: 0 5rem;
 
   }
 
