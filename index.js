@@ -26,6 +26,10 @@ app.get('/', async (req, res) => {
   res.render('index');
 });
 
+app.get('/tv', async (req, res) => {
+  res.render('tv');
+});
+
 
 
 
