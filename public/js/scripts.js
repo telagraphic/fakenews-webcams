@@ -13,6 +13,21 @@ if (window.innerWidth > 800) {
 }
 
 
+if (window.innerWidth > 800) {
+  nodeMarquee({
+      selector: '.tv-header__news-ticker-container',
+      speed: 3
+  });
+} else {
+  nodeMarquee({
+      selector: '.tv-header__news-ticker-container',
+      speed: 1.5
+  });
+}
+
+
+
+
 
 const news = async () => {
   let response = await fetch('http://localhost:3000/api/fakenews');

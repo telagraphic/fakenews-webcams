@@ -1,17 +1,17 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-// <body>
-//   <header>
-//     <section class="news-ticker">
-//       <ul class="news-ticker__wrapper">
-//         <li class="news-ticker__story-wrapper">
-//           <a class="news-ticker__story-link" href="#">News Story #1</a>
-//         </li>
-//         ...
-//       </ul>
-//     </section>
-
+// <header class="news-header">
+//   <section class="news-ticker">
+//     <ul class="news-ticker__container">
+//       <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe -->
+//       <li class="news-ticker__story-wrapper">
+//         <a class="news-ticker__story-link" href="#">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</a>
+//       </li>
+//       ...
+//     </ul>
+//   </section>
+// </header>
 
 
 .news-header {
@@ -43,35 +43,8 @@
     padding: .5% 0;
   }
 
-
-
   &__container {
     @include font-size(26,20);
-  }
-
-
-  &__story-wrapper {
-    flex: 1 0 auto;
-
-    max-width: 100%;
-    padding: 0 5rem;
-
-  }
-
-  &__story-link {
-
-    width: 100%;
-
     text-transform: uppercase;
-    white-space: nowrap;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-
-    @include desktop {
-      width: 100%;
-    }
   }
 }
