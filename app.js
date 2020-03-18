@@ -8,6 +8,7 @@ const path = require('path');
 
 app.use('/api', routes);
 
+app.use(express.static('public'));
 app.use(express.static('public/pages'));
 app.use(express.static('public/css'));
 app.use(express.static('public/js'));
@@ -26,7 +27,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/tv', async (req, res) => {
-  res.sendFile('public/pages/tv.html');
+  res.sendFile('tv.html', {root : __dirname + '/public/pages'});
 });
 
 

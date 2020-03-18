@@ -437,7 +437,6 @@ h3 {
   font-weight: 600; }
   @media (min-width: 70rem) {
     .news-ticker {
-      width: 97%;
       padding: .5% 0; } }
   .news-ticker__container {
     font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
@@ -458,7 +457,6 @@ h3 {
     font-weight: 600; }
     @media (min-width: 70rem) {
       .tv-header__news-ticker {
-        width: 97%;
         padding: .15% 0; } }
   .tv-header__news-ticker-container {
     font-size: calc(20px + (34 - 20) * ((100vw - 300px) / (1600 - 300)));
