@@ -2,31 +2,18 @@ import nodeMarquee from './node-marquee.js';
 
 if (window.innerWidth > 800) {
   nodeMarquee({
-      selector: '.news-ticker__container',
+      selector: '.ticker__feed',
       speed: 3
   });
 } else {
   nodeMarquee({
-      selector: '.news-ticker__container',
+      selector: '.ticker__feed',
       speed: 1.5
   });
 }
 
 
-if (window.innerWidth > 800) {
-  nodeMarquee({
-      selector: '.tv-header__news-ticker-container',
-      speed: 3
-  });
-} else {
-  nodeMarquee({
-      selector: '.tv-header__news-ticker-container',
-      speed: 1.5
-  });
-}
-
-
-
+const newsTickerFeed = document.querySelector('.news-ticker__container');
 
 
 const news = async () => {

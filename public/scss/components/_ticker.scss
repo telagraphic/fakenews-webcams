@@ -1,0 +1,33 @@
+@import '../config/variables';
+@import '../config/mixins';
+
+// <body class="page">
+//   <header class="page__header">
+//     <article class="news-ticker">
+//       <section class="news-ticker__feed">
+//         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe
+//       </section>
+//     </article>
+//   </header>
+
+
+.ticker {
+  display: flex;
+  align-content: center;
+
+  width: 100%;
+  padding: 1% 0;
+
+  font-family: 'Inter';
+  font-size: 2rem;
+  font-weight: 600;
+
+  @include desktop {
+    padding: .5% 0;
+  }
+
+  &__feed {
+    @include font-size(26,20);
+    text-transform: uppercase;
+  }
+}

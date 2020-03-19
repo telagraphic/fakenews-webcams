@@ -10,27 +10,6 @@
 
   <title>Fakenews Webcams</title>
 
-  <!-- <link rel="preload" href="public/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="public/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
-
-  <link rel="stylesheet" href="public/css/styles.css">
-
-  <style>
-    @font-face {
-      font-family: "Inter";
-      src: url('public/fonts/Inter-Regular.woff2') format('woff2'), url('public/fonts/Inter-Regular.woff') format('woff');
-      font-display: swap;
-      font-weight: 500;
-    }
-
-    @font-face {
-      font-family: "Inter";
-      src: url('public/fonts/Inter-Medium.woff2') format('woff2'), url('public/fonts/Inter-Medium.woff') format('woff');
-      font-display: swap;
-      font-weight: 600;
-    }
-  </style> -->
-
   <link rel="preload" href="Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -53,37 +32,21 @@
   </style>
 </head>
 
-<body class="tv-page">
-  <header class="news-header">
-    <section class="news-ticker">
-      <ul class="news-ticker__container">
-        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe -->
-        <li class="news-ticker__story-wrapper">
-          <a class="news-ticker__story-link" href="#">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</a>
-        </li>
-        <li class="news-ticker__story-wrapper">
-          <a class="news-ticker__story-link" href="#">Kennedy Space Center to temporarily close visitor complex due to coronavirus</a>
-        </li>
-        <li class="news-ticker__story-wrapper">
-          <a class="news-ticker__story-link" href="#">Appeals Court: Trump Can Withhold Funding from Sanctuary Cities</a>
-        </li>
-        <li class="news-ticker__story-wrapper">
-          <a class="news-ticker__story-link" href="#">Coronavirus pandemic spreads around the globe</a>
-        </li>
-      </ul>
-    </section>
+<body class="page">
+  <header class="page__header">
+    <article class="ticker">
+      <section class="ticker__feed">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe
+      </section>
+    </article>
   </header>
-  <main>
-    <section class="tv-page__news-video">
-      <section class="tv-page__news-video-wrapper">
-        <iframe class="tv-page__news-video-iframe" src="https://www.youtube-nocookie.com/embed/Gm3bQVANtVo?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
-          allowfullscreen></iframe>
+  <main class="page__main" data-barba="barba tag goes here">
+    <section class="tv">
+      <section class="tv__video-wrapper">
+        <iframe class="tv__video-iframe" src="https://www.youtube-nocookie.com/embed/Gm3bQVANtVo?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
       </section>
     </section>
   </main>
-  <footer>
-
-  </footer>
 </body>
 
 <script type="module" src="element.js"></script>

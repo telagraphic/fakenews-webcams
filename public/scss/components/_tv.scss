@@ -22,55 +22,50 @@
 // </main>
 
 
-.tv-header {
-  position: fixed;
-  // position: -webkit-sticky;
-  // top: 0rem;
+// .tv-header {
+//   position: fixed;
+//   // position: -webkit-sticky;
+//   // top: 0rem;
+//
+//   background-color: black;
+//   color: white;
+//
+//   z-index: 100;
+//
+//
+//   &__news-ticker {
+//     display: flex;
+//     align-content: center;
+//
+//     width: 100%;
+//
+//     padding: .1% 0;
+//
+//     font-family: 'Inter';
+//     font-size: 2rem;
+//     font-weight: 600;
+//
+//     @include desktop {
+//       padding: .15% 0;
+//     }
+//
+//   }
+//
+//   &__news-ticker-container {
+//     @include font-size(34,20);
+//     text-transform: uppercase;
+//   }
+//
+// }
 
-  background-color: black;
-  color: white;
+.tv {
+  width: 100vw;
 
-  z-index: 100;
-
-
-  &__news-ticker {
-    display: flex;
-    align-content: center;
-
-    width: 100%;
-
-    padding: .1% 0;
-
-    font-family: 'Inter';
-    font-size: 2rem;
-    font-weight: 600;
-
-    @include desktop {
-      padding: .15% 0;
-    }
-
+  @media (min-width: $desktop) {
+    height: 100vh;
   }
 
-  &__news-ticker-container {
-    @include font-size(34,20);
-    text-transform: uppercase;
-  }
-
-}
-
-
-
-.tv-page {
-
-  &__news-video {
-    width: 100vw;
-
-    @media (min-width: $desktop) {
-      height: 100vh;
-    }
-  }
-
-  &__news-video-wrapper {
+  &__video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -84,7 +79,7 @@
     }
   }
 
-  &__news-video-iframe {
+  &__video-iframe {
     position: absolute;
     top: 0;
     left: 0;

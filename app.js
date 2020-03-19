@@ -22,8 +22,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
-  let news = await newsService.getFakeNews();
-  res.render('index');
+  res.sendFile('reader.html', {root : __dirname + '/public/pages'});
 });
 
 app.get('/tv', async (req, res) => {
