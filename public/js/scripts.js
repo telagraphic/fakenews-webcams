@@ -1,16 +1,5 @@
 import nodeMarquee from './node-marquee.js';
 
-if (window.innerWidth > 800) {
-  nodeMarquee({
-      selector: '.ticker__feed',
-      speed: 3
-  });
-} else {
-  nodeMarquee({
-      selector: '.ticker__feed',
-      speed: 1.5
-  });
-}
 
 
 const newsTickerFeed = document.querySelector('.news-ticker__container');
@@ -24,7 +13,6 @@ const news = async () => {
 
 news()
   .then(data => {
-    // console.log(data.news.ALL);
     renderNewsPage(data.news);
     renderNewsTicker(data.news.ALL);
   })
@@ -42,27 +30,26 @@ function renderNewsPage(news) {
   }
 }
 
-const newsTickerStories = [];
-
 function renderNewsTicker(news) {
-  news.forEach(story => {
-    // newsTickerStories.push(story.headline);
+  const newsTickerStories = '';
+  const newsTickerElement = document.querySelector('.ticker__feed');
 
-    let newsStory = document.createElement('div');
-    newsStory.textContent = story.headline;
-    marquee.appendItem(newsStory);
-  })
+  let headlines = news.map(story => story.headline).join("\xa0\xa0\xa0\xa0\xa0");
+  newsTickerElement.innerText = headlines;
+
+  startNewsTicker();
 }
 
-// const newsTicker = document.getElementById('news-ticker');
-// const marquee = new dynamicMarquee.Marquee(newsTicker, { rate: -200 });
-//
-// dynamicMarquee.loop(marquee, [], function() {
-//   var $separator = document.createElement('div');
-//   $separator.innerHTML = '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
-//   return $separator;
-// });
-
-// const $item = document.createElement('div');
-// $item.textContent = 'Appeals Court: Trump Can Withhold Funding from Sanctuary Cities';
-// marquee.appendItem($item);
+function startNewsTicker() {
+  if (window.innerWidth > 800) {
+    nodeMarquee({
+        selector: '.ticker__feed',
+        speed: 3
+    });
+  } else {
+    nodeMarquee({
+        selector: '.ticker__feed',
+        speed: 1.5
+    });
+  }
+}
