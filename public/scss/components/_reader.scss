@@ -45,7 +45,7 @@
 
 
 .reader-section {
-  
+
 }
 
 
@@ -187,7 +187,7 @@
 }
 
 #cnn {
-  @include news-brand($cnn, $white)
+  @include news-brand($cnn, $white);
 }
 
 #fox {
@@ -196,4 +196,157 @@
 
 #rt {
   @include news-brand($rt, $black-0)
+}
+
+
+.reader {
+
+  &__news-section {
+    width: 100vw;
+  }
+
+  &__news-container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "news-feeds" "news-video";
+
+    @media (min-width: $desktop) {
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  &__news-row {
+    grid-area: news-feeds;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    max-width: 100%;
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__news-column {
+
+  }
+
+  &__tv-row {
+    grid-area: news-video;
+
+    width: 100vw;
+
+    @media (min-width: $desktop) {
+      height: 100vh;
+    }
+  }
+
+}
+
+
+.newspaper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "hero" "headline" "stories";
+  max-height: auto;
+
+  height: auto;
+
+  @media (min-width: $desktop) {
+    height: 100vh;
+  }
+
+  $news-feed-padding: 0 2%;
+
+  &__header {
+    display: grid;
+    justify-content: center;
+  }
+  &__header-title {}
+
+
+  &__hero {}
+  &__hero-image {
+    display: block;
+    position: relative;
+    float: left;
+
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+
+    padding-bottom: 0;
+    margin: 0 0 1rem 0;
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $desktop) {
+      height: 350px;
+      margin: 0 0 1rem 0;
+      // padding-bottom: 56.25%;
+    }
+  }
+
+
+  &__headline {
+    padding: $news-feed-padding;
+  }
+  &__headline-link {}
+  &__headline-link-header {}
+
+
+  &__stories {
+    max-height: 100%;
+    padding: $news-feed-padding;
+
+    list-style: none;
+
+    @media (min-width: $desktop) {
+      overflow-y: scroll;
+    }
+  }
+
+
+  &__story {
+
+  }
+  &__story-link {
+    text-decoration: none;
+  }
+  &__story-link-text {}
+
+}
+
+
+.tv {
+  // grid-area: news-video;
+  //
+  // width: 100vw;
+  //
+  // @media (min-width: $desktop) {
+  //   height: 100vh;
+  // }
+
+  &__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+
+    @media (min-width: $desktop) {
+      height: 100vh;
+      padding-bottom: 0;
+    }
+  }
+
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

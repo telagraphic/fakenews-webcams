@@ -1,7 +1,7 @@
 @import 'variables';
 
 @mixin news-brand($background, $title) {
-  .news-feed__header {
+  .newspaper__header {
     background-color: $background;
     color: $title;
   }
