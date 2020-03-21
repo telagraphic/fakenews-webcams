@@ -5,6 +5,7 @@ const app = express();
 const routes = require('./server/api/routes');
 const newsService = require('./server/services/newsService');
 const path = require('path');
+const exphbs = require('express-handlebars');
 
 app.use('/api', routes);
 
@@ -15,38 +16,40 @@ app.use(express.static('public/js'));
 app.use(express.static('public/fonts'));
 app.use(express.static('public/img'));
 
-// app.set('views', __dirname + '/public/pages');
-app.set('view engine', 'html');
+
+// app.use(express.static(__dirname + '/public'));
+const hbs = exphbs.create({
+  partialsDir: ["public/views/partials"],
+  extname: ".hbs",
+  layoutsDir: path.join(__dirname, "public/views/layouts"),
+  defaultLayout: path.join(__dirname, "public/views/layouts/main"),
+  helpers: {
+    toJSON: function(data) {
+      return JSON.stringify(data);
+    },
+    formatNumber: function(number) {
+      return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    }
+  }
+});
+
+app.set("view engine", "hbs");
+app.set('views', path.join(__dirname, "/public/views/pages"));
+app.engine( "hbs", hbs.engine);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
-  res.sendFile('reader.html', {root : __dirname + '/public/pages'});
+  const news = await newsService.getFakeNews();
+  res.render('reader', {ticker: news.ALL, CNN: news.CNN, FOX: news.FOX, RT: news.RT});
 });
 
 app.get('/tv', async (req, res) => {
-  res.sendFile('tv.html', {root : __dirname + '/public/pages'});
+  const news = await newsService.getFakeNews();
+  res.render('tv', {ticker: news.ALL});
 });
-
-
-// const expressHandlebars = require("express-handlebars");
-// app.use(express.static(__dirname + '/public'));
-// const hbs = expressHandlebars.create({
-//   partialsDir: ["public/views/partials"],
-//   extname: ".hbs",
-//   layoutsDir: path.join(__dirname, "public/views/layouts"),
-//   defaultLayout: path.join(__dirname, "public/views/layouts/main"),
-//   helpers: {
-//     formatDate: function(date) {
-//       return dayjs(date).format('MM/DD/YYYY [@]h:mmA')
-//     },
-//     formatNumber: function(number) {
-//       return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-//     }
-//   }
-// });
 //
-// app.set("view engine", "hbs");
-// app.set('views', path.join(__dirname, "/public/views/pages"));
-// app.engine( "hbs", hbs.engine);
+// app.get('/tv', async (req, res) => {
+//   res.sendFile('tv.html', {root : __dirname + '/public/pages'});
+// });
