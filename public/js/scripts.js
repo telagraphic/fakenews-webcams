@@ -4,9 +4,9 @@ import nodeMarquee from './node-marquee.js';
 
 const newsTickerFeed = document.querySelector('.news-ticker__container');
 
-
 const news = async () => {
-  let response = await fetch('http://localhost:3000/api/fakenews');
+  // let response = await fetch('http://localhost:3000/api/fakenews');
+  let response = await fetch('http://fakenewswebcams.com/api/fakenews');
   let data = await response.json();
   return data;
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2-runtime start ecosystem.config.js --env production",
-    "server": "nodemon app.js",
+    "server": "nodemon server.js",
     "server:start": "run-p server public:watch:scss",
     "public:scss": "node-sass --output-style nested -o public/css public/scss/styles.scss",
     "public:watch:scss": "onchange 'public/scss' -- npm run public:scss",

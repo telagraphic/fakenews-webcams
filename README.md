@@ -8,6 +8,8 @@
 - [PM2 on Heroku](https://pm2.keymetrics.io/docs/integrations/heroku/)
 - [Heroku Deploy](https://devcenter.heroku.com/articles/git)
 - [PUPPETEER ON HEROKU](#)
+- [Heroku Erro Codes](https://dev.to/lawrenceagles/causes-of-heroku-h10-app-crashed-error-and-how-to-solve-them-3jnl)
+
 
 # Puppeteer
 - [Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)
