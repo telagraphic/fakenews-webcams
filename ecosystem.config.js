@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: 'fakenews-webcams-app',
-    script: './index.js',
+    script: './server.js',
     env: {
       NODE_ENV: 'development'
     },
