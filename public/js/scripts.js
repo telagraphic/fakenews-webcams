@@ -1,12 +1,20 @@
 import nodeMarquee from './node-marquee.js';
 
-
-
-const newsTickerFeed = document.querySelector('.news-ticker__container');
+if (window.innerWidth > 800) {
+  nodeMarquee({
+      selector: '.ticker__feed',
+      speed: 3
+  });
+} else {
+  nodeMarquee({
+      selector: '.ticker__feed',
+      speed: 1.5
+  });
+}
 
 const news = async () => {
-  // let response = await fetch('http://localhost:3000/api/fakenews');
-  let response = await fetch('http://fakenewswebcams.com/api/fakenews');
+  let response = await fetch('http://localhost:3000/api/fakenews');
+  // let response = await fetch('http://fakenewswebcams.com/api/fakenews');
   let data = await response.json();
   return data;
 }
@@ -41,15 +49,7 @@ function renderNewsTicker(news) {
 }
 
 function startNewsTicker() {
-  if (window.innerWidth > 800) {
-    nodeMarquee({
-        selector: '.ticker__feed',
-        speed: 3
-    });
-  } else {
-    nodeMarquee({
-        selector: '.ticker__feed',
-        speed: 1.5
-    });
-  }
+
 }
+
+startNewsTicker();
