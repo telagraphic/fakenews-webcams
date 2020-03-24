@@ -8,22 +8,12 @@ const news = async () => {
 
 news()
   .then(data => {
-    renderNewsPage(data.news);
     renderNewsTicker(data.news.ZEROHEDGE);
   })
   .catch(error => {
     new Error(error);
   });
 
-
-function renderNewsPage(news) {
-
-  for (const prop in news) {
-    if (prop !== 'ALL') {
-      // console.log(news[prop]);
-    }
-  }
-}
 
 function renderNewsTicker(news) {
   const newsTickerStories = '';
@@ -32,8 +22,6 @@ function renderNewsTicker(news) {
   let headlines = news.map(story => story.headline).join("\xa0\xa0\xa0\xa0\xa0");
   newsTickerElement.innerText = headlines;
 }
-
-
 
 if (window.innerWidth > 800) {
   nodeMarquee({
