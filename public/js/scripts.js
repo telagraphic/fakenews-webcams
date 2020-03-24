@@ -1,4 +1,14 @@
 import nodeMarquee from './node-marquee.js';
+// import barba from './barba-core.js';
+
+barba.init({
+  transitions: [{
+    leave({ current, next, trigger }) {
+    },
+    enter({ current, next, trigger }) {
+    }
+  }]
+});
 
 if (window.innerWidth > 800) {
   nodeMarquee({
