@@ -42,8 +42,7 @@ async function getFakeNews() {
         }
       }
 
-      // fs.writeFileSync('server/models/newsForClient.json', JSON.stringify(allNews));
-      // const allNews = [...news.CNN, ...news.FOX, ...news.RT, ...news.BLOOMBERG, ...news.BREITBART, ...news.INFOWARS, ...news.NYTIMES, ...news.POLITICO, ...news.ZEROHEDGE];
+      console.log(allNews);
 
       return {
         ALL: allNews,
