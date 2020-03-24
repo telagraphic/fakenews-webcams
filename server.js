@@ -42,7 +42,7 @@ app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
   const news = await newsService.getFakeNews();
-  res.render('reader', {ticker: news.ALL, CNN: news.CNN, FOX: news.FOX, RT: news.RT});
+  res.render('reader', {ticker: news.ZEROHEDGE, CNN: news.CNN, FOX: news.FOX, RT: news.RT});
 });
 
 app.get('/tv', async (req, res) => {
