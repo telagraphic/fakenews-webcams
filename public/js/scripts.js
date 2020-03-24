@@ -15,22 +15,22 @@ news()
   });
 
 
-// function renderNewsTicker(news) {
-//   const newsTickerStories = '';
-//   const newsTickerElement = document.querySelector('.ticker__feed');
-//
-//   let headlines = news.map(story => story.headline).join("\xa0\xa0\xa0\xa0\xa0");
-//   newsTickerElement.innerText = headlines;
-// }
-//
-// if (window.innerWidth > 800) {
-//   nodeMarquee({
-//       selector: '.ticker__feed',
-//       speed: 3
-//   });
-// } else {
-//   nodeMarquee({
-//       selector: '.ticker__feed',
-//       speed: 1.5
-//   });
-// }
+function renderNewsTicker(news) {
+  const newsTickerStories = '';
+  const newsTickerElement = document.querySelector('.ticker__feed');
+
+  let headlines = news.map(story => story.headline).join("\xa0\xa0\xa0\xa0\xa0");
+  newsTickerElement.innerText = headlines;
+}
+
+if (window.innerWidth > 800) {
+  nodeMarquee({
+      selector: '.ticker__feed',
+      speed: 3
+  });
+} else {
+  nodeMarquee({
+      selector: '.ticker__feed',
+      speed: 1.5
+  });
+}
