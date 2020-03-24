@@ -16,8 +16,6 @@ app.use(express.static('public/js'));
 app.use(express.static('public/fonts'));
 app.use(express.static('public/img'));
 
-
-// app.use(express.static(__dirname + '/public'));
 const hbs = exphbs.create({
   partialsDir: ["public/views/partials"],
   extname: ".hbs",
@@ -47,9 +45,5 @@ app.get('/', async (req, res) => {
 
 app.get('/tv', async (req, res) => {
   const news = await newsService.getFakeNews();
-  res.render('tv', {ticker: news.ALL});
+  res.render('tv', {ticker: news.ZEROHEDGE});
 });
-//
-// app.get('/tv', async (req, res) => {
-//   res.sendFile('tv.html', {root : __dirname + '/public/pages'});
-// });
