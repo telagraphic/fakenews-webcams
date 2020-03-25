@@ -1,6 +1,3 @@
-barba.use(barbaCss);
-barba.init();
-
 const news = async () => {
   let response = await fetch('http://localhost:3000/api/fakenews');
   let data = await response.json();
@@ -42,6 +39,3 @@ function startNewsTicker() {
     ticker.play();
   }
 }
-
-// setupNewsTicker();
-// startNewsTicker();

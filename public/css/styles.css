@@ -329,13 +329,57 @@ h2 {
 h3 {
   font-size: calc(1rem + .5vw); }
 
-.page__header {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0rem;
-  background-color: black;
-  color: white;
-  z-index: 100; }
+/* Page Transition Styles */
+.fade-leave-active,
+.fade-enter-active,
+.fade-once-active {
+  transition: opacity var(--timing) var(--bezier), transform var(--timing) var(--bezier); }
+
+.fade-leave {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(0, 30px); }
+
+.fade-enter,
+.fade-once {
+  opacity: 0;
+  transform: translate(0, 30px); }
+
+.fade-enter-to,
+.fade-once-to {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+.page {
+  display: grid;
+  grid-template-rows: 7vh auto;
+  grid-template-areas: "header" "main";
+  width: 100vw; }
+  @media (min-width: 70rem) {
+    .page {
+      grid-template-rows: 5vh auto; } }
+  .page__header {
+    grid-area: header;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0rem;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    z-index: 100; }
+  .page__main {
+    grid-area: main; }
 
 .ticker {
   display: flex;
@@ -343,18 +387,16 @@ h3 {
   width: 100%;
   height: 100%;
   min-height: 1.5rem;
-  padding: 1% 0;
   font-family: 'Inter';
   font-size: 2rem;
   font-weight: 600; }
   @media (min-width: 70rem) {
     .ticker {
-      padding: .5% 0;
       min-height: 2.5rem; } }
   .ticker__feed {
     display: flex;
     align-items: center;
-    font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(22px + (26 - 22) * ((100vw - 300px) / (1600 - 300)));
     text-transform: uppercase;
     overflow: hidden; }
 
@@ -535,24 +577,20 @@ h3 {
   width: 100%;
   height: 100%; }
 
-.tv {
-  width: 100vw; }
+.tv__video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  max-width: 100%;
+  overflow: hidden; }
   @media (min-width: 70rem) {
-    .tv {
-      height: 100vh; } }
-  .tv__video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    max-width: 100%;
-    overflow: hidden; }
-    @media (min-width: 70rem) {
-      .tv__video-wrapper {
-        height: 100vh;
-        padding-bottom: 0; } }
-  .tv__video-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+    .tv__video-wrapper {
+      height: 95vh;
+      padding-bottom: 0; } }
+
+.tv__video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }

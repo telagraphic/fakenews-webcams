@@ -41,8 +41,18 @@
 
 
 .page {
+  display: grid;
+  grid-template-rows: 7vh auto;
+  grid-template-areas: "header" "main";
+
+  width: 100vw;
+
+  @include desktop {
+    grid-template-rows: 5vh auto;
+  }
 
   &__header {
+    grid-area: header;
     position: sticky;
     position: -webkit-sticky;
     top: 0rem;
@@ -50,10 +60,13 @@
     background-color: black;
     color: white;
 
+    overflow: hidden;
+
     z-index: 100;
   }
 
   &__main {
+    grid-area: main;
 
   }
 }

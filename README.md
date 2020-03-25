@@ -13,6 +13,7 @@
 
 # Git
 - [Atlassian Git Guide](https://www.atlassian.com/git/tutorials/making-a-pull-request)
+- [Github Guides](https://help.github.com/en/github)
 
 # Puppeteer
 - [Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)
