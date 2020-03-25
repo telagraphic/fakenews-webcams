@@ -1,3 +1,6 @@
+barba.use(barbaCss);
+barba.init();
+
 const news = async () => {
   let response = await fetch('http://localhost:3000/api/fakenews');
   let data = await response.json();
@@ -19,7 +22,10 @@ function renderNewsTicker(news) {
 
   let headlines = news.map(story => story.headline).join("\xa0\xa0\xa0\xa0\xa0");
   newsTickerElement.innerText = headlines;
+
+  startNewsTicker();
 }
+
 
 function setupNewsTicker() {
   document.addEventListener('DOMContentLoaded', function() {
@@ -37,4 +43,5 @@ function startNewsTicker() {
   }
 }
 
-setupNewsTicker();
+// setupNewsTicker();
+// startNewsTicker();
