@@ -11,7 +11,8 @@
 - [Heroku Error Codes](https://dev.to/lawrenceagles/causes-of-heroku-h10-app-crashed-error-and-how-to-solve-them-3jnl)
 - [Heroku Dyno Restart Codes](https://devcenter.heroku.com/articles/dynos#automatic-dyno-restarts)
 
-
+# Git
+- [Atlassian Git Guide](https://www.atlassian.com/git/tutorials/making-a-pull-request)
 
 # Puppeteer
 - [Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)

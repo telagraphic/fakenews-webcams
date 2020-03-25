@@ -16,7 +16,8 @@
   align-content: center;
 
   width: 100%;
-  max-height: 5rem;
+  height: 100%;
+  min-height: 1.5rem;
   padding: 1% 0;
 
   font-family: 'Inter';
@@ -25,10 +26,16 @@
 
   @include desktop {
     padding: .5% 0;
+    min-height: 2.5rem;
   }
 
   &__feed {
+    display: flex;
+    align-items: center;
+
     @include font-size(26,20);
     text-transform: uppercase;
+
+    overflow: hidden;
   }
 }

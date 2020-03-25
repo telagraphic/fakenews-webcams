@@ -28,11 +28,9 @@
   },
   "homepage": "https://github.com/telagraphic/fakenews-webcams#readme",
   "dependencies": {
-    "@barba/core": "^2.9.7",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "node-marquee": "^1.0.19",
     "pg-promise": "^10.4.4",
     "pm2": "^4.2.3",
     "puppeteer": "^2.1.1"
