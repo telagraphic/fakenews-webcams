@@ -47,6 +47,8 @@
 
   width: 100vw;
 
+  background: white;
+
   @include desktop {
     grid-template-rows: 6vh auto;
   }

@@ -329,42 +329,12 @@ h2 {
 h3 {
   font-size: calc(1rem + .5vw); }
 
-.fade-leave-active,
-.fade-enter-active,
-.fade-once-active {
-  transition: opacity 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-.fade-leave {
-  opacity: 1;
-  transform: translate(0, 0); }
-
-.fade-leave-to {
-  opacity: 0;
-  transform: translate(0, 30px); }
-
-.fade-enter,
-.fade-once {
-  opacity: 0;
-  transform: translate(0, 30px); }
-
-.fade-enter-to,
-.fade-once-to {
-  opacity: 1;
-  transform: translate(0, 0); }
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translate(0, 30px); }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0); } }
-
 .page {
   display: grid;
   grid-template-rows: 7vh auto;
   grid-template-areas: "header" "main";
-  width: 100vw; }
+  width: 100vw;
+  background: white; }
   @media (min-width: 70rem) {
     .page {
       grid-template-rows: 6vh auto; } }
@@ -416,8 +386,8 @@ h3 {
     align-items: center;
     width: 50%;
     height: 50%; }
-    .navigation__wrapper a {
-      color: white; }
+  .navigation__link {
+    color: white; }
   .navigation__button {
     background: white;
     border-radius: 50%;
@@ -606,26 +576,26 @@ h3 {
   width: 100%;
   height: 100%; }
 
-.tv__video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  max-width: 100%;
-  overflow: hidden; }
-  @media (min-width: 70rem) {
-    .tv__video-wrapper {
-      height: 94vh;
-      padding-bottom: 0; } }
-
-.tv__video-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.tv-mobile {
-  display: block; }
-  @media (min-width: 70rem) {
-    .tv-mobile {
-      display: none; } }
+.tv {
+  background: #000; }
+  .tv__video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    max-width: 100%;
+    overflow: hidden; }
+    @media (min-width: 70rem) {
+      .tv__video-wrapper {
+        height: 94vh;
+        padding-bottom: 0; } }
+  .tv__video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .tv-mobile {
+    display: block; }
+    @media (min-width: 70rem) {
+      .tv-mobile {
+        display: none; } }

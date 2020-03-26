@@ -39,3 +39,30 @@ function startNewsTicker() {
     ticker.play();
   }
 }
+
+const navLink = document.querySelector(".navigation__link");
+const pageBody = document.querySelector("body");
+
+barba.init({
+  transitions: [
+    {
+      name: "switch",
+      leave() {},
+      enter() {}
+    }
+  ],
+  views: [
+    {
+      namespace: "reader",
+      beforeEnter() {
+        navLink.setAttribute('href', '/tv');
+      }
+    },
+    {
+      namespace: "tv",
+      beforeEnter() {
+        navLink.setAttribute('href', '/');
+      }
+    }
+  ]
+});
