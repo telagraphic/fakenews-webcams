@@ -48,11 +48,15 @@
   width: 100vw;
 
   @include desktop {
-    grid-template-rows: 5vh auto;
+    grid-template-rows: 6vh auto;
   }
 
   &__header {
     grid-area: header;
+    display: grid;
+    grid-template-areas: "ticker nav";
+    // grid-template-columns: 95vh 5vh;
+
     position: sticky;
     position: -webkit-sticky;
     top: 0rem;
@@ -63,6 +67,10 @@
     overflow: hidden;
 
     z-index: 100;
+
+    @include desktop {
+      grid-template-columns: 96vw 4vw;
+    }
   }
 
   &__main {

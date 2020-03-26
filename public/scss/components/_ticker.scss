@@ -1,17 +1,19 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-// <body class="page">
-//   <header class="page__header">
-//     <article class="news-ticker">
-//       <section class="news-ticker__feed">
-//         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe
-//       </section>
-//     </article>
-//   </header>
+// <header class="page__header">
+//   <article class="ticker">
+//     <section class="ticker__feed">
+//     </section>
+//   </article>
+//   <nav>
+//     O
+//   </nav>
+// </header>
 
 
 .ticker {
+  grid-area: ticker;
   display: flex;
   align-content: center;
 
@@ -33,7 +35,7 @@
     display: flex;
     align-items: center;
 
-    @include font-size(26,22);
+    @include font-size(28,22);
     text-transform: uppercase;
 
     overflow: hidden;

@@ -27,7 +27,7 @@
     overflow: hidden;
 
     @media (min-width: $desktop) {
-      height: 95vh;
+      height: 94vh;
       padding-bottom: 0;
     }
   }
@@ -39,4 +39,12 @@
     width: 100%;
     height: 100%;
   }
+
+  &-mobile {
+    display: block;
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
 }

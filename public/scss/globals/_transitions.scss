@@ -1,9 +1,10 @@
-/* Page Transition Styles */
+@import '../config/variables';
+@import '../config/mixins';
 
 .fade-leave-active,
 .fade-enter-active,
 .fade-once-active {
-  transition: opacity var(--timing) var(--bezier), transform var(--timing) var(--bezier);
+  transition: opacity $timing $bezier, transform $timing $bezier;
 }
 
 .fade-leave {

@@ -29,4 +29,7 @@ $large-desktop: 72rem;
 
 
 
-// NEWS FEED
+// TRANSITIONS
+
+$timing: 0.25s;
+$bezier: cubic-bezier(0.215, 0.61, 0.355, 1);

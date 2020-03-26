@@ -42,6 +42,7 @@
 # CSS
 - [SASS Documentation](https://sass-lang.com/documentation)
 - [SASS Structure](https://css-irl.info/a-modern-front-end-workflow-part-3/)
+- [CSS Shapes](https://cloudfour.com/thinks/css-circles/)
 
 # Typography
 - [Modular Scale Tips](https://zellwk.com/blog/responsive-modular-scale/)
