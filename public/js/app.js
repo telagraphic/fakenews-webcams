@@ -56,6 +56,24 @@ barba.init({
       namespace: "reader",
       beforeEnter() {
         navLink.setAttribute('href', '/tv');
+      },
+      beforeLeave() {
+        const readerPage = document.querySelector('.reader');
+        return new Promise (resolve => {
+        const timeline = gsap.timeline({
+          onComplete() {
+            current.container.remove();
+            resolve();
+          }
+        });
+
+        timeline
+          .set('.reader', {opacity: '1'}, 0)
+          .set(next.container, {opacity: 0})
+          .to('.reader', {opacity: '0', duration: .5}, 0)
+          .to(next.container, {opacity: 1, duration: 1});
+      })
+
       }
     },
     {

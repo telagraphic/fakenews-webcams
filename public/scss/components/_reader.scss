@@ -44,148 +44,6 @@
 //     </article>
 
 
-.reader-section {
-
-}
-
-
-.news-page {
-  width: 100vw;
-
-  &__news-section {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: "news-feeds" "news-video";
-
-    @media (min-width: $desktop) {
-      grid-template-rows: 1fr 1fr;
-    }
-  }
-
-  &__news-feeds {
-    grid-area: news-feeds;
-    display: grid;
-    grid-template-columns: 1fr;
-
-    max-width: 100%;
-
-    @media (min-width: $desktop) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  &__news-feed {
-
-  }
-
-  &__news-video {
-    grid-area: news-video;
-
-    width: 100vw;
-
-    @media (min-width: $desktop) {
-      height: 100vh;
-    }
-  }
-
-  &__news-video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-
-    @media (min-width: $desktop) {
-      height: 100vh;
-      padding-bottom: 0;
-    }
-  }
-
-  &__news-video-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
-.news-feed {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas: "header" "hero" "headline" "stories";
-  max-height: auto;
-
-  height: auto;
-
-  @media (min-width: $desktop) {
-    height: 100vh;
-  }
-
-  $news-feed-padding: 0 2%;
-
-  &__header {
-    display: grid;
-    justify-content: center;
-  }
-
-  &__hero {
-
-    @media (min-width: $desktop) {
-      // height: 100vh;
-    }
-  }
-
-  &__hero-image {
-    display: block;
-    position: relative;
-    float: left;
-
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-
-    padding-bottom: 0;
-    margin: 0 0 1rem 0;
-
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (min-width: $desktop) {
-      height: 350px;
-      margin: 0 0 1rem 0;
-      // padding-bottom: 56.25%;
-    }
-  }
-
-  &__headline {
-    padding: $news-feed-padding;
-  }
-
-  &__headline-link {}
-  &__headline-link-text {}
-
-  &__stories-section {
-    max-height: 100%;
-    padding: $news-feed-padding;
-
-    list-style: none;
-
-    @media (min-width: $desktop) {
-      overflow-y: scroll;
-    }
-  }
-
-  &__stories-story {
-
-    a {
-      text-decoration: none;
-    }
-  }
-}
-
 #cnn {
   @include news-brand($cnn, $white);
 }
@@ -200,6 +58,7 @@
 
 
 .reader {
+  opacity: 1;
 
   &__news-section {
     width: 100vw;
@@ -317,36 +176,4 @@
   }
   &__story-link-text {}
 
-}
-
-
-.tv {
-  // grid-area: news-video;
-  //
-  // width: 100vw;
-  //
-  // @media (min-width: $desktop) {
-  //   height: 100vh;
-  // }
-
-  &__wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-
-    @media (min-width: $desktop) {
-      height: 100vh;
-      padding-bottom: 0;
-    }
-  }
-
-  &__iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
