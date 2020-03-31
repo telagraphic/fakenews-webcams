@@ -7,16 +7,16 @@
             <header class="newspaper__header">
               <h1 class="newspaper__header-title">CNN</h1>
             </header>
-            <a href="#" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
+            <a href="{{CNN_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="https://{{CNN_HEADLINE.img}}" alt="">
             </a>
             <section class="newspaper__headline">
-              <a href="#" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
+              <a href="{{CNN_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{CNN_HEADLINE.headline}}</h2>
               </a>
             </section>
             <ul class="newspaper__stories">
-              {{#each CNN}}
+              {{#each CNN_STORIES}}
               <li class="newspaper__story">
                 <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
@@ -31,16 +31,16 @@
             <header class="newspaper__header">
               <h1 class="newspaper__header-title">FOX</h1>
             </header>
-            <a href="#" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
+            <a href="{{FOX_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="https://{{FOX_HEADLINE.img}}">
             </a>
             <section class="newspaper__headline">
-              <a href="#" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
+              <a href="{{FOX_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{FOX_HEADLINE.headline}}</h2>
               </a>
             </section>
             <ul class="newspaper__stories">
-              {{#each FOX}}
+              {{#each FOX_STORIES}}
               <li class="newspaper__story">
                 <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
@@ -53,18 +53,19 @@
           </article>
           <article id="rt" class="reader__news-column newspaper">
             <header class="newspaper__header">
-              <h1 class="newspaper__header-title">CNN</h1>
+              <h1 class="newspaper__header-title">RT</h1>
             </header>
-            <a href="#" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
+            <a href="{{RT_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{RT_HEADLINE.img}}" alt="">
             </a>
             <section class="newspaper__headline">
-              <a href="#" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
+              <a href="{{RT_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{RT_HEADLINE.headline}}</h2>
               </a>
             </section>
+            </section>
             <ul class="newspaper__stories">
-              {{#each RT}}
+              {{#each RT_STORIES}}
               <li class="newspaper__story">
                 <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
@@ -87,196 +88,164 @@
     <article class="reader__news-section">
       <section class="reader__news-container">
         <section class=" reader__news-row">
-          <article id="cnn" class="reader__news-column newspaper">
+          <article id="nytimes" class="reader__news-column newspaper">
             <header class="newspaper__header">
-              <h1 class="newspaper__header-title">CNN</h1>
+              <h1 class="newspaper__header-title">NYTIMES</h1>
             </header>
-            <a href="#" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
+            <a href="{{NYTIMES_HEADLINE.href}}" class="newspaper__hero">
+              <!-- <img class="newspaper__hero-image" src="https://{{NYTIMES_HEADLINE.img}}" alt=""> -->
+              <img class="newspaper__hero-image" src="https://static01.nyt.com/vi-assets/images/share/1200x1200_t.png" alt="">
+
             </a>
             <section class="newspaper__headline">
-              <a href="#" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
+              <a href="{{NYTIMES_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{NYTIMES_HEADLINE.headline}}</h2>
               </a>
             </section>
             <ul class="newspaper__stories">
+              {{#each NYTIMES_STORIES}}
               <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
+                <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
+                    {{this.headline}}
                   </h3>
                 </a>
               </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
+              {{/each}}
             </ul>
           </article>
-          <article id="fox" class="reader__news-column newspaper">
+          <article id="infowars" class="reader__news-column newspaper">
             <header class="newspaper__header">
-              <h1 class="newspaper__header-title">CNN</h1>
+              <h1 class="newspaper__header-title">INFOWARS</h1>
             </header>
-            <a href="#" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
+            <a href="{{INFOWARS_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{INFOWARS_HEADLINE.img}}">
             </a>
             <section class="newspaper__headline">
-              <a href="#" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
+              <a href="{{INFOWARS_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{INFOWARS_HEADLINE.headline}}</h2>
               </a>
             </section>
             <ul class="newspaper__stories">
+              {{#each INFOWARS_STORIES}}
               <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
+                <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
+                    {{this.headline}}
                   </h3>
                 </a>
               </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
+              {{/each}}
             </ul>
           </article>
-          <article id="rt" class="reader__news-column newspaper">
+          <article id="breitbart" class="reader__news-column newspaper">
             <header class="newspaper__header">
-              <h1 class="newspaper__header-title">CNN</h1>
+              <h1 class="newspaper__header-title">BREITBART</h1>
             </header>
-            <a href="#" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
+            <a href="{{BREITBART_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{BREITBART_HEADLINE.img}}" alt="">
             </a>
             <section class="newspaper__headline">
-              <a href="#" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
+              <a href="{{BREITBART_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{BREITBART_HEADLINE.headline}}</h2>
+              </a>
+            </section>
+            </section>
+            <ul class="newspaper__stories">
+              {{#each BREITBART_STORIES}}
+              <li class="newspaper__story">
+                <a class="newspaper__story-link" href="{{this.href}}">
+                  <h3 class="newspaper__story-link-text">
+                    {{this.headline}}
+                  </h3>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </article>
+        </section>
+        <section class="news-page__news-video reader__tv-row tv">
+          <section class="news-page__news-video-wrapper tv__wrapper">
+            <iframe class="news-page__news-video-iframe tv__iframe" src="https://www.youtube-nocookie.com/embed/Gm3bQVANtVo?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
+              allowfullscreen></iframe>
+          </section>
+        </section>
+      </section>
+    </article>
+    <article class="reader__news-section">
+      <section class="reader__news-container">
+        <section class=" reader__news-row">
+          <article id="politico" class="reader__news-column newspaper">
+            <header class="newspaper__header">
+              <h1 class="newspaper__header-title">POLITICO</h1>
+            </header>
+            <a href="{{POLITICO_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{POLITICO_HEADLINE.img}}" alt="">
+            </a>
+            <section class="newspaper__headline">
+              <a href="{{POLITICO_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{POLITICO_HEADLINE.headline}}</h2>
               </a>
             </section>
             <ul class="newspaper__stories">
+              {{#each POLITICO_STORIES}}
               <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
+                <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
+                    {{this.headline}}
                   </h3>
                 </a>
               </li>
+              {{/each}}
+            </ul>
+          </article>
+          <article id="zerohedge" class="reader__news-column newspaper">
+            <header class="newspaper__header">
+              <h1 class="newspaper__header-title">ZEROHEDGE</h1>
+            </header>
+            <a href="{{ZEROHEDGE_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{ZEROHEDGE_HEADLINE.img}}">
+            </a>
+            <section class="newspaper__headline">
+              <a href="{{ZEROHEDGE_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{ZEROHEDGE_HEADLINE.headline}}</h2>
+              </a>
+            </section>
+            <ul class="newspaper__stories">
+              {{#each ZEROHEDGE_STORIES}}
               <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
+                <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
+                    {{this.headline}}
                   </h3>
                 </a>
               </li>
+              {{/each}}
+            </ul>
+          </article>
+          <article id="bloomberg" class="reader__news-column newspaper">
+            <header class="newspaper__header">
+              <h1 class="newspaper__header-title">BLOOMBERG</h1>
+            </header>
+            <a href="{{BLOOMBERG_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{BLOOMBERG_HEADLINE.img}}" alt="">
+            </a>
+            <section class="newspaper__headline">
+              <a href="{{BLOOMBERG_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{BLOOMBERG_HEADLINE.headline}}</h2>
+              </a>
+            </section>
+            </section>
+            <ul class="newspaper__stories">
+              {{#each BLOOMBERG_STORIES}}
               <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
+                <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
+                    {{this.headline}}
                   </h3>
                 </a>
               </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-                  <h3 class="newspaper__story-link-text">
-                    Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-                  </h3>
-                </a>
-              </li>
+              {{/each}}
             </ul>
           </article>
         </section>

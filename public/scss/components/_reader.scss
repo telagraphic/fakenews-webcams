@@ -198,6 +198,30 @@
   @include news-brand($rt, $black-0)
 }
 
+#nytimes {
+  @include news-brand($nytimes, $white)
+}
+
+#breitbart {
+  @include news-brand($breitbart, $white)
+}
+
+#infowars {
+  @include news-brand($infowars, $white)
+}
+
+#politico {
+  @include news-brand($politico, $white)
+}
+
+#zerohedge {
+  @include news-brand($zerohedge, $white)
+}
+
+#bloomberg {
+  @include news-brand($bloomberg, $white)
+}
+
 
 .reader {
 

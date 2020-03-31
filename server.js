@@ -6,6 +6,7 @@ const routes = require('./server/api/routes');
 const newsService = require('./server/services/newsService');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const cors = require('cors');
 
 app.use('/api', routes);
 
@@ -35,12 +36,42 @@ app.set("view engine", "hbs");
 app.set('views', path.join(__dirname, "/public/views/pages"));
 app.engine( "hbs", hbs.engine);
 
+const corsOptions = {
+  origin: 'http://fakenewswebcams.com',
+  // origin: 'http://localhost:3000',
+  method: 'GET',
+  optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));
 
 app.get('/', async (req, res) => {
   const news = await newsService.getFakeNews();
-  res.render('reader', {ticker: news.ALL, CNN: news.CNN, FOX: news.FOX, RT: news.RT});
+
+  res.render('reader', {
+    ticker: news.ALL,
+    CNN_HEADLINE: news.CNN_HEADLINE,
+    CNN_STORIES: news.CNN_STORIES,
+    FOX_HEADLINE: news.FOX_HEADLINE,
+    FOX_STORIES: news.FOX_STORIES,
+    RT_HEADLINE: news.RT_HEADLINE,
+    RT_STORIES: news.RT_STORIES,
+    NYTIMES_HEADLINE: news.NYTIMES_HEADLINE,
+    NYTIMES_STORIES: news.NYTIMES_STORIES,
+    BREITBART_HEADLINE: news.BREITBART_HEADLINE,
+    BREITBART_STORIES: news.BREITBART_STORIES,
+    INFOWARS_HEADLINE: news.INFOWARS_HEADLINE,
+    INFOWARS_STORIES: news.INFOWARS_STORIES,
+    POLITICO_HEADLINE: news.POLITICO_HEADLINE,
+    POLITICO_STORIES: news.POLITICO_STORIES,
+    ZEROHEDGE_HEADLINE: news.ZEROHEDGE_HEADLINE,
+    ZEROHEDGE_STORIES: news.ZEROHEDGE_STORIES,
+    BLOOMBERG_HEADLINE: news.BLOOMBERG_HEADLINE,
+    BLOOMBERG_STORIES: news.BLOOMBERG_STORIES
+  });
 });
 
 app.get('/tv', async (req, res) => {

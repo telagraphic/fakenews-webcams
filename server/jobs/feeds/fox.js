@@ -8,9 +8,10 @@ async function fetchStories() {
   const url = "https://www.foxnews.com/";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+  // const browser = await puppeteer.launch({ headless: false});
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  
+
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -95,10 +96,6 @@ async function fetchStories() {
 
   });
 
-  // console.log(stories);
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/fox.json', data);
-
   newsService.createFakeNews(stories, newsSource.fox.name)
     .then((response) => {
       process.exit(0);
@@ -106,8 +103,6 @@ async function fetchStories() {
     catch((error) => {
       process.exit(0);
     });
-
-
 
   await browser.close();
 

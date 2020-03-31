@@ -20,6 +20,10 @@
 
 # Node
 - [Node Architecture](https://dev.to/santypk4/bulletproof-node-js-project-architecture-4epf#cron)
+- [CORS In-Depth](https://auth0.com/blog/cors-tutorial-a-guide-to-cross-origin-resource-sharing/)
+- [CORS](https://www.positronx.io/express-cors-tutorial/)
+- [CORS Package](https://github.com/expressjs/cors)
+
 
 # Build Scripts
 - [BrowserSync with Express](https://www.browsersync.io/docs/options/#option-proxy)

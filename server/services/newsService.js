@@ -23,16 +23,12 @@ async function getFakeNews() {
     .getFakeNews()
     .then(data => {
 
-      // fs.writeFileSync('server/models/newsFromDatabase.json', JSON.stringify(data));
-
       let news = {};
       for (var i = 0; i < data.length; i++) {
         let obj = data[i].json_build_object;
         let name = Object.keys(obj)[0];
         news[name] = obj[name];
       };
-
-      // fs.writeFileSync('server/models/newsForClient.json', JSON.stringify(news));
 
       const allNews = [];
 
@@ -42,17 +38,37 @@ async function getFakeNews() {
         }
       }
 
+      let cnn_headline = news.CNN.shift();
+      let fox_headline = news.FOX.shift();
+      let rt_headline = news.RT.shift();
+      let nytimes_headline = news.NYTIMES.shift();
+      let breitbart_headline = news.BREITBART.shift();
+      let infowars_headline = news.INFOWARS.shift();
+      let politico_headline = news.POLITICO.shift();
+      let zerohedge_headline = news.ZEROHEDGE.shift();
+      let bloomberg_headline = news.ZEROHEDGE.shift();
+
+
       return {
         ALL: allNews,
-        CNN: news.CNN,
-        FOX: news.FOX,
-        RT: news.RT,
-        // BLOOMBERG: news.BLOOMBERG,
-        BREITBART: news.BREITBART,
-        INFOWARS: news.INFOWARS,
-        NYTIMES: news.NYTIMES,
-        POLITICO: news.POLITICO,
-        ZEROHEDGE: news.ZEROHEDGE
+        CNN_HEADLINE: cnn_headline,
+        CNN_STORIES: news.CNN,
+        FOX_HEADLINE: fox_headline,
+        FOX_STORIES: news.FOX,
+        RT_HEADLINE: rt_headline,
+        RT_STORIES: news.RT,
+        NYTIMES_HEADLINE: nytimes_headline,
+        NYTIMES_STORIES: news.NYTIMES,
+        BREITBART_HEADLINE: breitbart_headline,
+        BREITBART_STORIES: news.BREITBART,
+        INFOWARS_HEADLINE: infowars_headline,
+        INFOWARS_STORIES: news.INFOWARS,
+        POLITICO_HEADLINE: politico_headline,
+        POLITICO_STORIES: news.POLITICO,
+        ZEROHEDGE_HEADLINE: zerohedge_headline,
+        ZEROHEDGE_STORIES: news.ZEROHEDGE,
+        BLOOMBERG_HEADLINE: bloomberg_headline,
+        BLOOMBERG_STORIES: news.BLOOMBERG
       }
     })
     .catch(error => {
