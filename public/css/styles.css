@@ -450,6 +450,30 @@ h3 {
   background-color: #76bd1d;
   color: #000; }
 
+#nytimes .newspaper__header {
+  background-color: #000;
+  color: #FFFFFF; }
+
+#breitbart .newspaper__header {
+  background-color: #ff550f;
+  color: #FFFFFF; }
+
+#infowars .newspaper__header {
+  background-color: #194e8e;
+  color: #FFFFFF; }
+
+#politico .newspaper__header {
+  background-color: #dc0228;
+  color: #FFFFFF; }
+
+#zerohedge .newspaper__header {
+  background-color: #000000;
+  color: #FFFFFF; }
+
+#bloomberg .newspaper__header {
+  background-color: #000;
+  color: #FFFFFF; }
+
 .reader__news-section {
   width: 100vw; }
 
