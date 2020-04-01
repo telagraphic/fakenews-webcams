@@ -1,5 +1,3 @@
-// require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const routes = require('./server/api/routes');
@@ -7,8 +5,6 @@ const newsService = require('./server/services/newsService');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const cors = require('cors');
-
-app.use('/api', routes);
 
 app.use(express.static('public'));
 app.use(express.static('public/pages'));
@@ -44,7 +40,7 @@ const corsOptions = {
 }
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://fakenewswebcams.com"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "http://fakenewswebcams.com");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -53,6 +49,8 @@ app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Serving on ${PORT}`));
+
+app.use('/api', routes);
 
 app.get('/', async (req, res) => {
   const news = await newsService.getFakeNews();
