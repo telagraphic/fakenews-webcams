@@ -1,0 +1,16 @@
+.navigation {
+  grid-area: nav;
+
+  color: white;
+
+  display: none;
+
+  @include desktop {
+    display: inline-block;
+  }
+
+  &__wrapper {}
+  &__link {
+    color: white;
+  }
+}

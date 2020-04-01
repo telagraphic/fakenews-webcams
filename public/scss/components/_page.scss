@@ -1,48 +1,15 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-
-// <body class="page">
-//   <header class="page__header">
-//     <article class="ticker">
-//       <section class="ticker__feed">
-//         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe
-//       </section>
-//     </article>
-//   </header>
-//   <main class="page__main" data-barba="barba tag goes here">
-//     <section class="reader-section reader">
-//       <article class="news-page reader__row">
-//         <section class="news-page__news-section reader__row-container">
-//           <section class="news-page__news-feeds reader__row-news">
-//             <article id="cnn" class="news-page__news-feed news-feed reader__row-news-column">
-//               <header class="news-feed__header">
-//                 <h1>CNN</h1>
-//               </header>
-//               <a href="#" class="news-feed__hero">
-//                 <img class="news-feed__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
-//               </a>
-//               <section class="news-feed__headline">
-//                 <a href="#">
-//                   <h2>Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
-//                 </a>
-//               </section>
-//               <ul class="news-feed__stories-section">
-//                 <li class="news-feed__story">
-//                   <a class="news-feed__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
-//                     <h3 class="news-feed__story-link-text">
-//                       Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
-//                     </h3>
-//                   </a>
-//                 </li>
-//   </main>
-//   <footer></footer>
-// </body>
-
-
 .page {
 
   &__header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 'ticker';
+
+    align-items: center;
+
     position: sticky;
     position: -webkit-sticky;
     top: 0rem;
@@ -51,6 +18,11 @@
     color: white;
 
     z-index: 100;
+
+    @include desktop {
+      grid-template-columns: 97% auto;
+      grid-template-areas: 'ticker nav';
+    }
   }
 
   &__main {

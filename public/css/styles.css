@@ -330,14 +330,23 @@ h3 {
   font-size: calc(1rem + .5vw); }
 
 .page__header {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: 'ticker';
+  align-items: center;
   position: sticky;
   position: -webkit-sticky;
   top: 0rem;
   background-color: black;
   color: white;
   z-index: 100; }
+  @media (min-width: 70rem) {
+    .page__header {
+      grid-template-columns: 97% auto;
+      grid-template-areas: 'ticker nav'; } }
 
 .ticker {
+  grid-area: ticker;
   display: flex;
   align-content: center;
   width: 100%;
@@ -357,6 +366,16 @@ h3 {
     font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
     text-transform: uppercase;
     overflow: hidden; }
+
+.navigation {
+  grid-area: nav;
+  color: white;
+  display: none; }
+  @media (min-width: 70rem) {
+    .navigation {
+      display: inline-block; } }
+  .navigation__link {
+    color: white; }
 
 #cnn .newspaper__header {
   background-color: #cc0000;

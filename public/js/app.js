@@ -1,6 +1,3 @@
-barba.use(barbaCss);
-barba.init();
-
 const testUrl = 'http://localhost:3000/api/fakenews';
 const prodUrl = '/api/fakenews';
 
@@ -45,3 +42,24 @@ function startNewsTicker() {
     ticker.play();
   }
 }
+
+barba.init({
+  transitions: [],
+  views: [
+    {
+      namespace: 'reader',
+      beforeEnter() {
+        const navLink = document.querySelector('.navigation__link');
+        navLink.setAttribute('href', '/tv');
+      }
+    },
+    {
+      namespace: 'tv',
+      beforeEnter() {
+        const navLink = document.querySelector('.navigation__link');
+        navLink.setAttribute('href', '/');
+      }
+    }
+  ],
+  debug: true
+});
