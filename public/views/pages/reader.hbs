@@ -2,7 +2,7 @@
   <section class="reader">
     <article class="reader__news-section">
       <section class="reader__news-container">
-        <section class=" reader__news-row">
+        <section class="reader__news-row">
           <article id="cnn" class="reader__news-column newspaper">
             <header class="newspaper__header">
               <h1 class="newspaper__header-title">CNN</h1>
@@ -53,16 +53,15 @@
           </article>
           <article id="rt" class="reader__news-column newspaper">
             <header class="newspaper__header">
-              <h1 class="newspaper__header-title">RT</h1>
+              <h1 class="newspaper__header-title">FOX</h1>
             </header>
             <a href="{{RT_HEADLINE.href}}" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="{{RT_HEADLINE.img}}" alt="">
+              <img class="newspaper__hero-image" src="{{RT_HEADLINE.img}}">
             </a>
             <section class="newspaper__headline">
               <a href="{{RT_HEADLINE.href}}" clas="newspaper__headline-link">
                 <h2 class="newspaper__headline-link-header">{{RT_HEADLINE.headline}}</h2>
               </a>
-            </section>
             </section>
             <ul class="newspaper__stories">
               {{#each RT_STORIES}}
@@ -87,14 +86,13 @@
     </article>
     <article class="reader__news-section">
       <section class="reader__news-container">
-        <section class=" reader__news-row">
+        <section class="reader__news-row">
           <article id="nytimes" class="reader__news-column newspaper">
             <header class="newspaper__header">
               <h1 class="newspaper__header-title">NYTIMES</h1>
             </header>
             <a href="{{NYTIMES_HEADLINE.href}}" class="newspaper__hero">
-              <!-- <img class="newspaper__hero-image" src="https://{{NYTIMES_HEADLINE.img}}" alt=""> -->
-              <img class="newspaper__hero-image" src="https://upload.wikimedia.org/wikipedia/commons/4/40/New_York_Times_logo_variation.jpg" alt="">
+              <img class="newspaper__hero-image" src="https://{{NYTIMES_HEADLINE.img}}" alt="">
 
             </a>
             <section class="newspaper__headline">
@@ -118,12 +116,12 @@
             <header class="newspaper__header">
               <h1 class="newspaper__header-title">INFOWARS</h1>
             </header>
-            <a href="{{INFOWARS_HEADLINE.href}}" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="{{INFOWARS_HEADLINE.img}}">
+            <a href="{{INFOWARS.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="https://{{INFOWARS.img}}">
             </a>
             <section class="newspaper__headline">
-              <a href="{{INFOWARS_HEADLINE.href}}" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">{{INFOWARS_HEADLINE.headline}}</h2>
+              <a href="{{INFOWARS.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{INFOWARS.headline}}</h2>
               </a>
             </section>
             <ul class="newspaper__stories">
@@ -143,13 +141,12 @@
               <h1 class="newspaper__header-title">BREITBART</h1>
             </header>
             <a href="{{BREITBART_HEADLINE.href}}" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="{{BREITBART_HEADLINE.img}}" alt="">
+              <img class="newspaper__hero-image" src="{{BREITBART_HEADLINE.img}}">
             </a>
             <section class="newspaper__headline">
               <a href="{{BREITBART_HEADLINE.href}}" clas="newspaper__headline-link">
                 <h2 class="newspaper__headline-link-header">{{BREITBART_HEADLINE.headline}}</h2>
               </a>
-            </section>
             </section>
             <ul class="newspaper__stories">
               {{#each BREITBART_STORIES}}
@@ -166,7 +163,7 @@
         </section>
         <section class="news-page__news-video reader__tv-row tv">
           <section class="news-page__news-video-wrapper tv__wrapper">
-            <iframe class="news-page__news-video-iframe tv__iframe" src="https://www.youtube-nocookie.com/embed/Gm3bQVANtVo?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
+            <iframe class="news-page__news-video-iframe tv__iframe" src="https://www.youtube-nocookie.com/embed/UQRDv3HtmUA?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
               allowfullscreen></iframe>
           </section>
         </section>
@@ -174,37 +171,14 @@
     </article>
     <article class="reader__news-section">
       <section class="reader__news-container">
-        <section class=" reader__news-row">
-          <article id="politico" class="reader__news-column newspaper">
-            <header class="newspaper__header">
-              <h1 class="newspaper__header-title">POLITICO</h1>
-            </header>
-            <a href="{{POLITICO_HEADLINE.href}}" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="{{POLITICO_HEADLINE.img}}" alt="">
-            </a>
-            <section class="newspaper__headline">
-              <a href="{{POLITICO_HEADLINE.href}}" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">{{POLITICO_HEADLINE.headline}}</h2>
-              </a>
-            </section>
-            <ul class="newspaper__stories">
-              {{#each POLITICO_STORIES}}
-              <li class="newspaper__story">
-                <a class="newspaper__story-link" href="{{this.href}}">
-                  <h3 class="newspaper__story-link-text">
-                    {{this.headline}}
-                  </h3>
-                </a>
-              </li>
-              {{/each}}
-            </ul>
-          </article>
+        <section class="reader__news-row">
           <article id="zerohedge" class="reader__news-column newspaper">
             <header class="newspaper__header">
               <h1 class="newspaper__header-title">ZEROHEDGE</h1>
             </header>
             <a href="{{ZEROHEDGE_HEADLINE.href}}" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="{{ZEROHEDGE_HEADLINE.img}}">
+              <img class="newspaper__hero-image" src="{{ZEROHEDGE_HEADLINE.img}}" alt="">
+
             </a>
             <section class="newspaper__headline">
               <a href="{{ZEROHEDGE_HEADLINE.href}}" clas="newspaper__headline-link">
@@ -223,21 +197,44 @@
               {{/each}}
             </ul>
           </article>
-          <article id="bloomberg" class="reader__news-column newspaper">
+          <article id="politico" class="reader__news-column newspaper">
             <header class="newspaper__header">
-              <h1 class="newspaper__header-title">BLOOMBERG</h1>
+              <h1 class="newspaper__header-title">POLITICO</h1>
             </header>
-            <a href="{{BLOOMBERG_HEADLINE.href}}" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="{{BLOOMBERG_HEADLINE.img}}" alt="">
+            <a href="{{POLITICO_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{POLITICO_HEADLINE.img}}">
             </a>
             <section class="newspaper__headline">
-              <a href="{{BLOOMBERG_HEADLINE.href}}" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">{{BLOOMBERG_HEADLINE.headline}}</h2>
+              <a href="{{POLITICO_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{POLITICO_HEADLINE.headline}}</h2>
               </a>
             </section>
+            <ul class="newspaper__stories">
+              {{#each POLITICO_STORIES}}
+              <li class="newspaper__story">
+                <a class="newspaper__story-link" href="{{this.href}}">
+                  <h3 class="newspaper__story-link-text">
+                    {{this.headline}}
+                  </h3>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </article>
+          <article id="breitbart" class="reader__news-column newspaper">
+            <header class="newspaper__header">
+              <h1 class="newspaper__header-title">BREITBART</h1>
+            </header>
+            <a href="{{BREITBART_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{BREITBART_HEADLINE.img}}">
+            </a>
+            <section class="newspaper__headline">
+              <a href="{{BREITBART_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{BREITBART_HEADLINE.headline}}</h2>
+              </a>
             </section>
             <ul class="newspaper__stories">
-              {{#each BLOOMBERG_STORIES}}
+              {{#each BREITBART_STORIES}}
               <li class="newspaper__story">
                 <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">
@@ -251,7 +248,7 @@
         </section>
         <section class="news-page__news-video reader__tv-row tv">
           <section class="news-page__news-video-wrapper tv__wrapper">
-            <iframe class="news-page__news-video-iframe tv__iframe" src="https://www.youtube-nocookie.com/embed/Gm3bQVANtVo?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
+            <iframe class="news-page__news-video-iframe tv__iframe" src="https://www.youtube-nocookie.com/embed/eTAsANPVqB8?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
               allowfullscreen></iframe>
           </section>
         </section>
