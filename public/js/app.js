@@ -2,7 +2,7 @@ barba.use(barbaCss);
 barba.init();
 
 const testUrl = 'http://localhost:3000/api/fakenews';
-const prodUrl = 'http://fakenewswebcams/api/fakenews';
+const prodUrl = 'http://www.fakenewswebcams/api/fakenews';
 
 const news = async () => {
   let response = await fetch(prodUrl);

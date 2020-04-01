@@ -33,14 +33,14 @@ app.set('views', path.join(__dirname, "/public/views/pages"));
 app.engine( "hbs", hbs.engine);
 
 const corsOptions = {
-  origin: 'http://fakenewswebcams.com',
+  origin: 'http://www.fakenewswebcams.com',
   // origin: 'http://localhost:3000',
   method: 'GET',
   optionsSuccessStatus: 200
 }
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://fakenewswebcams.com");
+  res.header("Access-Control-Allow-Origin", "http://www.fakenewswebcams.com");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
