@@ -1,16 +1,6 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-// <body class="page">
-//   <header class="page__header">
-//     <article class="news-ticker">
-//       <section class="news-ticker__feed">
-//         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe
-//       </section>
-//     </article>
-//   </header>
-
-
 .ticker {
   grid-area: ticker;
   display: flex;

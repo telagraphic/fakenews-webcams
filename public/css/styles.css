@@ -329,21 +329,28 @@ h2 {
 h3 {
   font-size: calc(1rem + .5vw); }
 
-.page__header {
+.page {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-areas: 'ticker';
-  align-items: center;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0rem;
-  background-color: black;
-  color: white;
-  z-index: 100; }
-  @media (min-width: 70rem) {
-    .page__header {
-      grid-template-columns: 97% auto;
-      grid-template-areas: 'ticker nav'; } }
+  grid-template-rows: 6vh auto;
+  grid-template-areas: "ticker" "main"; }
+  .page__header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 'ticker';
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0rem;
+    background-color: black;
+    color: white;
+    z-index: 100;
+    overflow: hidden; }
+    @media (min-width: 70rem) {
+      .page__header {
+        grid-template-columns: 97% auto;
+        grid-template-areas: 'ticker nav'; } }
+  .page__main {
+    grid-area: main; }
 
 .ticker {
   grid-area: ticker;
