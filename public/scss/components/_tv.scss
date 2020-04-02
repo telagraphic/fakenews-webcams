@@ -17,8 +17,8 @@
 
     overflow: hidden;
 
-    @include desktop {
-      height: 100vh;
+    @media (min-width: $desktop) {
+      height: 94vh;
       padding-bottom: 0;
     }
 
@@ -31,4 +31,12 @@
     width: 100%;
     height: 100%;
   }
+
+  &-mobile {
+    display: block;
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
 }

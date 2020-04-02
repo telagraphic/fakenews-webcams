@@ -1,5 +1,6 @@
 .navigation {
   grid-area: nav;
+<<<<<<< HEAD
 
   color: white;
 
@@ -13,4 +14,37 @@
   &__link {
     color: white;
   }
+=======
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 50%;
+  }
+
+  &__link {
+    color: white;
+  }
+
+  &__button {
+    background: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+>>>>>>> page-transitions
 }

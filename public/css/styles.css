@@ -329,6 +329,7 @@ h2 {
 h3 {
   font-size: calc(1rem + .5vw); }
 
+<<<<<<< HEAD
 .page__header {
   display: grid;
   grid-template-columns: 100%;
@@ -344,6 +345,33 @@ h3 {
     .page__header {
       grid-template-columns: 97% auto;
       grid-template-areas: 'ticker nav'; } }
+=======
+.page {
+  display: grid;
+  grid-template-rows: 7vh auto;
+  grid-template-areas: "header" "main";
+  width: 100vw;
+  background: white; }
+  @media (min-width: 70rem) {
+    .page {
+      grid-template-rows: 6vh auto; } }
+  .page__header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "ticker nav";
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0rem;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    z-index: 100; }
+    @media (min-width: 70rem) {
+      .page__header {
+        grid-template-columns: 96vw 4vw; } }
+  .page__main {
+    grid-area: main; }
+>>>>>>> page-transitions
 
 .ticker {
   grid-area: ticker;
@@ -352,23 +380,22 @@ h3 {
   width: 100%;
   height: 100%;
   min-height: 1.5rem;
-  padding: 1% 0;
   font-family: 'Inter';
   font-size: 2rem;
   font-weight: 600; }
   @media (min-width: 70rem) {
     .ticker {
-      padding: .5% 0;
       min-height: 2.5rem; } }
   .ticker__feed {
     display: flex;
     align-items: center;
-    font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(22px + (28 - 22) * ((100vw - 300px) / (1600 - 300)));
     text-transform: uppercase;
     overflow: hidden; }
 
 .navigation {
   grid-area: nav;
+<<<<<<< HEAD
   color: white;
   display: none; }
   @media (min-width: 70rem) {
@@ -376,6 +403,29 @@ h3 {
       display: inline-block; } }
   .navigation__link {
     color: white; }
+=======
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .navigation__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%; }
+  .navigation__link {
+    color: white; }
+  .navigation__button {
+    background: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+>>>>>>> page-transitions
 
 #cnn .newspaper__header {
   background-color: #cc0000;
@@ -389,6 +439,7 @@ h3 {
   background-color: #76bd1d;
   color: #000; }
 
+<<<<<<< HEAD
 #nytimes .newspaper__header {
   background-color: #000;
   color: #FFFFFF; }
@@ -439,6 +490,33 @@ h3 {
   @media (min-width: 70rem) {
     .reader__tv-row {
       height: 100vh; } }
+=======
+.reader {
+  opacity: 1; }
+  .reader__news-section {
+    width: 100vw; }
+  .reader__news-container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "news-feeds" "news-video"; }
+    @media (min-width: 70rem) {
+      .reader__news-container {
+        grid-template-rows: 1fr 1fr; } }
+  .reader__news-row {
+    grid-area: news-feeds;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%; }
+    @media (min-width: 70rem) {
+      .reader__news-row {
+        grid-template-columns: repeat(3, 1fr); } }
+  .reader__tv-row {
+    grid-area: news-video;
+    width: 100vw; }
+    @media (min-width: 70rem) {
+      .reader__tv-row {
+        height: 100vh; } }
+>>>>>>> page-transitions
 
 .newspaper {
   display: grid;
@@ -480,29 +558,8 @@ h3 {
   .newspaper__story-link {
     text-decoration: none; }
 
-.tv__wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; }
-  @media (min-width: 70rem) {
-    .tv__wrapper {
-      height: 100vh;
-      padding-bottom: 0; } }
-
-.tv__iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
 .tv {
-  width: 100vw; }
-  @media (min-width: 70rem) {
-    .tv {
-      height: 100vh; } }
+  background: #000; }
   .tv__video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -511,7 +568,7 @@ h3 {
     overflow: hidden; }
     @media (min-width: 70rem) {
       .tv__video-wrapper {
-        height: 100vh;
+        height: 94vh;
         padding-bottom: 0; } }
   .tv__video-iframe {
     position: absolute;
@@ -519,3 +576,8 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%; }
+  .tv-mobile {
+    display: block; }
+    @media (min-width: 70rem) {
+      .tv-mobile {
+        display: none; } }

@@ -1,6 +1,7 @@
 @import '../config/variables';
 @import '../config/mixins';
 
+<<<<<<< HEAD
 #cnn {
   @include news-brand($cnn, $white);
 }
@@ -23,6 +24,53 @@
 
 #infowars {
   @include news-brand($infowars, $white)
+=======
+// <main class="page__main" data-barba="barba tag goes here">
+//   <section class="reader-section">
+//     <article class="news-page">
+//       <section class="news-page__news-section">
+//         <section class="news-page__news-feeds">
+//           <article id="cnn" class="news-page__news-feed news-feed">
+//             <header class="news-feed__header">
+//               <h1>CNN</h1>
+//             </header>
+//             <a href="#" class="news-feed__hero">
+//               <img class="news-feed__hero-image" src="https://cdn.cnn.com/cnnnext/dam/assets/200316155446-07-nyse-0316-medium-tease.jpg" alt="Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in">
+//             </a>
+//             <section class="news-feed__headline">
+//               <a href="#">
+//                 <h2>Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</h2>
+//               </a>
+//             </section>
+//             <ul class="news-feed__stories-section">
+//               <li class="news-feed__story">
+//                 <a class="news-feed__story-link" href="https://www.breitbart.com/politics/2020/02/26/appeals-court-trump-can-withhold-funding-from-sanctuary-cities/">
+//                   <h3 class="news-feed__story-link-text">
+//                     Appeals Court: Trump Can Withhold Funding from Sanctuary Cities
+//                   </h3>
+//                 </a>
+//               </li>
+//               ...
+//             </ul>
+//           </article>
+//           <article id="fox" class="news-page__news-feed news-feed">
+//           </article>
+//           <article id="rt" class="news-page__news-feed news-feed">
+//           </article>
+//         </section>
+//         <section class="news-page__news-video">
+//           <section class="news-page__news-video-wrapper">
+//             <iframe class="news-page__news-video-iframe" src="https://www.youtube-nocookie.com/embed/Gm3bQVANtVo?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
+//               allowfullscreen></iframe>
+//           </section>
+//         </section>
+//       </section>
+//     </article>
+
+
+#cnn {
+  @include news-brand($cnn, $white);
+>>>>>>> page-transitions
 }
 
 #politico {
@@ -38,6 +86,7 @@
 }
 
 .reader {
+  opacity: 1;
 
   &__news-section {
     width: 100vw;
@@ -156,6 +205,7 @@
   &__story-link-text {}
 
 }
+<<<<<<< HEAD
 
 
 .tv {
@@ -181,3 +231,5 @@
     height: 100%;
   }
 }
+=======
+>>>>>>> page-transitions

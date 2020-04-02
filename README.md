@@ -13,6 +13,7 @@
 
 # Git
 - [Atlassian Git Guide](https://www.atlassian.com/git/tutorials/making-a-pull-request)
+- [Github Guides](https://help.github.com/en/github)
 
 # Puppeteer
 - [Puppeteer On Heroku](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-heroku)
@@ -45,6 +46,7 @@
 # CSS
 - [SASS Documentation](https://sass-lang.com/documentation)
 - [SASS Structure](https://css-irl.info/a-modern-front-end-workflow-part-3/)
+- [CSS Shapes](https://cloudfour.com/thinks/css-circles/)
 
 # Typography
 - [Modular Scale Tips](https://zellwk.com/blog/responsive-modular-scale/)

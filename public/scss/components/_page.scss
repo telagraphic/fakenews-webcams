@@ -2,13 +2,31 @@
 @import '../config/mixins';
 
 .page {
+  display: grid;
+  grid-template-rows: 7vh auto;
+  grid-template-areas: "header" "main";
+
+  width: 100vw;
+
+  background: white;
+
+  @include desktop {
+    grid-template-rows: 6vh auto;
+  }
 
   &__header {
+<<<<<<< HEAD
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas: 'ticker';
 
     align-items: center;
+=======
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "ticker nav";
+    // grid-template-columns: 95vh 5vh;
+>>>>>>> page-transitions
 
     position: sticky;
     position: -webkit-sticky;
@@ -17,15 +35,22 @@
     background-color: black;
     color: white;
 
+    overflow: hidden;
+
     z-index: 100;
 
     @include desktop {
+<<<<<<< HEAD
       grid-template-columns: 97% auto;
       grid-template-areas: 'ticker nav';
+=======
+      grid-template-columns: 96vw 4vw;
+>>>>>>> page-transitions
     }
   }
 
   &__main {
+    grid-area: main;
 
   }
 }
