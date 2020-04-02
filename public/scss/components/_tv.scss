@@ -1,67 +1,11 @@
 @import '../config/variables';
 @import '../config/mixins';
 
-// <header class="tv-header">
-//   <section class="tv-header__news-ticker">
-//     <ul class="tv-header__news-ticker-container">
-//       <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appeals Court: Trump Can Withhold Funding from Sanctuary Cities&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coronavirus pandemic spreads around the globe -->
-//       <li class="tv-header__news-ticker-story-wrapper">
-//         <a class="tv-header__news-ticker-story-link" href="#">Biden grabs Virginia, NC; Bernie wins home state as early Super Tuesday results pour in</a>
-//       </li>
-//       ...
-//     </ul>
-//   </section>
-// </header>
-// <main>
-//   <section class="tv-page__news-video">
-//     <section class="tv-page__news-video-wrapper">
-//       <iframe class="tv-page__news-video-iframe" src="https://www.youtube-nocookie.com/embed/Gm3bQVANtVo?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
-//         allowfullscreen></iframe>
-//     </section>
-//   </section>
-// </main>
-
-
-// .tv-header {
-//   position: fixed;
-//   // position: -webkit-sticky;
-//   // top: 0rem;
-//
-//   background-color: black;
-//   color: white;
-//
-//   z-index: 100;
-//
-//
-//   &__news-ticker {
-//     display: flex;
-//     align-content: center;
-//
-//     width: 100%;
-//
-//     padding: .1% 0;
-//
-//     font-family: 'Inter';
-//     font-size: 2rem;
-//     font-weight: 600;
-//
-//     @include desktop {
-//       padding: .15% 0;
-//     }
-//
-//   }
-//
-//   &__news-ticker-container {
-//     @include font-size(34,20);
-//     text-transform: uppercase;
-//   }
-//
-// }
 
 .tv {
   width: 100vw;
 
-  @media (min-width: $desktop) {
+  @include desktop {
     height: 100vh;
   }
 
@@ -73,10 +17,11 @@
 
     overflow: hidden;
 
-    @media (min-width: $desktop) {
+    @include desktop {
       height: 100vh;
       padding-bottom: 0;
     }
+
   }
 
   &__video-iframe {
