@@ -1,7 +1,5 @@
 .navigation {
   grid-area: nav;
-<<<<<<< HEAD
-
   color: white;
 
   display: none;
@@ -10,41 +8,46 @@
     display: inline-block;
   }
 
-  &__wrapper {}
-  &__link {
-    color: white;
-  }
-=======
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-
   &__wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 50%;
-    height: 50%;
   }
 
   &__link {
-    color: white;
+    width: 42%;
+  }
+
+  &__svg {
+
   }
 
   &__button {
-    background: white;
+    background: $white;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
     height: 0;
     padding-bottom: 100%;
     width: 100%;
 
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    transition: background-color .25s ease;
+
+    &:hover,
+    &:focus {
+      background: $cnn;
+    }
   }
->>>>>>> page-transitions
+}
+
+.button-highlight {
+  border-radius: 50%;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+  background: $cnn;
+
+  &:focus,
+  &:hover {
+    background: white;
+  }
 }

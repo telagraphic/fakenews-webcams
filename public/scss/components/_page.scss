@@ -1,6 +1,40 @@
 @import '../config/variables';
 @import '../config/mixins';
 
+// .page {
+//   display: grid;
+//   grid-template-rows: 6vh auto;
+//   grid-template-areas: "ticker" "main";
+//
+//   &__header {
+//     display: grid;
+//     grid-template-columns: 100%;
+//     grid-template-areas: 'ticker';
+//
+//     align-items: center;
+//
+//     position: sticky;
+//     position: -webkit-sticky;
+//     top: 0rem;
+//
+//     background-color: black;
+//     color: white;
+//
+//     z-index: 100;
+//     overflow: hidden;
+//
+//     @include desktop {
+//       grid-template-columns: 97% auto;
+//       grid-template-areas: 'ticker nav';
+//     }
+//   }
+//
+//   &__main {
+//     grid-area: main;
+//   }
+// }
+
+
 .page {
   display: grid;
   grid-template-rows: 7vh auto;
@@ -15,18 +49,10 @@
   }
 
   &__header {
-<<<<<<< HEAD
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: 'ticker';
-
-    align-items: center;
-=======
     grid-area: header;
     display: grid;
     grid-template-areas: "ticker nav";
-    // grid-template-columns: 95vh 5vh;
->>>>>>> page-transitions
+    align-content: center;
 
     position: sticky;
     position: -webkit-sticky;
@@ -40,17 +66,11 @@
     z-index: 100;
 
     @include desktop {
-<<<<<<< HEAD
-      grid-template-columns: 97% auto;
-      grid-template-areas: 'ticker nav';
-=======
       grid-template-columns: 96vw 4vw;
->>>>>>> page-transitions
     }
   }
 
   &__main {
     grid-area: main;
-
   }
 }

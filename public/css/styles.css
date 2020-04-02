@@ -329,23 +329,6 @@ h2 {
 h3 {
   font-size: calc(1rem + .5vw); }
 
-<<<<<<< HEAD
-.page__header {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-areas: 'ticker';
-  align-items: center;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0rem;
-  background-color: black;
-  color: white;
-  z-index: 100; }
-  @media (min-width: 70rem) {
-    .page__header {
-      grid-template-columns: 97% auto;
-      grid-template-areas: 'ticker nav'; } }
-=======
 .page {
   display: grid;
   grid-template-rows: 7vh auto;
@@ -359,6 +342,7 @@ h3 {
     grid-area: header;
     display: grid;
     grid-template-areas: "ticker nav";
+    align-content: center;
     position: sticky;
     position: -webkit-sticky;
     top: 0rem;
@@ -371,7 +355,6 @@ h3 {
         grid-template-columns: 96vw 4vw; } }
   .page__main {
     grid-area: main; }
->>>>>>> page-transitions
 
 .ticker {
   grid-area: ticker;
@@ -379,13 +362,9 @@ h3 {
   align-content: center;
   width: 100%;
   height: 100%;
-  min-height: 1.5rem;
   font-family: 'Inter';
   font-size: 2rem;
   font-weight: 600; }
-  @media (min-width: 70rem) {
-    .ticker {
-      min-height: 2.5rem; } }
   .ticker__feed {
     display: flex;
     align-items: center;
@@ -395,37 +374,36 @@ h3 {
 
 .navigation {
   grid-area: nav;
-<<<<<<< HEAD
   color: white;
   display: none; }
   @media (min-width: 70rem) {
     .navigation {
       display: inline-block; } }
-  .navigation__link {
-    color: white; }
-=======
-  display: flex;
-  justify-content: center;
-  align-items: center; }
   .navigation__wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 50%; }
+    align-items: center; }
   .navigation__link {
-    color: white; }
+    width: 42%; }
   .navigation__button {
-    background: white;
+    background: #FFFFFF;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
     height: 0;
     padding-bottom: 100%;
     width: 100%;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none; }
->>>>>>> page-transitions
+    transition: background-color .25s ease; }
+    .navigation__button:hover, .navigation__button:focus {
+      background: #cc0000; }
+
+.button-highlight {
+  border-radius: 50%;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+  background: #cc0000; }
+  .button-highlight:focus, .button-highlight:hover {
+    background: white; }
 
 #cnn .newspaper__header {
   background-color: #cc0000;
@@ -439,7 +417,6 @@ h3 {
   background-color: #76bd1d;
   color: #000; }
 
-<<<<<<< HEAD
 #nytimes .newspaper__header {
   background-color: #000;
   color: #FFFFFF; }
@@ -464,33 +441,6 @@ h3 {
   background-color: #000;
   color: #FFFFFF; }
 
-.reader__news-section {
-  width: 100vw; }
-
-.reader__news-container {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  grid-template-areas: "news-feeds" "news-video"; }
-  @media (min-width: 70rem) {
-    .reader__news-container {
-      grid-template-rows: 1fr 1fr; } }
-
-.reader__news-row {
-  grid-area: news-feeds;
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 100%; }
-  @media (min-width: 70rem) {
-    .reader__news-row {
-      grid-template-columns: repeat(3, 1fr); } }
-
-.reader__tv-row {
-  grid-area: news-video;
-  width: 100vw; }
-  @media (min-width: 70rem) {
-    .reader__tv-row {
-      height: 100vh; } }
-=======
 .reader {
   opacity: 1; }
   .reader__news-section {
@@ -516,7 +466,6 @@ h3 {
     @media (min-width: 70rem) {
       .reader__tv-row {
         height: 100vh; } }
->>>>>>> page-transitions
 
 .newspaper {
   display: grid;
