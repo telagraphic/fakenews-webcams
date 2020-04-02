@@ -2,12 +2,40 @@
 @import '../config/mixins';
 
 
-.tv {
-  width: 100vw;
+// .tv {
+//   width: 100vw;
+//
+//   @include desktop {
+//     height: 100vh;
+//   }
+//
+//   &__video-wrapper {
+//     position: relative;
+//     padding-bottom: 56.25%;
+//     height: 0;
+//     max-width: 100%;
+//
+//     overflow: hidden;
+//
+//     @include desktop {
+//       height: 100vh;
+//       padding-bottom: 0;
+//     }
+//
+//   }
+//
+//   &__video-iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
 
-  @include desktop {
-    height: 100vh;
-  }
+
+.tv {
+  background: $black-0;
 
   &__video-wrapper {
     position: relative;
@@ -17,11 +45,10 @@
 
     overflow: hidden;
 
-    @include desktop {
-      height: 100vh;
+    @media (min-width: $desktop) {
+      height: 94vh;
       padding-bottom: 0;
     }
-
   }
 
   &__video-iframe {
@@ -30,5 +57,12 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  &-mobile {
+    display: block;
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 }

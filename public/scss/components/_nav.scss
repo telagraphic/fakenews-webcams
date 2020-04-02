@@ -9,8 +9,46 @@
     display: inline-block;
   }
 
-  &__wrapper {}
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__link {
-    color: white;
+    width: 42%;
+  }
+
+  &__svg {
+
+  }
+
+  &__button {
+    background: $white;
+    border-radius: 50%;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+
+    transition: background-color .25s ease;
+
+    &:hover,
+    &:focus {
+      background: $cnn;
+    }
+  }
+}
+
+.button-highlight {
+  border-radius: 50%;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+  background: $cnn;
+
+  &:focus,
+  &:hover {
+    background: white;
   }
 }

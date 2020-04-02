@@ -50,14 +50,18 @@ barba.init({
       namespace: 'reader',
       beforeEnter() {
         const navLink = document.querySelector('.navigation__link');
+        const navButton = document.querySelector('.navigation__button')
         navLink.setAttribute('href', '/tv');
+        navButton.classList.remove('button-highlight');
       }
     },
     {
       namespace: 'tv',
       beforeEnter() {
         const navLink = document.querySelector('.navigation__link');
+        const navButton = document.querySelector('.navigation__button')
         navLink.setAttribute('href', '/');
+        navButton.classList.add('button-highlight');
       }
     }
   ],

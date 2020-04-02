@@ -1,17 +1,58 @@
 @import '../config/variables';
 @import '../config/mixins';
 
+// .page {
+//   display: grid;
+//   grid-template-rows: 6vh auto;
+//   grid-template-areas: "ticker" "main";
+//
+//   &__header {
+//     display: grid;
+//     grid-template-columns: 100%;
+//     grid-template-areas: 'ticker';
+//
+//     align-items: center;
+//
+//     position: sticky;
+//     position: -webkit-sticky;
+//     top: 0rem;
+//
+//     background-color: black;
+//     color: white;
+//
+//     z-index: 100;
+//     overflow: hidden;
+//
+//     @include desktop {
+//       grid-template-columns: 97% auto;
+//       grid-template-areas: 'ticker nav';
+//     }
+//   }
+//
+//   &__main {
+//     grid-area: main;
+//   }
+// }
+
+
 .page {
   display: grid;
-  grid-template-rows: 6vh auto;
-  grid-template-areas: "ticker" "main";
+  grid-template-rows: 7vh auto;
+  grid-template-areas: "header" "main";
+
+  width: 100vw;
+
+  background: white;
+
+  @include desktop {
+    grid-template-rows: 6vh auto;
+  }
 
   &__header {
+    grid-area: header;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: 'ticker';
-
-    align-items: center;
+    grid-template-areas: "ticker nav";
+    align-content: center;
 
     position: sticky;
     position: -webkit-sticky;
@@ -20,12 +61,12 @@
     background-color: black;
     color: white;
 
-    z-index: 100;
     overflow: hidden;
 
+    z-index: 100;
+
     @include desktop {
-      grid-template-columns: 97% auto;
-      grid-template-areas: 'ticker nav';
+      grid-template-columns: 96vw 4vw;
     }
   }
 
