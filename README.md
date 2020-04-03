@@ -53,6 +53,7 @@
 - [CSS Shapes](https://cloudfour.com/thinks/css-circles/)
 
 # Typography
+- [Inter ui](https://github.com/rsms/inter)
 - [Modular Scale Tips](https://zellwk.com/blog/responsive-modular-scale/)
 - [Fluid Type Options](https://blog.logrocket.com/the-elements-of-responsive-typography/)
 - [Type Stuff](https://8thlight.com/blog/billy-whited/2011/10/28/r-a-ela-tional-design.html#tips)

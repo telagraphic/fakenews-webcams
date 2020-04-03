@@ -2,7 +2,6 @@
 
 
 // NEWS FEED
-
 $cnn: #cc0000;
 $fox: rgba(#003366, 0.99);
 $rt: #76bd1d;
@@ -17,19 +16,21 @@ $breitbart: #ff550f;
 
 
 // COLORS
-
 $black-0: #000;
 $black-10: #202020;
 $white: #FFFFFF;
 
 // BREAKPOINTS
-
 $desktop: 70rem; // 42rem
 $large-desktop: 72rem;
 
 
 
 // TRANSITIONS
-
 $timing: 0.25s;
 $bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+
+// READER
+
+$news-feed-padding: 0 4%;

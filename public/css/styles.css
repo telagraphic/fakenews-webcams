@@ -318,7 +318,7 @@ a {
 body {
   font-size: 100%;
   font-family: 'Inter';
-  font-weight: 500; }
+  font-weight: 400; }
 
 h1 {
   font-size: calc(1.3rem + 1vw); }
@@ -479,6 +479,8 @@ h3 {
   .newspaper__header {
     display: grid;
     justify-content: center; }
+  .newspaper__header-title {
+    font-weight: 600; }
   .newspaper__hero-image {
     display: block;
     position: relative;
@@ -496,16 +498,20 @@ h3 {
         height: 350px;
         margin: 0 0 1rem 0; } }
   .newspaper__headline {
-    padding: 0 2%; }
+    padding: 0 4%; }
+  .newspaper__headline-link-header {
+    font-weight: 600; }
   .newspaper__stories {
     max-height: 100%;
-    padding: 0 2%;
+    padding: 0 4%;
     list-style: none; }
     @media (min-width: 70rem) {
       .newspaper__stories {
         overflow-y: scroll; } }
   .newspaper__story-link {
     text-decoration: none; }
+  .newspaper__story-link-text {
+    font-weight: 400; }
 
 .tv {
   background: #000; }
