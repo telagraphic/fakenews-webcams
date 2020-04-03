@@ -6,9 +6,23 @@
 {{{body}}}
 </body>
 
+<!-- Fathom - simple website analytics - https://usefathom.com -->
+<script>
+(function(f, a, t, h, o, m){
+a[h]=a[h]||function(){
+(a[h].q=a[h].q||[]).push(arguments)
+};
+o=f.createElement('script'),
+m=f.getElementsByTagName('script')[0];
+o.async=1; o.src=t; o.id='fathom-script';
+m.parentNode.insertBefore(o,m)
+})(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'OATEKRPG');
+fathom('trackPageview');
+</script>
+<!-- / Fathom -->
 <script src="https://cdn.jsdelivr.net/npm/node-marquee/dist/cdn/index.min.js"></script>
 <script src="https://unpkg.com/@barba/core"></script>
-<script src="https://unpkg.com/@barba/css"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 <script src="app.js"></script>
 <html>
