@@ -67,3 +67,7 @@ barba.init({
   ],
   debug: true
 });
+
+barba.hooks.after(() => {
+  fathom('set', 'spa', 'pushstate');
+});

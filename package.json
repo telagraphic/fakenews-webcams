@@ -4,13 +4,12 @@
   "description": "news headline aggregator for bias comparison",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "public:scss": "node-sass --output-style nested -o public/css public/scss/styles.scss",
-    "public:watch:scss": "onchange 'public/scss' -- npm run public:scss",
+    "public:watch": "onchange 'public/scss' -- npm run public:scss",
+    "public:reload": "browser-sync start --proxy 'localhost:3000' --ss 'public/pages' --files 'public/scss/**/*.scss, public/views/**/*.hbs, public/js/*.js' --reload-delay=500 --no-notify --no-open --no-ui",
     "server:restart": "nodemon server.js",
-    "server:reload": "browser-sync start --ss 'public/pages' --proxy 'localhost:3000' --files 'public/scss/**/*.scss, public/views/**/*.hbs, public/js/*.js'",
-    "server": "run-p server:restart server:reload public:watch:scss"
+    "server": "run-p server:restart public:reload public:watch"
   },
   "engines": {
     "node": "12.10.0"

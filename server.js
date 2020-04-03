@@ -37,6 +37,7 @@ const corsOptions = {
   // origin: 'http://localhost:3000',
   method: 'GET',
   optionsSuccessStatus: 200
+  
 }
 
 app.use(function(req, res, next) {

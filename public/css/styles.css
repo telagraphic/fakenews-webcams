@@ -509,6 +509,30 @@ h3 {
 
 .tv {
   background: #000; }
+  .tv__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    max-width: 100%;
+    overflow: hidden; }
+    @media (min-width: 70rem) {
+      .tv__wrapper {
+        height: 94vh;
+        padding-bottom: 0; } }
+  .tv__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .tv-mobile {
+    display: block; }
+    @media (min-width: 70rem) {
+      .tv-mobile {
+        display: none; } }
+
+.tv {
+  background: #000; }
   .tv__video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -527,6 +551,3 @@ h3 {
     height: 100%; }
   .tv-mobile {
     display: block; }
-    @media (min-width: 70rem) {
-      .tv-mobile {
-        display: none; } }

@@ -27,8 +27,12 @@
 
 
 # Build Scripts
-- [BrowserSync with Express](https://www.browsersync.io/docs/options/#option-proxy)
 - [CSS Tricks NPM Build Scripts](https://css-tricks.com/why-npm-scripts/)
+- [BrowserSync Options](https://www.browsersync.io/docs/options)
+- [BrowserSync with Express](https://www.browsersync.io/docs/options/#option-proxy)
+- [Nodemon & Browsersync Option](https://auth0.com/blog/create-a-simple-and-stylish-node-express-app/#Adding-Live-Reload-to-Express-Using-Browsersync)
+- [Nodemon & Browsersync](https://gist.github.com/corysimmons/c6b31bc7d5d9d970d884175a293d8a0d)
+
 
 # News Ticker
 - [News Ticker](https://www.youtube.com/watch?v=3T4rD_P2nc8)
