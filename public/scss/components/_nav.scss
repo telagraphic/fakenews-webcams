@@ -3,6 +3,7 @@
   color: white;
 
   display: none;
+  display: block;
 
   @include desktop {
     display: inline-block;
@@ -16,7 +17,11 @@
   }
 
   &__link {
-    width: 42%;
+    width: 58%;
+
+    @include desktop {
+      width: 42%;
+    }
   }
 
   &__svg {

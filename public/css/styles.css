@@ -342,6 +342,7 @@ h3 {
     grid-area: header;
     display: grid;
     grid-template-areas: "ticker nav";
+    grid-template-columns: 90vw 10vw;
     align-content: center;
     position: sticky;
     position: -webkit-sticky;
@@ -375,7 +376,8 @@ h3 {
 .navigation {
   grid-area: nav;
   color: white;
-  display: none; }
+  display: none;
+  display: block; }
   @media (min-width: 70rem) {
     .navigation {
       display: inline-block; } }
@@ -385,7 +387,10 @@ h3 {
     justify-content: center;
     align-items: center; }
   .navigation__link {
-    width: 42%; }
+    width: 58%; }
+    @media (min-width: 70rem) {
+      .navigation__link {
+        width: 42%; } }
   .navigation__button {
     background: #FFFFFF;
     border-radius: 50%;
