@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
 const newsSource = require('../../config/sources');
+const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
@@ -18,10 +19,9 @@ async function fetchStories() {
 
   const stories = await page.evaluate(() => {
     let url = "https://www.cnn.com";
+    let imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg';
 
     const allStories = [];
-
-    // banner
 
     if (document.querySelector('.zn-top h2.banner-text')) {
 
@@ -53,6 +53,8 @@ async function fetchStories() {
       let lead_href = lead_story.querySelector('.link-banner').getAttribute('href');
 
       lead_img = lead_img.replace('//', '');
+      let http = 'https://';
+      lead_img = http.concat(lead_img);
       lead_href = url.concat(lead_href);
 
       let sublead_headline = lead_story.querySelector('.cd__wrapper .cd__headline a').innerText.replace(/(\r\n|\n|\r)/gm," ");
@@ -61,7 +63,7 @@ async function fetchStories() {
       sublead_href = url.concat(sublead_href);
 
       if (lead_headline.length > 0) {
-        allStories.push({headline: lead_headline, img: lead_img, href: lead_href});
+        allStories.push({headline: lead_headline.toUpperCase(), img: lead_img, href: lead_href});
       }
 
       if (sublead_headline.length > 0) {
@@ -89,7 +91,7 @@ async function fetchStories() {
           article.img = story.querySelector('img').getAttribute('src');
           article.img = article.img.replace('//', '');
         } else {
-          article.img = "";
+          article.img = imageUrl;
         }
 
         if (story.querySelector('a')) {
@@ -127,7 +129,7 @@ async function fetchStories() {
           article.img = story.querySelector('img').getAttribute('src');
           article.img = article.img.replace('//', '');
         } else {
-          article.img = "";
+          article.img = imageUrl;
         }
 
         if (story.querySelector('a')) {
@@ -151,8 +153,9 @@ async function fetchStories() {
 
   });
 
-  // console.log(stories);
-  // fs.writeFileSync('../json/cnn.json', JSON.stringify(stories));
+  stories.forEach(story => {
+    story.headline = feedUtilities.properCase(story.headline);
+  });
 
   newsService.createFakeNews(stories, newsSource.cnn.name)
     .then((response) => {

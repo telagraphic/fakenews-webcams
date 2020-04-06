@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
 const newsSource = require('../../config/sources');
+const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
@@ -10,7 +11,7 @@ async function fetchStories() {
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  
+
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -73,9 +74,9 @@ async function fetchStories() {
 
   });
 
-  // console.log(stories);
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/rt.json', data);
+  stories.forEach(story => {
+    story.headline = feedUtilities.properCase(story.headline);
+  });
 
   newsService.createFakeNews(stories, newsSource.rt.name)
     .then((response) => {

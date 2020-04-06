@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
 const newsSource = require('../../config/sources');
+const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
@@ -20,8 +21,6 @@ async function fetchStories() {
     let url = "https://www.infowars.com";
 
     const allStories = [];
-
-    // banner
 
     if (document.querySelector('.slider .slides li')) {
       let slider_stories = document.querySelectorAll('.slider .slides li');
@@ -91,7 +90,8 @@ async function fetchStories() {
 
 
   stories.forEach(story=> {
-    story.headline = upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(story.headline))
+    story.headline = feedUtilities.properCase(story.headline);
+    console.log(story);
   })
 
   newsService.createFakeNews(stories, newsSource.infowars.name)
@@ -104,16 +104,6 @@ async function fetchStories() {
 
   await browser.close();
 
-}
-
-function upperCaseFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function lowerCaseAllWordsExceptFirstLetters(string) {
-  return string.replace(/\w\S*/g, function (word) {
-    return word.charAt(0) + word.slice(1).toLowerCase();
-  });
 }
 
 fetchStories();

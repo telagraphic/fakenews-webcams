@@ -10,7 +10,7 @@ async function fetchStories() {
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  
+
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -43,7 +43,7 @@ async function fetchStories() {
           if (story.querySelector('img')) {
             article.img = story.querySelector('img').getAttribute('src');
           } else {
-            article.img = '';
+            article.img = 'https://upload.wikimedia.org/wikipedia/commons/4/40/New_York_Times_logo_variation.jpg';
           }
         }
 
@@ -55,10 +55,6 @@ async function fetchStories() {
 
   });
 
-  // console.log(stories);
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/nytimes.json', data);
-
   newsService.createFakeNews(stories, newsSource.nytimes.name)
     .then((response) => {
       process.exit(0);
@@ -66,7 +62,6 @@ async function fetchStories() {
     catch((error) => {
       process.exit(0);
     });
-
 
   await browser.close();
 

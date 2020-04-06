@@ -24,6 +24,10 @@
 
 #infowars {
   @include news-brand($infowars, $white)
+
+  .newspaper__headline-link-header {
+    text-transform: capitalize;
+  }
 }
 
 
@@ -48,11 +52,11 @@
 
   &__news-container {
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr;
     grid-template-areas: "news-feeds" "news-video";
 
     @media (min-width: $desktop) {
-      grid-template-rows: 1fr 1fr;
+      // grid-template-rows: 1fr;
     }
   }
 
@@ -137,6 +141,7 @@
   &__headline-link {}
   &__headline-link-header {
     font-weight: 600;
+    text-transform: capitalize;
   }
 
 

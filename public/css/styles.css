@@ -434,6 +434,9 @@ h3 {
   background-color: #194e8e;
   color: #FFFFFF; }
 
+#infowars .newspaper__headline-link-header {
+  text-transform: capitalize; }
+
 #politico .newspaper__header {
   background-color: #dc0228;
   color: #FFFFFF; }
@@ -452,11 +455,8 @@ h3 {
     width: 100vw; }
   .reader__news-container {
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr;
     grid-template-areas: "news-feeds" "news-video"; }
-    @media (min-width: 70rem) {
-      .reader__news-container {
-        grid-template-rows: 1fr 1fr; } }
   .reader__news-row {
     grid-area: news-feeds;
     display: grid;
@@ -505,7 +505,8 @@ h3 {
   .newspaper__headline {
     padding: 0 4%; }
   .newspaper__headline-link-header {
-    font-weight: 600; }
+    font-weight: 600;
+    text-transform: capitalize; }
   .newspaper__stories {
     max-height: 100%;
     padding: 0 4%;

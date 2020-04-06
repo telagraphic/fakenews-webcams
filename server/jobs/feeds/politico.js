@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
 const newsSource = require('../../config/sources');
+const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
@@ -27,6 +28,10 @@ async function fetchStories() {
     article.headline = topnews_headline.querySelector('h3.headline').innerText;
     article.img = topnews_headline.querySelector('img').getAttribute('src');
     article.href = topnews_headline.querySelector('a').getAttribute('href');
+
+    if (article.img.length < 0) {
+      article.img = 'https://upload.wikimedia.org/wikipedia/commons/0/0d/POLITICO_Logo.jpg';
+    }
 
     allStories.push(article);
 
@@ -57,6 +62,9 @@ async function fetchStories() {
 
   });
 
+  stories.forEach(story => {
+    story.headline = feedUtilities.properCase(story.headline);
+  });
 
   newsService.createFakeNews(stories, newsSource.politico.name)
     .then((response) => {

@@ -48,25 +48,26 @@ async function getFakeNews() {
       let zerohedge_headline = news.ZEROHEDGE.shift();
       let bloomberg_headline = news.ZEROHEDGE.shift();
 
+      let storyLimit = 10;
 
       return {
         ALL: allNews,
         CNN_HEADLINE: cnn_headline,
-        CNN_STORIES: news.CNN,
+        CNN_STORIES: news.CNN.slice(0, storyLimit),
         FOX_HEADLINE: fox_headline,
-        FOX_STORIES: news.FOX,
+        FOX_STORIES: news.FOX.slice(0, storyLimit),
         RT_HEADLINE: rt_headline,
-        RT_STORIES: news.RT,
+        RT_STORIES: news.RT.slice(0, storyLimit),
         NYTIMES_HEADLINE: nytimes_headline,
-        NYTIMES_STORIES: news.NYTIMES,
+        NYTIMES_STORIES: news.NYTIMES.slice(0, storyLimit),
         BREITBART_HEADLINE: breitbart_headline,
-        BREITBART_STORIES: news.BREITBART,
+        BREITBART_STORIES: news.BREITBART.slice(0, storyLimit),
         INFOWARS_HEADLINE: infowars_headline,
-        INFOWARS_STORIES: news.INFOWARS,
+        INFOWARS_STORIES: news.INFOWARS.slice(0, storyLimit),
         POLITICO_HEADLINE: politico_headline,
-        POLITICO_STORIES: news.POLITICO,
+        POLITICO_STORIES: news.POLITICO.slice(0, storyLimit),
         ZEROHEDGE_HEADLINE: zerohedge_headline,
-        ZEROHEDGE_STORIES: news.ZEROHEDGE,
+        ZEROHEDGE_STORIES: news.ZEROHEDGE.slice(0, storyLimit),
         BLOOMBERG_HEADLINE: bloomberg_headline,
         BLOOMBERG_STORIES: news.BLOOMBERG
       }

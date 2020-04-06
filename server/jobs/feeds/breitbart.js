@@ -31,6 +31,10 @@ async function fetchStories() {
       main_article.href = url.concat(main_article.href);
       main_article.img = main_story.querySelector('img.wp-post-image').getAttribute('src');
 
+      if (main_article.img.length < 0) {
+        main_article.img = 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Breitbart_News.svg';
+      }
+
       allStories.push(main_article);
     }
 
