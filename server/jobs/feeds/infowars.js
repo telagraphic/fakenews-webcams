@@ -10,7 +10,7 @@ async function fetchStories() {
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  
+
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -30,6 +30,7 @@ async function fetchStories() {
         let article = {};
 
         article.headline = story.querySelector('.flex-caption h3 a').innerText;
+        article.headline.toLowerCase();
         article.href = story.querySelector('.flex-caption h3 a').getAttribute('href');
         article.img = story.querySelector('img').getAttribute('src');
 
@@ -45,6 +46,7 @@ async function fetchStories() {
         let article = {};
 
         article.headline = story.querySelector('.article-content h3').innerText;
+        article.headline.toUpperCase();
         if (story.querySelector('.article-content h3 a')) {
           article.href = story.querySelector('.article-content h3 a').getAttribute('href');
         }
@@ -67,6 +69,7 @@ async function fetchStories() {
         let article = {};
 
         article.headline = story.querySelector('.article-content h3').innerText;
+        article.headline.toUpperCase();
         if (story.querySelector('.article-content h3 a')) {
           article.href = story.querySelector('.article-content h3 a').getAttribute('href');
         }
@@ -86,46 +89,10 @@ async function fetchStories() {
 
   });
 
-  // function titleCase(str) {
-  //   return str.toLowerCase().split(' ').map(function(word) {
-  //     return (
-  //       if (word.charAt(0) === "\'") {
-  //         word.charAt(1).toUpperCase() + word.slice(2)
-  //       } else (
-  //         word.charAt(0).toUpperCase() + word.slice(1)
-  //       )
-  //     );
-  //   }).join(' ');
-  // }
 
-  // function titleCase(str) {
-  //   str = str.toLowerCase().split(' ');
-  //   for (var i = 0; i < str.length; i++) {
-  //     if (str[i] === "\'") {
-  //       str[i] = str[i].charAt(1).toUpperCase() + str[i].slice(2);
-  //     } else {
-  //       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
-  //     }
-  //   }
-  //   return str.join(' ');
-  // }
-  //
-  // const typesetStories = [];
-  //
-  // stories.forEach(story => {
-  //
-  //   let lowercaseHeadline = story.headline.toLowerCase();
-  //   story.headline = titleCase(lowercaseHeadline);
-  //   typesetStories.push(story);
-  //
-  // });
-  // https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
-  //
-  // console.log(typesetStories);
-
-  // console.log(stories);
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/infowars.json', data);
+  stories.forEach(story=> {
+    story.headline = upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(story.headline))
+  })
 
   newsService.createFakeNews(stories, newsSource.infowars.name)
     .then((response) => {
@@ -135,10 +102,18 @@ async function fetchStories() {
       process.exit(0);
     });
 
-
-
   await browser.close();
 
+}
+
+function upperCaseFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function lowerCaseAllWordsExceptFirstLetters(string) {
+  return string.replace(/\w\S*/g, function (word) {
+    return word.charAt(0) + word.slice(1).toLowerCase();
+  });
 }
 
 fetchStories();
