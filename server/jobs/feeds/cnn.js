@@ -155,6 +155,12 @@ async function fetchStories() {
 
   stories.forEach(story => {
     story.headline = feedUtilities.properCase(story.headline);
+
+    if (story.img.length === 0) {
+      story.img = 'https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg';
+    }
+
+    console.log(story);
   });
 
   newsService.createFakeNews(stories, newsSource.cnn.name)
