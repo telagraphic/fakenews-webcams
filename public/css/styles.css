@@ -338,6 +338,9 @@ h3 {
   @media (min-width: 70rem) {
     .page {
       grid-template-rows: 6vh auto; } }
+  @media (orientation: landscape) {
+    .page {
+      grid-template-rows: 12vh auto; } }
   .page__header {
     grid-area: header;
     display: grid;
@@ -434,9 +437,6 @@ h3 {
   background-color: #194e8e;
   color: #FFFFFF; }
 
-#infowars .newspaper__headline-link-header {
-  text-transform: capitalize; }
-
 #politico .newspaper__header {
   background-color: #dc0228;
   color: #FFFFFF; }
@@ -445,8 +445,8 @@ h3 {
   background-color: #000000;
   color: #FFFFFF; }
 
-#bloomberg .newspaper__header {
-  background-color: #000;
+#theonion .newspaper__header {
+  background-color: #006b3a;
   color: #FFFFFF; }
 
 .reader {

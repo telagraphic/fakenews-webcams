@@ -46,7 +46,7 @@ async function getFakeNews() {
       let infowars_headline = news.INFOWARS.shift();
       let politico_headline = news.POLITICO.shift();
       let zerohedge_headline = news.ZEROHEDGE.shift();
-      let bloomberg_headline = news.ZEROHEDGE.shift();
+      let theonion_headline = news.THEONION.shift();
 
       let storyLimit = 10;
 
@@ -68,8 +68,8 @@ async function getFakeNews() {
         POLITICO_STORIES: news.POLITICO.slice(0, storyLimit),
         ZEROHEDGE_HEADLINE: zerohedge_headline,
         ZEROHEDGE_STORIES: news.ZEROHEDGE.slice(0, storyLimit),
-        BLOOMBERG_HEADLINE: bloomberg_headline,
-        BLOOMBERG_STORIES: news.BLOOMBERG
+        THEONION_HEADLINE: theonion_headline,
+        THEONION_STORIES: news.THEONION.slice(0, storyLimit)
       }
     })
     .catch(error => {

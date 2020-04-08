@@ -220,20 +220,20 @@
               {{/each}}
             </ul>
           </article>
-          <article id="breitbart" class="reader__news-column newspaper">
+          <article id="theonion" class="reader__news-column newspaper">
             <header class="newspaper__header">
-              <h1 class="newspaper__header-title">BREITBART</h1>
+              <h1 class="newspaper__header-title">THE ONION</h1>
             </header>
-            <a href="{{BREITBART_HEADLINE.href}}" class="newspaper__hero">
-              <img class="newspaper__hero-image" src="{{BREITBART_HEADLINE.img}}">
+            <a href="{{THEONION_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{THEONION_HEADLINE.img}}">
             </a>
             <section class="newspaper__headline">
-              <a href="{{BREITBART_HEADLINE.href}}" clas="newspaper__headline-link">
-                <h2 class="newspaper__headline-link-header">{{BREITBART_HEADLINE.headline}}</h2>
+              <a href="{{THEONION_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{THEONION_HEADLINE.headline}}</h2>
               </a>
             </section>
             <ul class="newspaper__stories">
-              {{#each BREITBART_STORIES}}
+              {{#each THEONION_STORIES}}
               <li class="newspaper__story">
                 <a class="newspaper__story-link" href="{{this.href}}">
                   <h3 class="newspaper__story-link-text">

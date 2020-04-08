@@ -37,7 +37,7 @@ const corsOptions = {
   // origin: 'http://localhost:3000',
   method: 'GET',
   optionsSuccessStatus: 200
-  
+
 }
 
 app.use(function(req, res, next) {
@@ -74,8 +74,8 @@ app.get('/', async (req, res) => {
     POLITICO_STORIES: news.POLITICO_STORIES,
     ZEROHEDGE_HEADLINE: news.ZEROHEDGE_HEADLINE,
     ZEROHEDGE_STORIES: news.ZEROHEDGE_STORIES,
-    BLOOMBERG_HEADLINE: news.BLOOMBERG_HEADLINE,
-    BLOOMBERG_STORIES: news.BLOOMBERG_STORIES
+    THEONION_HEADLINE: news.THEONION_HEADLINE,
+    THEONION_STORIES: news.THEONION_STORIES
   });
 });
 

@@ -15,6 +15,10 @@
     grid-template-rows: 6vh auto;
   }
 
+  @media (orientation: landscape) {
+      grid-template-rows: 12vh auto;
+  }
+
   &__header {
     grid-area: header;
     display: grid;

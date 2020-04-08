@@ -24,10 +24,6 @@
 
 #infowars {
   @include news-brand($infowars, $white)
-
-  .newspaper__headline-link-header {
-    text-transform: capitalize;
-  }
 }
 
 
@@ -39,8 +35,8 @@
   @include news-brand($zerohedge, $white)
 }
 
-#bloomberg {
-  @include news-brand($bloomberg, $white)
+#theonion {
+  @include news-brand($theonion, $white)
 }
 
 .reader {
@@ -56,7 +52,6 @@
     grid-template-areas: "news-feeds" "news-video";
 
     @media (min-width: $desktop) {
-      // grid-template-rows: 1fr;
     }
   }
 
@@ -130,7 +125,6 @@
     @media (min-width: $desktop) {
       height: 350px;
       margin: 0 0 1rem 0;
-      // padding-bottom: 56.25%;
     }
   }
 
