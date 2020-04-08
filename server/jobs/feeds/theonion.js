@@ -10,7 +10,7 @@ async function fetchStories() {
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  
+
   await page.setViewport({ width: 1280, height: 4000 })
   await page.goto(url);
 
@@ -23,27 +23,42 @@ async function fetchStories() {
 
     if (document.querySelector('main.sc-11qwj9y-0')) {
 
-      let main_stories = document.querySelectorAll('main.sc-11qwj9y-0 article');
 
+      let main_stories = document.querySelectorAll('main.sc-11qwj9y-0 .js_curation-block-list section:nth-child(2) article');
       main_stories.forEach(story => {
         let article = {};
 
-        article.headline = story.querySelector('a').innerText;
+        article.headline = story.querySelector('h4').innerText;
+
+        if (story.querySelector('img')) {
+          article.img = story.querySelector('img').getAttribute('srcset');
+        }
+
         article.href = story.querySelector('a').getAttribute('href');
+        allStories.push(article);
+      });
 
-        // if (story.querySelector('h2')) {
-        //   article.headline = story.querySelector('h2').innerText;
-        //
-        //   if (story.querySelector('a')) {
-        //     article.href = story.querySelector('a').getAttribute('href');
-        //     article.href = url.concat(article.href);
-        //   }
-        //
-        //   if (story.querySelector('img')) {
-        //     article.img = story.querySelector('img').getAttribute('src');
-        //   }
-        // }
+      let suport_stories = document.querySelectorAll('main.sc-11qwj9y-0 .js_curation-block-list section:nth-child(4) article');
+      main_stories.forEach(story => {
+        let article = {};
 
+        article.headline = story.querySelector('h4').innerText;
+
+        if (story.querySelector('img')) {
+          article.img = story.querySelector('img').getAttribute('srcset');
+        }
+
+        article.href = story.querySelector('a').getAttribute('href');
+        allStories.push(article);
+      });
+
+      let banner_stories = document.querySelectorAll('main.sc-11qwj9y-0 .js_curation-block-list section:nth-child(1) article');
+
+      banner_stories.forEach(story => {
+        let article = {};
+
+        article.headline = story.querySelector('h4').innerText;
+        article.href = story.querySelector('a').getAttribute('href');
         allStories.push(article);
       });
     }
@@ -52,11 +67,33 @@ async function fetchStories() {
 
   });
 
-  console.log(stories);
+  // console.log(stories);
 
-  const data = JSON.stringify(stories);
-  fs.writeFileSync('../json/theonion.json', data);
+  stories.forEach(story => {
 
+    if (story.img) {
+      let imgStringArray = story.img.split(" ");
+      story.img = imgStringArray[6];
+    } else {
+      story.img = '';
+    }
+
+    if (!story.href) {
+      story.href = '';
+    }
+
+  });
+
+  // const data = JSON.stringify(stories);
+  // fs.writeFileSync('../json/theonion.json', data);
+
+  newsService.createFakeNews(stories, newsSource.theonion.name)
+    .then((response) => {
+      process.exit(0);
+    }).
+    catch((error) => {
+      process.exit(0);
+    });
 
   await browser.close();
 
