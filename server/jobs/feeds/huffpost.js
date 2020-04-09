@@ -2,50 +2,65 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
 const newsSource = require('../../config/sources');
+const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
-
-  const url = "https://www.huffpost.com/";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
 
   await page.setViewport({ width: 1280, height: 4000 })
-  await page.goto(url);
+  await page.goto(newsSource.huffpost.url);
 
-  await page.waitFor('main.sc-11qwj9y-0');
+  await page.waitFor('.front-page-top');
 
   const stories = await page.evaluate(() => {
-    let url = "https://www.huffpost.com/";
 
     const allStories = [];
 
-    if (document.querySelector('main.sc-11qwj9y-0')) {
+    if (document.querySelector('.front-page-top #zone-main')) {
 
-      let main_stories = document.querySelectorAll('main.sc-11qwj9y-0 article');
+      let headline_story = document.querySelector('#zone-main .splash');
 
-      main_stories.forEach(story => {
+      let article = {};
+
+      article.headline = headline_story.querySelector('.splash__text a').innerText;
+      article.href = headline_story.querySelector('.splash__text a').getAttribute('href');;
+      article.img = headline_story.querySelector('.splash__image picture:last-child img').getAttribute('src');
+
+      allStories.push({headline: article.headline, href: article.href, img: article.img});
+    }
+
+    if (document.querySelector('.front-page-top #zone-atf')) {
+
+      let headline_support_stories = document.querySelectorAll('.front-page-top #zone-atf .card');
+
+      headline_support_stories.forEach(story => {
         let article = {};
 
-        article.headline = story.querySelector('a').innerText;
+        article.headline = story.querySelector('h3').innerText;
         article.href = story.querySelector('a').getAttribute('href');
 
-        // if (story.querySelector('h2')) {
-        //   article.headline = story.querySelector('h2').innerText;
-        //
-        //   if (story.querySelector('a')) {
-        //     article.href = story.querySelector('a').getAttribute('href');
-        //     article.href = url.concat(article.href);
-        //   }
-        //
-        //   if (story.querySelector('img')) {
-        //     article.img = story.querySelector('img').getAttribute('src');
-        //   }
-        // }
 
         allStories.push(article);
       });
+
+    }
+
+    if (document.querySelector('.front-page-content .zone__content')) {
+
+      let headline_support_stories = document.querySelectorAll('.front-page-content .zone__content .card');
+
+      headline_support_stories.forEach(story => {
+        let article = {};
+
+        article.headline = story.querySelector('h3').innerText;
+        article.href = story.querySelector('a').getAttribute('href');
+
+        allStories.push(article);
+      });
+
     }
 
     return allStories;
@@ -54,9 +69,21 @@ async function fetchStories() {
 
   console.log(stories);
 
-  const data = JSON.stringify(stories);
-  fs.writeFileSync('../json/theonion.json', data);
+  stories.forEach(story=> {
+    story.headline = feedUtilities.properCase(story.headline);
+    console.log(story);
+    if (!story.img) {
+      story.img = newsSource.huffpost.placeholder;
+    }
+  })
 
+  newsService.createFakeNews(stories, newsSource.huffpost.name)
+    .then((response) => {
+      process.exit(0);
+    }).
+    catch((error) => {
+      process.exit(0);
+    });
 
   await browser.close();
 

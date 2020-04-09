@@ -253,5 +253,89 @@
         </section> -->
       </section>
     </article>
+    <article class="reader__news-section">
+      <section class="reader__news-container">
+        <section class="reader__news-row">
+          <article id="huffpost" class="reader__news-column newspaper">
+            <header class="newspaper__header">
+              <h1 class="newspaper__header-title">HUFFPOST</h1>
+            </header>
+            <a href="{{HUFFPOST_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{HUFFPOST_HEADLINE.img}}" alt="">
+            </a>
+            <section class="newspaper__headline">
+              <a href="{{HUFFPOST_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{HUFFPOST_HEADLINE.headline}}</h2>
+              </a>
+            </section>
+            <ul class="newspaper__stories">
+              {{#each HUFFPOST_STORIES}}
+              <li class="newspaper__story">
+                <a class="newspaper__story-link" href="{{this.href}}">
+                  <h3 class="newspaper__story-link-text">
+                    {{this.headline}}
+                  </h3>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </article>
+          <article id="drudgereport" class="reader__news-column newspaper">
+            <header class="newspaper__header">
+              <h1 class="newspaper__header-title">DRUDGE REPORT</h1>
+            </header>
+            <a href="{{DRUDGEREPORT_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{DRUDGEREPORT_HEADLINE.img}}">
+            </a>
+            <section class="newspaper__headline">
+              <a href="{{DRUDGEREPORT_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{DRUDGEREPORT_HEADLINE.headline}}</h2>
+              </a>
+            </section>
+            <ul class="newspaper__stories">
+              {{#each DRUDGEREPORT_STORIES}}
+              <li class="newspaper__story">
+                <a class="newspaper__story-link" href="{{this.href}}">
+                  <h3 class="newspaper__story-link-text">
+                    {{this.headline}}
+                  </h3>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </article>
+          <article id="talkingpointsmemo" class="reader__news-column newspaper">
+            <header class="newspaper__header">
+              <h1 class="newspaper__header-title">TALKING POINTS MEMO</h1>
+            </header>
+            <a href="{{TALKINGPOINTSMEMO_HEADLINE.href}}" class="newspaper__hero">
+              <img class="newspaper__hero-image" src="{{TALKINGPOINTSMEMO_HEADLINE.img}}">
+            </a>
+            <section class="newspaper__headline">
+              <a href="{{TALKINGPOINTSMEMO_HEADLINE.href}}" clas="newspaper__headline-link">
+                <h2 class="newspaper__headline-link-header">{{TALKINGPOINTSMEMO_HEADLINE.headline}}</h2>
+              </a>
+            </section>
+            <ul class="newspaper__stories">
+              {{#each TALKINGPOINTSMEMO_STORIES}}
+              <li class="newspaper__story">
+                <a class="newspaper__story-link" href="{{this.href}}">
+                  <h3 class="newspaper__story-link-text">
+                    {{this.headline}}
+                  </h3>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </article>
+        </section>
+        <!-- <section class="news-page__news-video reader__tv-row tv">
+          <section class="news-page__news-video-wrapper tv__wrapper">
+            <iframe class="news-page__news-video-iframe tv__iframe" src="https://www.youtube-nocookie.com/embed/eTAsANPVqB8?controls=0&rel=0&autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"
+              allowfullscreen></iframe>
+          </section>
+        </section> -->
+      </section>
+    </article>
   </section>
 </main>

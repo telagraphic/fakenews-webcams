@@ -4,18 +4,18 @@
 
 .page {
   display: grid;
-  grid-template-rows: 7vh auto;
+  grid-template-rows: 6vh auto;
   grid-template-areas: "header" "main";
 
   width: 100vw;
 
   background: white;
 
-  @include desktop {
-    grid-template-rows: 6vh auto;
-  }
-
-  @media (orientation: landscape) {
+  // @include desktop {
+  //   grid-template-rows: 6vh auto;
+  // }
+  //
+  @media (orientation: landscape) and (max-width: $desktop) {
       grid-template-rows: 12vh auto;
   }
 

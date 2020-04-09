@@ -26,7 +26,6 @@
   @include news-brand($infowars, $white)
 }
 
-
 #politico {
   @include news-brand($politico, $white)
 }
@@ -37,6 +36,18 @@
 
 #theonion {
   @include news-brand($theonion, $white)
+}
+
+#huffpost {
+  @include news-brand($huffpost, $white)
+}
+
+#drudgereport {
+  @include news-brand($drudgereport, $white)
+}
+
+#talkingpointsmemo {
+  @include news-brand($talkingpointsmemo, $white)
 }
 
 .reader {

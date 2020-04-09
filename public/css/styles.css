@@ -331,14 +331,11 @@ h3 {
 
 .page {
   display: grid;
-  grid-template-rows: 7vh auto;
+  grid-template-rows: 6vh auto;
   grid-template-areas: "header" "main";
   width: 100vw;
   background: white; }
-  @media (min-width: 70rem) {
-    .page {
-      grid-template-rows: 6vh auto; } }
-  @media (orientation: landscape) {
+  @media (orientation: landscape) and (max-width: 70rem) {
     .page {
       grid-template-rows: 12vh auto; } }
   .page__header {
@@ -447,6 +444,18 @@ h3 {
 
 #theonion .newspaper__header {
   background-color: #006b3a;
+  color: #FFFFFF; }
+
+#huffpost .newspaper__header {
+  background-color: #0dbe98;
+  color: #FFFFFF; }
+
+#drudgereport .newspaper__header {
+  background-color: #000;
+  color: #FFFFFF; }
+
+#talkingpointsmemo .newspaper__header {
+  background-color: #990000;
   color: #FFFFFF; }
 
 .reader {
