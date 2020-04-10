@@ -12,6 +12,12 @@ function properCase(string) {
   return upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(string));
 }
 
+function addProtocol(imgURL) {
+  let url = 'https://';
+  return url.concat(imgURL);
+}
+
 module.exports = {
-  properCase : properCase
+  properCase : properCase,
+  addProtocol: addProtocol
 }
