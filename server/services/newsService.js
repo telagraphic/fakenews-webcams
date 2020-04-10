@@ -34,7 +34,7 @@ async function getFakeNews() {
 
       for (const prop in news) {
         if (news[prop]) {
-          allNews.push(...news[prop])
+          allNews.push(...news[prop].slice(11, 30))
         }
       }
 
