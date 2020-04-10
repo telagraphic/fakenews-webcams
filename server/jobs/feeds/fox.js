@@ -2,10 +2,9 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const newsService = require('../../services/newsService');
 const newsSource = require('../../config/sources');
+const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
-
-  const url = "https://www.foxnews.com/";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   // const browser = await puppeteer.launch({ headless: false});
@@ -13,20 +12,19 @@ async function fetchStories() {
   await page.setDefaultNavigationTimeout(0);
 
   await page.setViewport({ width: 1280, height: 4000 })
-  await page.goto(url);
+  await page.goto(newsSource.fox.url);
 
   await page.waitFor('div.page-content');
 
   const stories = await page.evaluate(() => {
-    let url = "https://www.foxnews.com/";
 
     const allStories = [];
-
-    // main-content
 
     let banner_headline = document.querySelector('.main-content .sticky-region .story-1 .info-header h2 a').innerText;
     let banner_img = document.querySelector('.main-content .sticky-region .story-1 img').getAttribute('src');
     banner_img = banner_img.replace("//", "");
+    let url = 'https://';
+    banner_img = url.concat(banner_img);
     let banner_href= document.querySelector('.main-content .sticky-region .story-1 .info-header h2 a').getAttribute('href');
 
     if (banner_headline.length > 0) {

@@ -17,7 +17,13 @@ async function fetchStories() {
 
   const stories = await page.evaluate(() => {
 
-    const allStories = [];
+    // const allStories = [];
+
+    const allStories = {
+        headline: [],
+        headline_support: [],
+        body_stories: []
+      };
 
     if (document.querySelector('tt')) {
 
@@ -31,7 +37,7 @@ async function fetchStories() {
         article.href = story.getAttribute('href');
         article.img = headline_image.getAttribute('src');
 
-        allStories.push(article);
+        allStories.headline.push(article);
       });
 
     }
@@ -47,7 +53,7 @@ async function fetchStories() {
         article.href = story.getAttribute('href');
         article.img = story.getAttribute('src');
 
-        allStories.push(article);
+        allStories.headline_support.push(article);
       });
     }
 
@@ -62,7 +68,7 @@ async function fetchStories() {
         article.href = story.getAttribute('href');
         article.img = story.getAttribute('src');
 
-        allStories.push(article);
+        allStories.body_stories.push(article);
       });
     }
 
@@ -72,18 +78,20 @@ async function fetchStories() {
 
   });
 
-  stories.forEach(story=> {
+  const storiesToSave = [...stories.headline, ...stories.headline_support];
+
+  storiesToSave.forEach(story=> {
     story.headline = feedUtilities.properCase(story.headline);
-    console.log(story);
     if (!story.img) {
       story.img = newsSource.drudgereport.placeholder;
     }
+    // console.log(story);
   })
 
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/drudgereport.json', data);
+  const data = JSON.stringify(storiesToSave);
+  fs.writeFileSync('../json/drudgereport.json', data);
 
-  newsService.createFakeNews(stories, newsSource.drudgereport.name)
+  newsService.createFakeNews(storiesToSave, newsSource.drudgereport.name)
     .then((response) => {
       process.exit(0);
     }).
