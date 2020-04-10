@@ -43,8 +43,112 @@ function startNewsTicker() {
   }
 }
 
+const bodyTag = document.querySelector('body');
+const interstitial = document.createElement('section');
+interstitial.classList.add('reader-to-tv-interstitial');
+bodyTag.appendChild(interstitial);
+
 barba.init({
-  transitions: [],
+  transitions: [
+    {
+      name: 'fadetotv',
+      from : {
+        namespace: ['reader']
+      },
+      to: {
+        namespace: ['tv']
+      },
+      beforeEnter({current, next, trigger}) {
+        console.log('fadetotv: beforeEnter');
+
+        return new Promise(resolve => {
+          const timeline = gsap.timeline({
+            onComplete() {
+              resolve();
+            }
+          });
+
+          timeline
+            .set(next.container, {opacity: 0})
+            .to('.reader-to-tv-interstitial', {y: '0%'});
+
+        });
+      },
+      enter({current, next, trigger}) {
+        console.log('fadetotv: enter');
+
+        return new Promise(resolve => {
+          const timeline = gsap.timeline({
+            onComplete() {
+              resolve();
+            }
+          });
+
+          timeline
+            .to(next.container, {opacity: 1})
+            .to('.reader-to-tv-interstitial', {opacity: 0, duration: 1})
+        });
+
+      },
+      leave({current, next, trigger}) {
+        console.log('fadetotv: leave');
+
+        return new Promise(resolve => {
+          const timeline = gsap.timeline({
+            onComplete() {
+              resolve();
+              current.container.remove();
+            }
+          });
+
+          timeline
+            .set('.reader-to-tv-interstitial', {y: '100%', opacity: 1})
+            .to('.reader-to-tv-interstitial', {y: '0%', duration: .5, ease: 'power4.out'})
+        });
+      }
+    },
+    {
+      name: 'fadetoreader',
+      from : {
+        namespace: ['tv']
+      },
+      to: {
+        namespace: ['reader']
+      },
+      beforeEnter({current, next, trigger}) {
+        console.log('fadetoreader: beforeEnter');
+
+        return new Promise(resolve => {
+          const timeline = gsap.timeline({
+            onComplete() {
+              resolve();
+            }
+          });
+
+          timeline
+            .to(next.container, {opacity: 1, duration: 1})
+        });
+
+      },
+      leave({current, next, trigger}) {
+        console.log('fadetoreader: leave');
+
+        return new Promise(resolve => {
+          const timeline = gsap.timeline({
+            onComplete() {
+              resolve();
+              current.container.remove();
+            }
+          });
+
+          timeline
+            .set(current.container, {opacity: 1})
+            .set(next.container, {opacity: 0, duration: 1})
+            .to(current.container, {opacity: 0, duration: 1});
+        });
+      }
+    }
+  ],
   views: [
     {
       namespace: 'reader',

@@ -8,7 +8,7 @@
     "server:restart": "nodemon server.js",
     "public:scss": "node-sass --output-style nested -o public/css public/scss/styles.scss",
     "public:watch": "onchange 'public/scss' -- npm run public:scss",
-    "public:reload": "browser-sync start --proxy 'localhost:3000' --ss 'public/pages' --files 'public/scss/**/*.scss, public/views/**/*.hbs, public/js/*.js'",
+    "public:reload": "browser-sync start --proxy 'localhost:3000' --ss 'public/pages' --files 'public/scss/**/*.scss, public/views/**/*.hbs, public/js/*.js' --no-notify",
     "server": "run-p server:restart public:reload public:watch"
   },
   "engines": {

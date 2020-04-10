@@ -572,3 +572,12 @@ h3 {
     height: 100%; }
   .tv-mobile {
     display: block; }
+
+.reader-to-tv-interstitial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  transform: translate(0, 100%); }
