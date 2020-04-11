@@ -459,9 +459,12 @@ h3 {
   color: #FFFFFF; }
 
 .reader {
-  opacity: 1; }
+  opacity: 1;
+  scroll-snap-type: y mandatory; }
   .reader__news-section {
-    width: 100vw; }
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start; }
   .reader__news-container {
     display: grid;
     grid-template-rows: 1fr;

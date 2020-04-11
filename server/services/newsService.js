@@ -54,7 +54,7 @@ async function getFakeNews() {
       let storyLimit = 10;
 
       return {
-        ALL: allNews,
+        ALL: shuffleNews(allNews),
         CNN_HEADLINE: cnn_headline,
         CNN_STORIES: news.CNN.slice(0, storyLimit),
         FOX_HEADLINE: fox_headline,
@@ -85,6 +85,25 @@ async function getFakeNews() {
       throw new Error(error);
     });
 
+}
+
+function shuffleNews(array) {
+  var currentIndex = array.length;
+  var temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
 }
 
 
