@@ -53,19 +53,14 @@
 .reader {
   opacity: 1;
 
-  scroll-snap-type: y mandatory;
-
   &__news-section {
     width: 100vw;
-    height: 100vh;
-
-    scroll-snap-align: start;
   }
 
   &__news-container {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-areas: "news-feeds" "news-video";
+    grid-template-areas: "news-feeds";
 
     @media (min-width: $desktop) {
     }
