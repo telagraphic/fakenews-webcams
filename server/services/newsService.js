@@ -9,6 +9,8 @@ async function createFakeNews(news, newsSource) {
       story.source = newsSource;
     });
 
+
+
     return newsModel.createFakeNews(news, newsSource);
 
   } else {

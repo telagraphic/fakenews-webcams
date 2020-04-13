@@ -3,9 +3,9 @@ const fs = require('fs');
 
 async function createFakeNews(news, source) {
 
-  database.none("DELETE FROM stories WHERE source = $1", source);
+  await database.none("DELETE FROM stories WHERE source = $1", source);
 
-  return database.task(function(t) {
+  return await database.task(function(t) {
     var queries = [];
     news.forEach(function(story) {
       queries.push(t.none("INSERT INTO stories (headline, img, href, source) VALUES (${headline}, ${img}, ${href}, ${source})", story));
