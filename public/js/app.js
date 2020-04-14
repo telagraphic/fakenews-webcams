@@ -51,6 +51,25 @@ bodyTag.appendChild(interstitial);
 barba.init({
   transitions: [
     {
+      name: 'fade-once',
+      once({current, next, trigger}) {
+        console.log('fade-once: once');
+
+        return new Promise(resolve => {
+          const timeline = gsap.timeline({
+            onComplete() {
+              resolve();
+            }
+          });
+
+          timeline
+            .to('.page__header', {y: '0%', duration: 1, ease: 'power4.out'}, 0)
+            .to('.page__main', {opacity: 1, duration: 1, ease: 'circ'}, 0);
+
+        });
+      }
+    },
+    {
       name: 'fadetotv',
       from : {
         namespace: ['reader']
@@ -103,7 +122,7 @@ barba.init({
 
           timeline
             .set('.reader-to-tv-interstitial', {y: '100%', opacity: 1})
-            .to('.reader-to-tv-interstitial', {y: '0%', duration: .5, ease: 'power4.out'})
+            .to('.reader-to-tv-interstitial', {y: '0%', duration: 1, ease: 'circ'})
         });
       }
     },
@@ -126,7 +145,7 @@ barba.init({
           });
 
           timeline
-            .to(next.container, {opacity: 1, duration: 1})
+            .to(next.container, {opacity: 1, duration: 2, ease: 'circ'})
         });
 
       },

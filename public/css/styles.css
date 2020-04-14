@@ -350,12 +350,14 @@ h3 {
     background-color: black;
     color: white;
     overflow: hidden;
+    transform: translate(0, -100%);
     z-index: 100; }
     @media (min-width: 70rem) {
       .page__header {
         grid-template-columns: 96vw 4vw; } }
   .page__main {
-    grid-area: main; }
+    grid-area: main;
+    opacity: 0; }
 
 .ticker {
   grid-area: ticker;

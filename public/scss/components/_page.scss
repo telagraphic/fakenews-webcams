@@ -11,10 +11,6 @@
 
   background: white;
 
-  // @include desktop {
-  //   grid-template-rows: 6vh auto;
-  // }
-  //
   @media (orientation: landscape) and (max-width: $desktop) {
       grid-template-rows: 12vh auto;
   }
@@ -34,6 +30,7 @@
     color: white;
 
     overflow: hidden;
+    transform: translate(0, -100%);
 
     z-index: 100;
 
@@ -44,5 +41,6 @@
 
   &__main {
     grid-area: main;
+    opacity: 0;
   }
 }
