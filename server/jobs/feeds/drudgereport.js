@@ -17,8 +17,6 @@ async function fetchStories() {
 
   const stories = await page.evaluate(() => {
 
-    // const allStories = [];
-
     const allStories = {
         headline: [],
         headline_support: [],
@@ -85,11 +83,9 @@ async function fetchStories() {
     if (!story.img) {
       story.img = newsSource.drudgereport.placeholder;
     }
-    // console.log(story);
+    console.log(story.headline);
   })
 
-  const data = JSON.stringify(storiesToSave);
-  fs.writeFileSync('../json/drudgereport.json', data);
 
   newsService.createFakeNews(storiesToSave, newsSource.drudgereport.name)
     .then((response) => {
