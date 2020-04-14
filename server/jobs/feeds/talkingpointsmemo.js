@@ -82,7 +82,6 @@ async function fetchStories() {
   });
 
   stories.forEach(story=> {
-    // story.headline = feedUtilities.properCase(story.headline);
     if (!story.img) {
       story.img = newsSource.talkingpointsmemo.placeholder;
     }

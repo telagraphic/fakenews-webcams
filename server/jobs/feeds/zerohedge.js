@@ -5,14 +5,12 @@ const newsSource = require('../../config/sources');
 
 async function fetchStories() {
 
-  const url = "https://www.zerohedge.com";
-
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  
+
   await page.setViewport({ width: 1280, height: 4000 })
-  await page.goto(url);
+  await page.goto(newsSource.zerohedge.url);
 
   await page.waitFor('.layout-content');
 
@@ -23,7 +21,6 @@ async function fetchStories() {
 
     if (document.querySelector('#block-zerohedge-content')) {
       let main_stories = document.querySelectorAll('#block-zerohedge-content .view-content .views-row');
-
 
       main_stories.forEach(story => {
         let article = {};
@@ -47,9 +44,15 @@ async function fetchStories() {
 
   });
 
-  // console.log(stories);
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/zerohedge.json', data);
+  stories.forEach(story=> {
+    if (!story.img) {
+      story.img = newsSource.zerohedge.placeholder;
+    }
+
+    if (story.img.startsWith('/s3')) {
+      story.img = newsSource.zerohedge.url.concat(story.img);
+    }
+  });
 
   newsService.createFakeNews(stories, newsSource.zerohedge.name)
     .then((response) => {
@@ -58,8 +61,6 @@ async function fetchStories() {
     catch((error) => {
       process.exit(0);
     });
-
-
 
   await browser.close();
 
