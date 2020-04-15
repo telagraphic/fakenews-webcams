@@ -103,16 +103,11 @@ async function fetchStories() {
       })
     }
 
-
     return allStories;
 
   });
 
-  // console.log(stories);
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/breitbart.json', data);
-
-  newsService.createFakeNews(stories, newsSource.breitbart.name)
+  await newsService.createFakeNews(stories, newsSource.breitbart.name)
     .then((response) => {
       process.exit(0);
     }).

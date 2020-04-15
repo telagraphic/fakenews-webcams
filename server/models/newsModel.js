@@ -13,7 +13,7 @@ async function createFakeNews(news, source) {
     return t.batch(queries);
   })
   .then(function(data) {
-    console.log("SAVED: " + data.length + " " + source + " stories.");
+    console.log("SAVED: " + source + " " + data.length + " stories.");
   })
   .catch(function(error) {
     console.log("FAILED: ", error);

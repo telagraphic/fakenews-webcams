@@ -83,11 +83,9 @@ async function fetchStories() {
     if (!story.img) {
       story.img = newsSource.drudgereport.placeholder;
     }
-    console.log(story.headline);
   })
 
-
-  newsService.createFakeNews(storiesToSave, newsSource.drudgereport.name)
+  await newsService.createFakeNews(storiesToSave, newsSource.drudgereport.name)
     .then((response) => {
       process.exit(0);
     }).

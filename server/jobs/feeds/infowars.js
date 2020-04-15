@@ -91,10 +91,9 @@ async function fetchStories() {
 
   stories.forEach(story=> {
     story.headline = feedUtilities.properCase(story.headline);
-    console.log(story);
-  })
+  });
 
-  newsService.createFakeNews(stories, newsSource.infowars.name)
+  await newsService.createFakeNews(stories, newsSource.infowars.name)
     .then((response) => {
       process.exit(0);
     }).

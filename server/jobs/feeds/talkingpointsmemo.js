@@ -85,10 +85,9 @@ async function fetchStories() {
     if (!story.img) {
       story.img = newsSource.talkingpointsmemo.placeholder;
     }
-    console.log(story);
-  })
+  });
 
-  newsService.createFakeNews(stories, newsSource.talkingpointsmemo.name)
+  await newsService.createFakeNews(stories, newsSource.talkingpointsmemo.name)
     .then((response) => {
       process.exit(0);
     }).

@@ -78,7 +78,7 @@ async function fetchStories() {
     story.headline = feedUtilities.properCase(story.headline);
   });
 
-  newsService.createFakeNews(stories, newsSource.rt.name)
+  await newsService.createFakeNews(stories, newsSource.rt.name)
     .then((response) => {
       process.exit(0);
     }).

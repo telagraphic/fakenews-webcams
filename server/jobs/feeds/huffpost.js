@@ -71,13 +71,12 @@ async function fetchStories() {
 
   stories.forEach(story=> {
     story.headline = feedUtilities.properCase(story.headline);
-    console.log(story);
     if (!story.img) {
       story.img = newsSource.huffpost.placeholder;
     }
   })
 
-  newsService.createFakeNews(stories, newsSource.huffpost.name)
+  await newsService.createFakeNews(stories, newsSource.huffpost.name)
     .then((response) => {
       process.exit(0);
     }).

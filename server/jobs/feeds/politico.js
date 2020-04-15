@@ -74,7 +74,7 @@ async function fetchStories() {
     }
   });
 
-  newsService.createFakeNews(stories, newsSource.politico.name)
+  await newsService.createFakeNews(stories, newsSource.politico.name)
     .then((response) => {
       process.exit(0);
     }).

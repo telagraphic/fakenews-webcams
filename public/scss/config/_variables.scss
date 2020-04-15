@@ -1,6 +1,4 @@
 // 🎨 Color
-
-
 // NEWS FEED
 $cnn: #cc0000;
 $fox: rgba(#003366, 0.99);
@@ -8,7 +6,7 @@ $rt: #76bd1d;
 $bloomberg: #000;
 $infowars: #194e8e;
 $nytimes: #000;
-$politico: #dc0228;
+$politico: #cf1c23; //#dc0228
 $zerohedge: #000000;
 $theonion: #006b3a;
 $breitbart: #ff550f;
@@ -25,12 +23,9 @@ $white: #FFFFFF;
 $desktop: 70rem; // 42rem
 $large-desktop: 72rem;
 
-
-
 // TRANSITIONS
 $timing: 0.25s;
 $bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
-
 
 // READER
 $news-feed-padding: 0 4%;

@@ -94,7 +94,7 @@ async function fetchStories() {
 
   });
 
-  newsService.createFakeNews(stories, newsSource.fox.name)
+  await newsService.createFakeNews(stories, newsSource.fox.name)
     .then((response) => {
       process.exit(0);
     }).

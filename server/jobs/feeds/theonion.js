@@ -23,7 +23,6 @@ async function fetchStories() {
 
     if (document.querySelector('main.sc-11qwj9y-0')) {
 
-
       let main_stories = document.querySelectorAll('main.sc-11qwj9y-0 .js_curation-block-list section:nth-child(2) article');
       main_stories.forEach(story => {
         let article = {};
@@ -84,10 +83,7 @@ async function fetchStories() {
 
   });
 
-  // const data = JSON.stringify(stories);
-  // fs.writeFileSync('../json/theonion.json', data);
-
-  newsService.createFakeNews(stories, newsSource.theonion.name)
+  await newsService.createFakeNews(stories, newsSource.theonion.name)
     .then((response) => {
       process.exit(0);
     }).

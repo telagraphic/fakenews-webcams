@@ -157,20 +157,18 @@ async function fetchStories() {
     story.headline = feedUtilities.properCase(story.headline);
 
     if (story.img.length === 0) {
-      story.img = 'https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg';
+      story.img = newsSource.cnn.placeholder;
     }
 
-    console.log(story);
   });
 
-  newsService.createFakeNews(stories, newsSource.cnn.name)
+  await newsService.createFakeNews(stories, newsSource.cnn.name)
     .then((response) => {
       process.exit(0);
     }).
     catch((error) => {
       process.exit(0);
     });
-
 
   await browser.close();
 

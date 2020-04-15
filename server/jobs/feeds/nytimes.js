@@ -83,9 +83,7 @@ async function fetchStories() {
 
   });
 
-  console.log(stories);
-
-  newsService.createFakeNews(stories, newsSource.nytimes.name)
+  await newsService.createFakeNews(stories, newsSource.nytimes.name)
     .then((response) => {
       process.exit(0);
     }).

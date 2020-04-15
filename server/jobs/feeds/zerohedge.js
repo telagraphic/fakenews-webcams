@@ -54,7 +54,7 @@ async function fetchStories() {
     }
   });
 
-  newsService.createFakeNews(stories, newsSource.zerohedge.name)
+  await newsService.createFakeNews(stories, newsSource.zerohedge.name)
     .then((response) => {
       process.exit(0);
     }).
