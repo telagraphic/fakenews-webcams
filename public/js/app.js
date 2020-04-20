@@ -89,7 +89,8 @@ barba.init({
 
           timeline
             .set(next.container, {opacity: 0})
-            .to('.reader-to-tv-interstitial', {y: '0%'});
+            .to('.reader-to-tv-interstitial', {y: '0%'})
+            .to('.reader-to-tv-interstitial', {zIndex: -10});
 
         });
       },
@@ -111,6 +112,8 @@ barba.init({
       },
       leave({current, next, trigger}) {
         console.log('fadetotv: leave');
+        const interstitial = document.querySelector('.reader-to-tv-interstitial');
+        interstitial.style.zIndex = 10;
 
         return new Promise(resolve => {
           const timeline = gsap.timeline({
@@ -122,7 +125,8 @@ barba.init({
 
           timeline
             .set('.reader-to-tv-interstitial', {y: '100%', opacity: 1})
-            .to('.reader-to-tv-interstitial', {y: '0%', duration: 1, ease: 'circ'})
+            .to('.reader-to-tv-interstitial', {y: '0%', duration: 1, ease: 'circ'});
+
         });
       }
     },
@@ -145,7 +149,7 @@ barba.init({
           });
 
           timeline
-            .to(next.container, {opacity: 1, duration: 2, ease: 'circ'})
+            .to(next.container, {opacity: 1, duration: 2, ease: 'circ'});
         });
 
       },
