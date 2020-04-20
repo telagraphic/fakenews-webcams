@@ -94,6 +94,14 @@ async function fetchStories() {
 
   });
 
+  stories.forEach(story => {
+
+    if (story.img.length === 0) {
+      story.img = newsSource.fox.placeholder;
+    }
+
+  });
+
   await newsService.createFakeNews(stories, newsSource.fox.name)
     .then((response) => {
       process.exit(0);

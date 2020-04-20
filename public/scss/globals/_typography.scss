@@ -1,6 +1,9 @@
+@import '../config/variables';
+@import '../config/mixins';
+
 body {
   font-size: 100%;
-  font-family: 'Inter';
+  font-family: 'Helvetica-Neue';
   font-weight: 400;
 }
 
@@ -24,7 +27,11 @@ h1 {
 
 // HEADLINE
 h2 {
-  font-size: calc(1.1rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
+
+  @include desktop {
+    font-size: calc(1.15rem + 1vw);
+  }
 }
 
 // STORY LINKS

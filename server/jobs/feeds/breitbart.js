@@ -107,6 +107,14 @@ async function fetchStories() {
 
   });
 
+  stories.forEach(story => {
+
+    if (story.img.length === 0) {
+      story.img = newsSource.breitbart.placeholder;
+    }
+
+  });
+
   await newsService.createFakeNews(stories, newsSource.breitbart.name)
     .then((response) => {
       process.exit(0);

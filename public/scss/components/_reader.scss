@@ -147,6 +147,12 @@
   &__headline-link-header {
     font-weight: 600;
     text-transform: capitalize;
+
+    // font-size: 500;
+    //
+    // @include desktop {
+    //   font-weight: 400;
+    // }
   }
 
 
@@ -169,7 +175,11 @@
     text-decoration: none;
   }
   &__story-link-text {
-    font-weight: 400;
+    font-weight: 500;
+
+    @include desktop {
+      font-weight: 400;
+    }
   }
 
 }

@@ -11,9 +11,14 @@
   // min-height: 1.5rem;
   // padding: 1% 0;
 
-  font-family: 'Inter';
+  font-family: 'Helvetica-Neue';
   font-size: 2rem;
-  font-weight: 600;
+
+  font-weight: 500;
+
+  @include desktop {
+    font-weight: 400;
+  }
 
   @include desktop {
     // padding: .5% 0;
