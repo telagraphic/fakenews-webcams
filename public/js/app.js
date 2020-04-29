@@ -78,8 +78,6 @@ barba.init({
         namespace: ['tv']
       },
       beforeEnter({current, next, trigger}) {
-        console.log('fadetotv: beforeEnter');
-
         window.scrollTo({top: 0, behavior: 'smooth'});
 
         return new Promise(resolve => {
@@ -141,7 +139,7 @@ barba.init({
         namespace: ['reader']
       },
       beforeEnter({current, next, trigger}) {
-        console.log('fadetoreader: beforeEnter');
+        window.scrollTo({top: 0, behavior: 'smooth'});
 
         return new Promise(resolve => {
           const timeline = gsap.timeline({
