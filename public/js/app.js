@@ -80,6 +80,8 @@ barba.init({
       beforeEnter({current, next, trigger}) {
         console.log('fadetotv: beforeEnter');
 
+        window.scrollTo({top: 0, behavior: 'smooth'});
+
         return new Promise(resolve => {
           const timeline = gsap.timeline({
             onComplete() {
