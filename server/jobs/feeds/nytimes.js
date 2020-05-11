@@ -5,6 +5,8 @@ const newsSource = require('../../config/sources');
 
 async function fetchStories() {
 
+  console.log("JOB START: NYTIMES");
+
   const url = "https://www.nytimes.com";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });

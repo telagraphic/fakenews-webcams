@@ -5,6 +5,8 @@ const newsSource = require('../../config/sources');
 
 async function fetchStories() {
 
+  console.log("JOB START: ZEROHEDGE");
+
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);

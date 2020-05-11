@@ -6,6 +6,8 @@ const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
+  console.log("JOB START: CNN");
+
   const url = "https://www.cnn.com/";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });

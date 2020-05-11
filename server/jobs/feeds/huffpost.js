@@ -6,6 +6,8 @@ const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
+  console.log("JOB START: HUFFPOST");
+
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
@@ -66,8 +68,6 @@ async function fetchStories() {
     return allStories;
 
   });
-
-  console.log(stories);
 
   stories.forEach(story=> {
     story.headline = feedUtilities.properCase(story.headline);

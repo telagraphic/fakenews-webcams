@@ -6,6 +6,8 @@ const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
+  console.log("JOB START: RT");
+
   const url = "https://www.rt.com";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });

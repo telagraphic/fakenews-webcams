@@ -6,6 +6,8 @@ const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
+  console.log("JOB START: FOX");
+
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   // const browser = await puppeteer.launch({ headless: false});
   const page = await browser.newPage();

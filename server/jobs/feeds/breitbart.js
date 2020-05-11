@@ -5,6 +5,8 @@ const newsSource = require('../../config/sources');
 
 async function fetchStories() {
 
+  console.log("JOB START: BREITBART");
+
   const url = "https://www.breitbart.com";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });

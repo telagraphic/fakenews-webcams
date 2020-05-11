@@ -6,6 +6,8 @@ const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
+  console.log("JOB START: POLITICO");
+
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);

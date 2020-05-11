@@ -5,6 +5,8 @@ const newsSource = require('../../config/sources');
 
 async function fetchStories() {
 
+  console.log("JOB START: THE ONION");
+
   const url = "https://www.theonion.com/";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });

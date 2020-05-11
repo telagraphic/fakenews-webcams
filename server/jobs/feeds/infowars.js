@@ -6,6 +6,8 @@ const feedUtilities = require('../feed-utilities.js');
 
 async function fetchStories() {
 
+  console.log("JOB START: INFOWARS");
+
   const url = "https://www.infowars.com";
 
   const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
