@@ -176,6 +176,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: CNN");
+
 fetchStories();
 
 module.exports = {

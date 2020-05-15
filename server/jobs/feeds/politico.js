@@ -89,6 +89,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: POLITICO");
+
 fetchStories();
 
 module.exports = {

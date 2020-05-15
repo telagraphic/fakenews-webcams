@@ -93,6 +93,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: RT");
+
 fetchStories();
 
 module.exports = {

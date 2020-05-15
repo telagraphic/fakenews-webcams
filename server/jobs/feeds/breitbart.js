@@ -130,6 +130,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: BREITBART");
+
 fetchStories();
 
 module.exports = {

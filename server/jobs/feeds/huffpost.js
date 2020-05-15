@@ -88,6 +88,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: HUFFPOST");
+
 fetchStories();
 
 module.exports = {

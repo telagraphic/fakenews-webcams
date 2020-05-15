@@ -101,6 +101,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: TALKING POINTS MEMO");
+
 fetchStories();
 
 module.exports = {

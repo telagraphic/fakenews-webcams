@@ -107,6 +107,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: INFOWARS");
+
 fetchStories();
 
 module.exports = {

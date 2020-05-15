@@ -116,6 +116,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: FOX");
+
 fetchStories();
 
 module.exports = {

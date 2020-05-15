@@ -68,6 +68,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: ZEROHEDGE");
+
 fetchStories();
 
 module.exports = {

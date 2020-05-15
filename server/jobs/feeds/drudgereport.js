@@ -99,6 +99,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: DRUDGEREPORT");
+
 fetchStories();
 
 module.exports = {

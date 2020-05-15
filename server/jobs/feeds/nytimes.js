@@ -97,6 +97,8 @@ async function fetchStories() {
 
 }
 
+console.log("JOB START-END: NYTIMES");
+
 fetchStories();
 
 module.exports = {
